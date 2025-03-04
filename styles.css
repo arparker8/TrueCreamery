@@ -1,0 +1,342 @@
+/* 
+Ashleigh Parker - MGD2041
+
+M2A2 - RWD with Colors/Fonts
+
+Build further on the M2A1 page to work with color and typography.
+
+True Creamery - Lactose Free Ice Cream Brand
+
+Styling all pages as well as making them responsive for mobile.
+*/
+
+/* - All Pages - */
+
+/* Added this to make sure there wasn't any weird spacing on the page that I didn't add. */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: "Vergilia";
+    src: url(https://www.fontspace.com/vergilia-font-f98059);
+}
+
+@font-face {
+    font-family: "Louis George Cafe";
+    src: url(https://www.dafont.com/louis-george-cafe.font);
+}
+
+/* I decided to set my font-size for the whole website so I could use rem units to make it more responsive. */
+html {
+    font-size: 16px;
+}
+
+/* This style is connected to my div for my header and nav so it can have a drop-shadow and stick to the top of the page. */
+.top-banner {
+    display: flex;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    background-color: white;
+    box-shadow: 0px 2.5px 10px 0px rgba(0,0,0,0.2);
+}
+
+header, nav {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+
+.logo {
+    height: 100px;
+    width: 300px;
+}
+
+/* Selecting the links in the menu or nav */
+nav > a {
+    text-decoration: none;
+    color: black;
+    font-size: 1.125rem;
+    color: #745e4b;
+    margin: 0 30px;
+    font-family: "Louis George Cafe";
+}
+
+/* Adding a line underneath the nav links when hovering over them. */
+nav > a:hover {
+    text-decoration: underline;
+    text-decoration-color: #b4c978;
+    text-underline-offset: 8px;
+}
+
+.icons {
+    height: 25px;
+    width: 25px;
+}
+
+footer {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 20px;
+    color: #745e4b;
+    background-color: #ede6d9;
+    font-family: "Louis George Cafe";
+}
+
+/* - Home(index) Page - */
+
+/* This is selecting the p tag in both my call to action to add spacing between the button and h2 tag. */
+.call-to-action1 > p, .call-to-action2 > p {
+    margin: 10px 0 30px 0;
+    font-family: "Louis George Cafe";
+}
+
+.home-images {
+    max-width: 70%;
+    height: auto;
+}
+
+/* This style is attached to my first div, which is a call to action with an image. */
+.call-to-action-container1 {
+    /* I made this div position relative so that I could position my text and button on top of my image. */
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+}
+
+/* This style is attached to my text and button for my first call to action. */
+.call-to-action1 {
+    /* This div is absolute so that it could be positioned where I needed it to be on the image. */
+    position: absolute;
+    top: 15%;
+    right: 8%;
+    text-align: right;
+}
+
+/* This is selecting the h2 tag in my first call to action. */
+.call-to-action1 > h2 {
+    color: #75445f;
+    font-size: 2.125rem;
+    font-family: "Vergilia";
+}
+
+.shop-now-button {
+    text-decoration: none;
+    padding: 10px 20px;
+    background-color: #75445f;
+    color: white;
+    font-family: "Louis George Cafe";
+    font-size: 1.125rem;
+    box-shadow: 0px 2.5px 2.5px 0px rgba(0,0,0,0.2);
+}
+
+.shop-now-button:hover {
+    background-color: #e19ac1;
+}
+
+/* This style is attached to my second div, which is a call to action with an image. */
+.call-to-action-container2 {
+    /* I made this div position relative so that I could position my text and button on top of my image. */
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* This style is attached to my text and button for my second call to action. */
+.call-to-action2 {
+    /* This div is absolute so that it could be positioned where I needed it to be on the image. */
+    position: absolute;
+    top: 15%;
+    left: 8%;
+    text-align: left;
+}
+
+/* This is selecting the h2 tag in my second call to action. */
+.call-to-action2 > h2 {
+    color: #7c8a42;
+    font-size: 2.125rem;
+    font-family: "Vergilia";
+}
+
+.explore-button {
+    text-decoration: none;
+    padding: 10px 20px;
+    background-color: #7c8a42;
+    color: white;
+    font-family: "Louis George Cafe";
+    font-size: 1.125rem;
+    box-shadow: 0px 2.5px 2.5px 0px rgba(0,0,0,0.2);
+}
+
+.explore-button:hover {
+    background-color: #b4c978;
+}
+
+/* - Our Flavors Page - */
+
+.our-flavors-header {
+    text-align: center;
+    margin: 40px 0;
+}
+
+/* Selecting the title in my header on the Our Flavors Page. */
+.our-flavors-header > h2 {
+    margin-bottom: 20px;
+    font-family: "Vergilia";
+    color: #75445f;
+    font-size: 2rem;
+}
+
+/* Selecting the description in my header on the Our Flavors Page. */
+.our-flavors-header > p {
+    font-size: 1.125rem;
+    font-family: "Louis George Cafe";
+}
+
+/* Making a grid 3 by 2. */
+.our-flavors-content {
+    display: grid;
+    grid-template-rows: 2fr 2fr;
+    grid-template-columns: 2fr 2fr 2fr;
+}
+
+.our-flavors {
+    text-align: center;
+    position: relative;
+}
+
+/* Adding a button that will add the item to the bag. */
+.our-flavors-add-button {
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    position: absolute;
+    top: 5%;
+    right: 15%;
+    color: white;
+    background-color: #7c8a42;
+    font-family: "Louis George Cafe";
+    font-size: 1.125rem;
+    box-shadow: 0px 2.5px 2.5px 0px rgba(0,0,0,0.2);
+}
+
+/* This makes it so that when you hover over the button it changes to say 'Add to Bag'. */
+.our-flavors-add-button:hover::after {
+    content: " ADD TO BAG";
+}
+
+.our-flavors-text {
+    margin: 20px 0 40px 0;
+}
+
+/* Selecting the flavor name for each flavor. */
+.our-flavors-text > a {
+    font-family: "Vergilia";
+    font-size: 1.5rem;
+    color: #7c8a42;
+    text-decoration: none;
+}
+
+.our-flavors-text > a:hover {
+    color: #b4c978;
+}
+
+/* Selecting the price for each flavor. */
+.our-flavors-text > p {
+    margin-top: 15px;
+    font-family: "Louis George Cafe";
+    font-size: 1.125rem;
+}
+
+.our-flavors-images {
+    max-width: 80%;
+    height: auto;
+}
+
+/* Making it so that the layout changes in mobile view. */
+@media only screen and (max-width: 600px) {
+
+    /* - All Pages - */
+
+    /* The banner needed to be stacked so it would fit better. */
+    .top-banner {
+        display: block;
+    }
+    
+    header {
+        display: flex;
+        justify-content: center;
+        padding: 10px;
+    }
+    
+    nav {
+        display: flex;
+        justify-content: space-evenly;
+        padding: 10px;
+    }
+
+    nav > a {
+        margin: 0 10px;
+        font-size: 1rem;
+    }
+
+    footer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        padding: 10px;
+    }
+
+    footer > p {
+        margin: 5px 10px;
+    }
+
+    /* - Home(index) Page - */
+
+    .call-to-action1 > h2, .call-to-action2 > h2 {
+        font-size: 1.5rem;
+    }
+
+    .call-to-action1 > p, .call-to-action2 > p {
+        font-size: 0.875rem;
+    }
+
+    .shop-now-button, .explore-button {
+        font-size: 1rem;
+    }
+
+    /* - Our Flavors Page - */
+
+    .our-flavors-header > h2 {
+        font-size: 1.5rem;
+    }
+
+    .our-flavors-header > p {
+        font-size: 1rem;
+    }
+
+    /* Changing the grid to fit 2 by 3. */
+    .our-flavors-content {
+        display: grid;
+        grid-template-rows: 2fr 2fr 2fr;
+        grid-template-columns: 2fr 2fr;
+    }
+
+    .our-flavors-add-button {
+        padding: 5px 10px;
+        font-size: 1rem;
+    }
+
+    .our-flavors-text > a {
+        font-size: 1.125rem;
+    }
+
+    .our-flavors-text > p {
+        font-size: 1rem;
+    }
+}
