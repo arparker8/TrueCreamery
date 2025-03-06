@@ -1,10 +1,6 @@
 /* 
 Ashleigh Parker - MGD2041
 
-M2A2 - RWD with Colors/Fonts
-
-Build further on the M2A1 page to work with color and typography.
-
 True Creamery - Lactose Free Ice Cream Brand
 
 Styling all pages as well as making them responsive for mobile.
@@ -226,7 +222,7 @@ footer {
 
 /* This makes it so that when you hover over the button it changes to say 'Add to Bag'. */
 .our-flavors-add-button:hover::after {
-    content: " ADD TO BAG";
+    content: " ADD";
 }
 
 .our-flavors-text {
@@ -298,12 +294,30 @@ footer {
 
     /* - Home(index) Page - */
 
+    .call-to-action1, .call-to-action2 {
+        text-align: center;
+        position: static;
+        margin: 30px 0 40px 0;
+    }
+
+    .call-to-action-container1 {
+        display: block;
+        text-align: left;
+        position: static;
+    }
+
+    .call-to-action-container2 {
+        display: block;
+        text-align: right;
+        position: static;
+    }
+
     .call-to-action1 > h2, .call-to-action2 > h2 {
         font-size: 1.5rem;
     }
 
     .call-to-action1 > p, .call-to-action2 > p {
-        font-size: 0.875rem;
+        font-size: 1rem;
     }
 
     .shop-now-button, .explore-button {
