@@ -255,8 +255,8 @@ footer {
 
 @media only screen and (max-width: 1024px) {
 
-    body {
-        max-height: 100vh;
+    html {
+        height: 100%;
     }
 }
 
