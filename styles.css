@@ -16,12 +16,12 @@ Styling all pages as well as making them responsive for mobile.
 
 @font-face {
     font-family: "Vergilia";
-    src: url(https://www.fontspace.com/vergilia-font-f98059);
+    src: url(Fonts/Vergilia-mL6aa.ttf);
 }
 
 @font-face {
     font-family: "Louis George Cafe";
-    src: url(https://www.dafont.com/louis-george-cafe.font);
+    src: url(Fonts/Louis\ George\ Cafe.ttf);
 }
 
 /* I decided to set my font-size for the whole website so I could use rem units to make it more responsive. */
