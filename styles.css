@@ -6,7 +6,7 @@ True Creamery - Lactose Free Ice Cream Brand
 Styling all pages as well as making them responsive for mobile.
 */
 
-/* - All Pages - */
+/*** - All Pages - ***/
 
 /* Added this to make sure there wasn't any weird spacing on the page that I didn't add. */
 * {
@@ -20,8 +20,13 @@ Styling all pages as well as making them responsive for mobile.
 }
 
 @font-face {
-    font-family: "Louis George Cafe";
+    font-family: "LouisGeorgeCafe";
     src: url(Fonts/Louis\ George\ Cafe.ttf);
+}
+
+@font-face {
+    font-family: "LouisGeorgeCafeBold";
+    src: url(Fonts/Louis\ George\ Cafe\ Bold.ttf)
 }
 
 /* I decided to set my font-size for the whole website so I could use rem units to make it more responsive. */
@@ -53,17 +58,17 @@ header, nav {
 
 /* Selecting the links in the menu or nav */
 nav > a {
-    text-decoration: none;
-    color: black;
+    font-family: "LouisGeorgeCafeBold";
     font-size: 1.125rem;
     color: #745e4b;
+    text-decoration: none;
     margin: 0 30px;
-    font-family: "Louis George Cafe";
 }
 
 /* Adding a line underneath the nav links when hovering over them. */
 nav > a:hover {
     text-decoration: underline;
+    text-decoration-thickness: 2px;
     text-decoration-color: #b4c978;
     text-underline-offset: 8px;
 }
@@ -74,21 +79,21 @@ nav > a:hover {
 }
 
 footer {
+    font-family: "LouisGeorgeCafe";
+    color: #745e4b;
+    background-color: #ede6d9;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     padding: 20px;
-    color: #745e4b;
-    background-color: #ede6d9;
-    font-family: "Louis George Cafe";
 }
 
-/* - Home(index) Page - */
+/*** - Home(index) Page - ***/
 
 /* This is selecting the p tag in both my call to action to add spacing between the button and h2 tag. */
 .call-to-action1 > p, .call-to-action2 > p {
+    font-family: "LouisGeorgeCafe";
     margin: 10px 0 30px 0;
-    font-family: "Louis George Cafe";
 }
 
 .home-images {
@@ -115,18 +120,18 @@ footer {
 
 /* This is selecting the h2 tag in my first call to action. */
 .call-to-action1 > h2 {
-    color: #75445f;
-    font-size: 2.125rem;
     font-family: "Vergilia";
+    font-size: 2.125rem;
+    color: #75445f;
 }
 
 .shop-now-button {
+    font-family: "LouisGeorgeCafeBold";
+    font-size: 1.125rem;
+    color: white;
+    background-color: #75445f;
     text-decoration: none;
     padding: 10px 20px;
-    background-color: #75445f;
-    color: white;
-    font-family: "Louis George Cafe";
-    font-size: 1.125rem;
     box-shadow: 0px 2.5px 2.5px 0px rgba(0,0,0,0.2);
 }
 
@@ -153,18 +158,18 @@ footer {
 
 /* This is selecting the h2 tag in my second call to action. */
 .call-to-action2 > h2 {
-    color: #7c8a42;
-    font-size: 2.125rem;
     font-family: "Vergilia";
+    font-size: 2.125rem;
+    color: #7c8a42;
 }
 
 .explore-button {
+    font-family: "LouisGeorgeCafeBold";
+    font-size: 1.125rem;
+    color: white;
+    background-color: #7c8a42;
     text-decoration: none;
     padding: 10px 20px;
-    background-color: #7c8a42;
-    color: white;
-    font-family: "Louis George Cafe";
-    font-size: 1.125rem;
     box-shadow: 0px 2.5px 2.5px 0px rgba(0,0,0,0.2);
 }
 
@@ -172,7 +177,7 @@ footer {
     background-color: #b4c978;
 }
 
-/* - Our Flavors Page - */
+/*** - Our Flavors Page - ***/
 
 .our-flavors-header {
     text-align: center;
@@ -181,16 +186,17 @@ footer {
 
 /* Selecting the title in my header on the Our Flavors Page. */
 .our-flavors-header > h2 {
-    margin-bottom: 20px;
     font-family: "Vergilia";
-    color: #75445f;
     font-size: 2rem;
+    color: #75445f;
+    margin-bottom: 20px;
 }
 
 /* Selecting the description in my header on the Our Flavors Page. */
 .our-flavors-header > p {
+    font-family: "LouisGeorgeCafe";
     font-size: 1.125rem;
-    font-family: "Louis George Cafe";
+    margin: 0 200px;
 }
 
 /* Making a grid 3 by 2. */
@@ -207,16 +213,16 @@ footer {
 
 /* Adding a button that will add the item to the bag. */
 .our-flavors-add-button {
+    font-family: "LouisGeorgeCafeBold";
+    font-size: 1.125rem;
+    color: white;
+    background-color: #7c8a42;
     padding: 5px 10px;
-    text-align: center;
-    text-decoration: none;
     position: absolute;
     top: 5%;
     right: 15%;
-    color: white;
-    background-color: #7c8a42;
-    font-family: "Louis George Cafe";
-    font-size: 1.125rem;
+    text-align: center;
+    text-decoration: none;
     box-shadow: 0px 2.5px 2.5px 0px rgba(0,0,0,0.2);
 }
 
@@ -243,9 +249,9 @@ footer {
 
 /* Selecting the price for each flavor. */
 .our-flavors-text > p {
-    margin-top: 15px;
-    font-family: "Louis George Cafe";
+    font-family: "LouisGeorgeCafeBold";
     font-size: 1.125rem;
+    margin-top: 15px;
 }
 
 .our-flavors-images {
@@ -253,21 +259,68 @@ footer {
     height: auto;
 }
 
-@media only screen and (max-width: 1024px) {
+/*** - Each Flavor - ***/
 
-    html {
-        height: 100vh;
-    }
+.each-flavor-container {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+}
 
-    body {
-        height: 100vh;
-    }
+.each-flavor-images-content {
+    text-align: center;
+    margin: 20px;
+}
+
+.each-flavor-text-content {
+    max-width: 500px;
+    margin: 20px 0;
+}
+
+.each-flavor-images {
+    max-width: 80%;
+    height: auto;
+}
+
+.each-flavor-text-content > h2 {
+    font-family: "Vergilia";
+    font-size: 2rem;
+    color: #75445f;
+    margin-top: 40px;
+}
+
+.each-flavor-text-content > p {
+    font-family: "LouisGeorgeCafe";
+    font-size: 1.125rem;
+    margin: 30px 0;
+}
+
+.each-flavor-text-content > .each-flavor-price {
+    font-family: "LouisGeorgeCafeBold";
+    font-size: 1.875rem;
+    margin-bottom: 30px;
+}
+
+.each-flavor-add-to-bag-button {
+    font-family: "LouisGeorgeCafeBold";
+    font-size: 1.125rem;
+    color: white;
+    background-color: #7c8a42;
+    text-decoration: none;
+    display: flex;
+    max-width: 100%;
+    justify-content: center;
+    padding: 10px 20px;
+    box-shadow: 0px 2.5px 2.5px 0px rgba(0,0,0,0.2);
+}
+
+.each-flavor-add-to-bag-button:hover {
+    background-color: #b4c978;
 }
 
 /* Making it so that the layout changes in mobile view. */
 @media only screen and (max-width: 800px) {
 
-    /* - All Pages - */
+    /*** - All Pages - ***/
 
     /* The banner needed to be stacked so it would fit better. */
     .top-banner {
@@ -287,8 +340,8 @@ footer {
     }
 
     nav > a {
-        margin: 0 10px;
         font-size: 1rem;
+        margin: 0 10px;
     }
 
     footer {
@@ -303,7 +356,7 @@ footer {
         margin: 5px 10px;
     }
 
-    /* - Home(index) Page - */
+    /*** - Home(index) Page - ***/
 
     .call-to-action1, .call-to-action2 {
         text-align: center;
@@ -335,7 +388,7 @@ footer {
         font-size: 1rem;
     }
 
-    /* - Our Flavors Page - */
+    /*** - Our Flavors Page - ***/
 
     .our-flavors-header > h2 {
         font-size: 1.5rem;
@@ -352,6 +405,10 @@ footer {
         grid-template-columns: 2fr 2fr;
     }
 
+    .our-flavors-header > p {
+        margin: 0 75px;
+    }
+
     .our-flavors-add-button {
         padding: 5px 10px;
         font-size: 1rem;
@@ -363,5 +420,37 @@ footer {
 
     .our-flavors-text > p {
         font-size: 1rem;
+    }
+
+    /*** - Each Flavor - ***/
+
+    .each-flavor-images-content {
+        margin: 10px;
+    }
+
+    .each-flavor-container {
+        display: block;
+        text-align: center;
+    }
+
+    .each-flavor-text-content {
+        display: inline-block;
+        text-align: center;
+        max-width: 440px;
+        margin-top: 10px;
+    }
+
+    .each-flavor-text-content > h2 {
+        font-size: 1.5rem;
+        margin-top: 0;
+    }
+
+    .each-flavor-text-content > p {
+        text-align: left;
+        font-size: 1rem;
+    }
+
+    .each-flavor-text-content > .each-flavor-price {
+        font-size: 1.5rem;
     }
 }
