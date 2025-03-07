@@ -406,7 +406,7 @@ footer {
     }
 
     .our-flavors-header > p {
-        margin: 0 75px;
+        margin: 0 100px;
     }
 
     .our-flavors-add-button {
@@ -415,7 +415,7 @@ footer {
     }
 
     .our-flavors-text > a {
-        font-size: 1.125rem;
+        font-size: 1rem;
     }
 
     .our-flavors-text > p {
