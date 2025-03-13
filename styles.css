@@ -343,7 +343,7 @@ footer {
     visibility: visible;
     opacity: 1;
     position: static;
-    transition: opacity 0.5s ease-in-out;
+    transition: opacity 0.7s ease-in-out;
 }
 
 /* Layout change in mobile view. */
@@ -559,9 +559,8 @@ footer {
     }
 
     .flvr-img-cont {
-        margin: 20px 0;
+        margin: 20px auto;
         max-width: 350px;
-        justify-items: center;
     }
 
     .flvr-text-cont {
