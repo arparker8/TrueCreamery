@@ -334,11 +334,16 @@ footer {
 }
 
 .img-off,  .img-grid:hover > .img-on {
-    display: none;
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
 }
 
 .img-on, .img-grid:hover > .img-off {
-    display: inline;
+    visibility: visible;
+    opacity: 1;
+    position: static;
+    transition: opacity 0.5s ease-in-out;
 }
 
 /* Layout change in mobile view. */
@@ -556,7 +561,7 @@ footer {
     .flvr-img-cont {
         margin: 20px 0;
         max-width: 350px;
-        text-align: center;
+        justify-items: center;
     }
 
     .flvr-text-cont {
