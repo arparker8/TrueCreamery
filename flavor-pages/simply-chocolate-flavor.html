@@ -1,0 +1,96 @@
+<!--
+Ashleigh Parker - MGD2041
+
+True Creamery - Lactose Free Ice Cream Brand
+
+Simply Chocolate Flavor - Description, Price, Add to Bag button, Ingredients and call to action about being lactose free. With Photo gallery
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>True Creamery - Shop Simply Chocolate Flavor</title>
+        <link rel="stylesheet" href="../styles.css">
+    </head>
+    <body>
+        <!-- Container for my Header and Nav -->
+        <div class="top-banner">
+            <!-- Header holding logo -->
+            <header>
+                <a href="../index.html"><img src="../images/logo.jpg" alt="True Creamery Logo" class="logo"></a>
+            </header>
+            <!-- Nav holding all the links -->
+            <nav>
+                <a href="../our-flavors.html">Our Flavors</a>
+                <a href="#">Our Story</a>
+                <a href="#">Contact</a>
+                <a href="#"><img src="../images/search-icon.jpg" alt="Search icon" class="icons"></a>
+                <a href="#"><img src="../images/shop-icon.jpg" alt="Shop icon" class="icons"></a>
+            </nav>
+        </div>
+        <!-- Container for Content on Page-->
+        <div class="flvr-cont">
+
+            <!-- Container for Image Gallery -->
+            <div class="flvr-img-cont">
+                
+                <!-- Full-Width Images with Number text -->
+                <div class="flvr-img-slides">
+                    <div class="slides-num-text">1 / 3</div>
+                    <img src="../images/onepint-mockup-image.jpg" alt="#">
+                </div>
+                <div class="flvr-img-slides">
+                    <div class="slides-num-text">2 / 3</div>
+                    <img src="../images/chocolate-img/scoop-chocolate.jpg" alt="#">
+                </div>
+                <div class="flvr-img-slides">
+                    <div class="slides-num-text">3 / 3</div>
+                    <img src="../images/chocolate-img/top-view-chocolate.jpg" alt="#">
+                </div>
+                
+                <!-- Next and Previous Buttons -->
+                <a class="slides-prev-btn" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="slides-next-btn" onclick="plusSlides(1)">&#10095;</a>
+                
+                <!-- Image text -->
+                <div class="flvr-img-caption-cont">
+                    <p id="flvr-img-caption"></p>
+                </div>
+                
+                <!-- Thumbnail Images -->
+                <div class="thumbnail-row">
+                    <div class="thumbnail-column">
+                        <img class="demo cursor" src="../images/onepint-mockup-image.jpg" onclick="currentSlide(1)" alt="#">
+                    </div>
+                    <div class="thumbnail-column">
+                        <img class="demo cursor" src="../images/chocolate-img/scoop-chocolate.jpg" onclick="currentSlide(2)" alt="#">
+                    </div>
+                    <div class="thumbnail-column">
+                        <img class="demo cursor" src="../images/chocolate-img/top-view-chocolate.jpg" onclick="currentSlide(3)" alt="#">
+                    </div>
+                </div>
+            </div>
+            <!-- Container for Text on Page -->
+            <div class="flvr-text-cont">
+                <h2>Simply Chocolate</h2>
+                <p>Indulge in the rich, velvety taste of chocolate—without the lactose! Our lactose-free chocolate ice cream is crafted for pure 
+                    cocoa lovers, delivering a smooth, creamy texture and deep chocolate flavor in every bite. It’s the perfect treat for those 
+                    who crave classic chocolate without compromise.</p>
+                <p class="flvr-price">$12.00</p>
+                <a href="#" class="add-to-bag-btn">ADD TO BAG</a>
+                <h3>INGREDIENTS</h3>
+                <p class="flvr-ingredients">Lactose-Free Whole Milk, Lactose-Free Heavy Cream, Granulated Sugar, Unsweetened Cocoa Powder, Pure Vanilla Extract, and Salt.</p>
+            </div>
+        </div>
+        <!-- Footer with rights info -->
+        <footer>
+            <p>Term of Use</p>
+            <p>Privacy Policy</p>
+            <p>FAQ</p>
+            <p>© 2025 True Creamery All Rights Reserved</p>
+        </footer>
+        <script src="../index.js"></script>
+    </body>
+</html>
