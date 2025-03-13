@@ -555,7 +555,8 @@ footer {
 
     .flvr-img-cont {
         margin: 20px 0;
-        max-width: 370px;
+        max-width: 350px;
+        text-align: center;
     }
 
     .flvr-text-cont {
