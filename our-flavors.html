@@ -12,76 +12,100 @@ Our Flavors Page - All the ice cream flavors available with price and link to in
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>True Creamery - Our Flavors</title>
-        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="./styles.css">
     </head>
     <body>
+        <!-- Container for my Header and Nav -->
         <div class="top-banner">
+            <!-- Header holding logo -->
             <header>
-                <a href="index.html"><img src="Images/logo.jpg" alt="True Creamery Logo" class="logo"></a>
+                <a href="./index.html"><img src="./images/logo.jpg" alt="True Creamery Logo" class="logo"></a>
             </header>
+            <!-- Nav holding all the links -->
             <nav>
-                <a href="#">Our Flavors</a>
+                <a href="./our-flavors.html">Our Flavors</a>
                 <a href="#">Our Story</a>
                 <a href="#">Contact</a>
-                <a href="#"><img src="Images/search-icon.jpg" alt="Search icon" class="icons"></a>
-                <a href="#"><img src="Images/shop-icon.jpg" alt="Shop icon" class="icons"></a>
+                <a href="#"><img src="./images/search-icon.jpg" alt="Search icon" class="icons"></a>
+                <a href="#"><img src="./images/shop-icon.jpg" alt="Shop icon" class="icons"></a>
             </nav>
         </div>
-        <div class="our-flavors-header">
+        <!-- Container for title and description header -->
+        <div class="all-flvr-header">
             <h2>ALL OUR FLAVORS</h2>
             <p>Our lactose-free ice cream delivers all the smooth texture and delicious flavors you love. Made with high-quality ingredients and carefully 
                 crafted for a delightful treat, it's perfect for anyone looking for a dairy-free alternative without sacrificing taste.</p>
         </div>
-        <div class="our-flavors-content">
-            <div class="our-flavors">
-                <a href="classic-cream-flavor.html"><img src="Images/onepint-mockup-image.jpg" alt="Brand photo of a pint of ice cream." class="our-flavors-images"></a>
-                <a href="#" class="our-flavors-add-button">+</a>
-                <div class="our-flavors-text">
-                    <a href="classic-cream-flavor.html">Classic Cream</a>
+        <!-- Container to make grid for each flavor available -->
+        <div class="all-flvr-cont">
+            <!-- Container for each flavor -->
+            <div class="ea-flvr-grid">
+                <a href="./flavor-pages/classic-cream-flavor.html" class="img-grid"><img src="./images/onepint-mockup-image.jpg" alt="#" class="all-flvr-img img-on">
+                    <img src="./images/vanilla-img/scoop-vanilla.jpg" alt="#" class="all-flvr-img img-off"></a>
+                <a href="#" class="add-btn">+</a>
+                <!-- Container for title and price of each flavor -->
+                <div class="ea-flvr-grid-text">
+                    <a href="./flavor-pages/classic-cream-flavor.html">Classic Cream</a>
                     <p>$12.00</p>
                 </div>
             </div>
-            <div class="our-flavors">
-                <a href="simply-chocolate-flavor.html"><img src="Images/onepint-mockup-image.jpg" alt="Brand photo of a pint of ice cream." class="our-flavors-images"></a>
-                <a href="#" class="our-flavors-add-button">+</a>
-                <div class="our-flavors-text">
-                    <a href="simply-chocolate-flavor.html">Simply Chocolate</a>
+            <!-- Container for each flavor -->
+            <div class="ea-flvr-grid">
+                <a href="./flavor-pages/simply-chocolate-flavor.html" class="img-grid"><img src="./images/onepint-mockup-image.jpg" alt="#" class="all-flvr-img img-on">
+                    <img src="./images/chocolate-img/scoop-chocolate.jpg" alt="#" class="all-flvr-img img-off"></a>
+                <a href="#" class="add-btn">+</a>
+                <!-- Container for title and price of each flavor -->
+                <div class="ea-flvr-grid-text">
+                    <a href="./flavor-pages/simply-chocolate-flavor.html">Simply Chocolate</a>
                     <p>$12.00</p>
                 </div>
             </div>
-            <div class="our-flavors">
-                <a href="pure-strawberry-flavor.html"><img src="Images/onepint-mockup-image.jpg" alt="Brand photo of a pint of ice cream." class="our-flavors-images"></a>
-                <a href="#" class="our-flavors-add-button">+</a>
-                <div class="our-flavors-text">
-                    <a href="pure-strawberry-flavor.html">Pure Strawberry</a>
+            <!-- Container for each flavor -->
+            <div class="ea-flvr-grid">
+                <a href="./flavor-pages/pure-strawberry-flavor.html" class="img-grid"><img src="./images/onepint-mockup-image.jpg" alt="#" class="all-flvr-img img-on">
+                    <img src="./images/strawberry-img/scoop-strawberry.jpg" alt="#" class="all-flvr-img img-off"></a>
+                <a href="#" class="add-btn">+</a>
+                <!-- Container for title and price of each flavor -->
+                <div class="ea-flvr-grid-text">
+                    <a href="./flavor-pages/pure-strawberry-flavor.html">Pure Strawberry</a>
                     <p>$12.00</p>
                 </div>
             </div>
-            <div class="our-flavors">
-                <a href="cookies-n-cream-flavor.html"><img src="Images/onepint-mockup-image.jpg" alt="Brand photo of a pint of ice cream." class="our-flavors-images"></a>
-                <a href="#" class="our-flavors-add-button">+</a>
-                <div class="our-flavors-text">
-                    <a href="cookies-n-cream-flavor.html">Cookies 'n Cream</a>
+            <!-- Container for each flavor -->
+            <div class="ea-flvr-grid">
+                <a href="./flavor-pages/cookies-n-cream-flavor.html" class="img-grid"><img src="./images/onepint-mockup-image.jpg" alt="#" class="all-flvr-img img-on">
+                    <img src="./images/cookies-img/scoop-cookies.jpg" alt="#" class="all-flvr-img img-off"></a>
+                <a href="#" class="add-btn">+</a>
+                <!-- Container for title and price of each flavor -->
+                <div class="ea-flvr-grid-text">
+                    <a href="./flavor-pages/cookies-n-cream-flavor.html">Cookies 'n Cream</a>
                     <p>$12.00</p>
                 </div>
             </div>
-            <div class="our-flavors">
-                <a href="mint-chocolate-chip-flavor.html"><img src="Images/onepint-mockup-image.jpg" alt="Brand photo of a pint of ice cream." class="our-flavors-images"></a>
-                <a href="#" class="our-flavors-add-button">+</a>
-                <div class="our-flavors-text">
-                    <a href="mint-chocolate-chip-flavor.html">Mint Chocolate Chip</a>
+            <!-- Container for each flavor -->
+            <div class="ea-flvr-grid">
+                <a href="./flavor-pages/mint-chocolate-chip-flavor.html" class="img-grid"><img src="./images/onepint-mockup-image.jpg" alt="#" class="all-flvr-img img-on">
+                    <img src="./images/mint-img/scoop-mint.jpg" alt="#" class="all-flvr-img img-off"></a>
+                <a href="#" class="add-btn">+</a>
+                <!-- Container for title and price of each flavor -->
+                <div class="ea-flvr-grid-text">
+                    <a href="./flavor-pages/mint-chocolate-chip-flavor.html">Mint Chocolate Chip</a>
                     <p>$12.00</p>
                 </div>
             </div>
-            <div class="our-flavors">
-                <a href="butter-pecan-flavor.html"><img src="Images/onepint-mockup-image.jpg" alt="Brand photo of a pint of ice cream." class="our-flavors-images"></a>
-                <a href="#" class="our-flavors-add-button">+</a>
-                <div class="our-flavors-text">
-                    <a href="butter-pecan-flavor.html">Butter Pecan</a>
+            <!-- Container for each flavor -->
+            <div class="ea-flvr-grid">
+                <a href="./flavor-pages/butter-pecan-flavor.html" class="img-grid"><img src="./images/onepint-mockup-image.jpg" alt="#" class="all-flvr-img img-on">
+                    <img src="./images/pecan-img/scoop-pecan.jpg" alt="#" class="all-flvr-img img-off"></a>
+                <a href="#" class="add-btn">+</a>
+                <!-- Container for title and price of each flavor -->
+                <div class="ea-flvr-grid-text">
+                    <a href="./flavor-pages/butter-pecan-flavor.html">Butter Pecan</a>
                     <p>$12.00</p>
                 </div>
             </div>
-            </div>
+        </div>
+        <!-- Footer with rights info -->
         <footer>
             <p>Term of Use</p>
             <p>Privacy Policy</p>

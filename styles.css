@@ -16,17 +16,17 @@ Styling all pages as well as making them responsive for mobile.
 
 @font-face {
     font-family: "Vergilia";
-    src: url(Fonts/Vergilia-mL6aa.ttf);
+    src: url(fonts/Vergilia-mL6aa.ttf);
 }
 
 @font-face {
     font-family: "LouisGeorgeCafe";
-    src: url(Fonts/Louis\ George\ Cafe.ttf);
+    src: url(fonts/Louis\ George\ Cafe.ttf);
 }
 
 @font-face {
     font-family: "LouisGeorgeCafeBold";
-    src: url(Fonts/Louis\ George\ Cafe\ Bold.ttf)
+    src: url(fonts/Louis\ George\ Cafe\ Bold.ttf)
 }
 
 /* I decided to set my font-size for the whole website so I could use rem units to make it more responsive. */
@@ -129,18 +129,18 @@ footer {
 /*** - Home(index) Page - ***/
 
 /* This is selecting the p tag in both my call to action to add spacing between the button and h2 tag. */
-.call-to-action1 > p, .call-to-action2 > p {
+.prompt-1 > p, .prompt-2 > p {
     font-family: "LouisGeorgeCafe";
     margin: 10px 0 30px 0;
 }
 
-.home-images {
+.home-img {
     max-width: 70%;
     height: auto;
 }
 
 /* This style is attached to my first div, which is a call to action with an image. */
-.call-to-action-container1 {
+.prompt-cont-1 {
     /* I made this div position relative so that I could position my text and button on top of my image. */
     position: relative;
     display: flex;
@@ -148,7 +148,7 @@ footer {
 }
 
 /* This style is attached to my text and button for my first call to action. */
-.call-to-action1 {
+.prompt-1 {
     /* This div is absolute so that it could be positioned where I needed it to be on the image. */
     position: absolute;
     top: 15%;
@@ -157,13 +157,13 @@ footer {
 }
 
 /* This is selecting the h2 tag in my first call to action. */
-.call-to-action1 > h2 {
+.prompt-1 > h2 {
     font-family: "Vergilia";
     font-size: 2.125rem;
     color: #75445f;
 }
 
-.shop-now-button {
+.shop-now-btn {
     font-family: "LouisGeorgeCafeBold";
     font-size: 1.125rem;
     color: white;
@@ -173,12 +173,12 @@ footer {
     box-shadow: 0px 2.5px 2.5px 0px rgba(0,0,0,0.2);
 }
 
-.shop-now-button:hover {
+.shop-now-btn:hover {
     background-color: #e19ac1;
 }
 
 /* This style is attached to my second div, which is a call to action with an image. */
-.call-to-action-container2 {
+.prompt-cont-2 {
     /* I made this div position relative so that I could position my text and button on top of my image. */
     position: relative;
     display: flex;
@@ -186,7 +186,7 @@ footer {
 }
 
 /* This style is attached to my text and button for my second call to action. */
-.call-to-action2 {
+.prompt-2 {
     /* This div is absolute so that it could be positioned where I needed it to be on the image. */
     position: absolute;
     top: 15%;
@@ -195,13 +195,13 @@ footer {
 }
 
 /* This is selecting the h2 tag in my second call to action. */
-.call-to-action2 > h2 {
+.prompt-2 > h2 {
     font-family: "Vergilia";
     font-size: 2.125rem;
     color: #7c8a42;
 }
 
-.explore-button {
+.explore-btn {
     font-family: "LouisGeorgeCafeBold";
     font-size: 1.125rem;
     color: white;
@@ -211,40 +211,40 @@ footer {
     box-shadow: 0px 2.5px 2.5px 0px rgba(0,0,0,0.2);
 }
 
-.explore-button:hover {
+.explore-btn:hover {
     background-color: #b4c978;
 }
 
 /* Layout change in mobile view. */
 @media only screen and (max-width: 800px) {
 
-    .call-to-action1, .call-to-action2 {
+    .prompt-1, .prompt-2 {
         text-align: center;
         position: static;
         margin: 30px 0 40px 0;
     }
 
-    .call-to-action-container1 {
+    .prompt-cont-1 {
         display: block;
         text-align: left;
         position: static;
     }
 
-    .call-to-action-container2 {
+    .prompt-cont-2 {
         display: block;
         text-align: right;
         position: static;
     }
 
-    .call-to-action1 > h2, .call-to-action2 > h2 {
+    .prompt-1 > h2, .prompt-2 > h2 {
         font-size: 1.5rem;
     }
 
-    .call-to-action1 > p, .call-to-action2 > p {
+    .prompt-1 > p, .prompt-2 > p {
         font-size: 1rem;
     }
 
-    .shop-now-button, .explore-button {
+    .shop-now-btn, .explore-btn {
         font-size: 1rem;
     }
 
@@ -252,13 +252,13 @@ footer {
 
 /*** - Our Flavors Page - ***/
 
-.our-flavors-header {
+.all-flvr-header {
     text-align: center;
     margin: 40px 0;
 }
 
 /* Selecting the title in my header on the Our Flavors Page. */
-.our-flavors-header > h2 {
+.all-flvr-header > h2 {
     font-family: "Vergilia";
     font-size: 2rem;
     color: #75445f;
@@ -266,26 +266,27 @@ footer {
 }
 
 /* Selecting the description in my header on the Our Flavors Page. */
-.our-flavors-header > p {
+.all-flvr-header > p {
     font-family: "LouisGeorgeCafe";
     font-size: 1.125rem;
     margin: 0 200px;
 }
 
 /* Making a grid 3 by 2. */
-.our-flavors-content {
+.all-flvr-cont {
     display: grid;
     grid-template-rows: 2fr 2fr;
     grid-template-columns: 2fr 2fr 2fr;
+    justify-items: center;
 }
 
-.our-flavors {
+.ea-flvr-grid {
     text-align: center;
     position: relative;
 }
 
 /* Adding a button that will add the item to the bag. */
-.our-flavors-add-button {
+.add-btn {
     font-family: "LouisGeorgeCafeBold";
     font-size: 1.125rem;
     color: white;
@@ -300,77 +301,85 @@ footer {
 }
 
 /* This makes it so that when you hover over the button it changes to say 'Add to Bag'. */
-.our-flavors-add-button:hover::after {
+.add-btn:hover::after {
     content: " ADD";
 }
 
-.our-flavors-text {
+.ea-flvr-grid-text {
     margin: 20px 0 40px 0;
 }
 
 /* Selecting the flavor name for each flavor. */
-.our-flavors-text > a {
+.ea-flvr-grid-text > a {
     font-family: "Vergilia";
     font-size: 1.5rem;
     color: #7c8a42;
     text-decoration: none;
 }
 
-.our-flavors-text > a:hover {
+.ea-flvr-grid-text > a:hover {
     color: #b4c978;
 }
 
 /* Selecting the price for each flavor. */
-.our-flavors-text > p {
+.ea-flvr-grid-text > p {
     font-family: "LouisGeorgeCafeBold";
     font-size: 1.125rem;
     margin-top: 15px;
 }
 
-.our-flavors-images {
+.all-flvr-img {
     max-width: 80%;
     height: auto;
+}
+
+.img-off,  .img-grid:hover > .img-on {
+    display: none;
+}
+
+.img-on, .img-grid:hover > .img-off {
+    display: inline;
 }
 
 /* Layout change in mobile view. */
 @media only screen and (max-width: 800px) {
 
-    .our-flavors-header {
+    .all-flvr-header {
         margin: 20px 0;
     }
     
-    .our-flavors-header > h2 {
+    .all-flvr-header > h2 {
         font-size: 1.5rem;
         margin: 10px 0;
     }
 
-    .our-flavors-header > p {
+    .all-flvr-header > p {
         font-size: 1rem;
         margin: 0 40px;
     }
 
     /* Changing the grid to fit 2 by 3. */
-    .our-flavors-content {
+    .all-flvr-cont {
         display: grid;
         grid-template-rows: 2fr 2fr 2fr;
         grid-template-columns: 2fr 2fr;
         margin-bottom: 20px;
     }
 
-    .our-flavors-text {
+    .ea-flvr-grid-text {
         margin: 0 10px;
     }
 
-    .our-flavors-add-button {
+    .add-btn {
         padding: 5px 10px;
         font-size: 1rem;
     }
 
-    .our-flavors-text > a {
+    .ea-flvr-grid-text > a {
         font-size: 1rem;
     }
 
-    .our-flavors-text > p {
+    .ea-flvr-grid-text > p {
         font-size: 1rem;
     }
 
@@ -378,46 +387,135 @@ footer {
 
 /*** - Each Flavor - ***/
 
-.each-flavor-container {
+.flvr-cont {
     display: grid;
     grid-template-columns: 3fr 2fr;
+    justify-items: center;
 }
 
-.each-flavor-images-content {
-    text-align: center;
-    margin: 20px;
+.flvr-img-cont {
+    margin: 20px 20px;
+    position: relative;
+    max-width: 600px;
 }
 
-.each-flavor-text-content {
-    max-width: 500px;
-    margin: 20px 0;
-}
-
-.each-flavor-images {
+.flvr-img {
     max-width: 80%;
     height: auto;
 }
 
-.each-flavor-text-content > h2 {
+.flvr-img-slides {
+    display: none;
+}
+
+.flvr-img-slides img {
+    width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.cursor {
+    cursor: pointer;
+}
+
+.slides-prev-btn {
+    cursor: pointer;
+    position: absolute;
+    top: 40%;
+    left: 0;
+    padding: 5px 10px;
+    color: rgba(0, 0, 0, 0.5);
+    font-family: "LouisGeorgeCafeBold";
+    font-size: 1.5rem;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+.slides-next-btn {
+    cursor: pointer;
+    position: absolute;
+    top: 40%;
+    right: 0;
+    padding: 5px 10px;
+    color: rgba(0, 0, 0, 0.5);
+    font-family: "LouisGeorgeCafeBold";
+    font-size: 1.5rem;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+.slides-next-btn:hover, .slides-prev-btn:hover {
+    color: white;
+    background-color: #7c8a42;
+}
+
+.slides-num-text {
+    color:rgba(0, 0, 0, 0.5);
+    font-family: "LouisGeorgeCafeBold";
+    padding: 10px 15px;
+    position: absolute;
+    top: 0;
+}
+
+.flvr-img-caption-cont {
+    text-align: left;
+    padding: 2px 15px;
+    color: #75445f;
+}
+
+.thumbnail-row {
+    display: flex;
+    justify-content: center;
+}
+
+.thumbnail-row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.thumbnail-column {
+    width: 15%;
+    margin: 0 10px;
+}
+
+.thumbnail-column img {
+    max-width: 100%;
+}
+
+.demo {
+    opacity: 0.6;
+}
+
+.active, .demo:hover {
+    opacity: 1;
+}
+
+.flvr-text-cont {
+    max-width: 500px;
+    margin: 20px 20px;
+}
+
+.flvr-text-cont > h2 {
     font-family: "Vergilia";
     font-size: 2rem;
     color: #75445f;
     margin-top: 40px;
 }
 
-.each-flavor-text-content > p {
+.flvr-text-cont > p {
     font-family: "LouisGeorgeCafe";
     font-size: 1.125rem;
     margin: 30px 0;
 }
 
-.each-flavor-text-content > .each-flavor-price {
+.flvr-text-cont > .flvr-price {
     font-family: "LouisGeorgeCafeBold";
     font-size: 1.875rem;
     margin-bottom: 30px;
 }
 
-.each-flavor-add-to-bag-button {
+.add-to-bag-btn {
     font-family: "LouisGeorgeCafeBold";
     font-size: 1.125rem;
     color: white;
@@ -430,18 +528,18 @@ footer {
     box-shadow: 0px 2.5px 2.5px 0px rgba(0,0,0,0.2);
 }
 
-.each-flavor-add-to-bag-button:hover {
+.add-to-bag-btn:hover {
     background-color: #b4c978;
 }
 
-.each-flavor-text-content > h3 {
+.flvr-text-cont > h3 {
     font-family: "Vergilia";
     font-size: 1.125rem;
     color: #75445f;
     margin-top: 50px;
 }
 
-.each-flavor-text-content > .each-flavor-ingredients {
+.flvr-text-cont > .flvr-ingredients {
     font-family: "LouisGeorgeCafe";
     font-size: 1rem;
     margin: 10px 0;
@@ -450,33 +548,34 @@ footer {
 /* Layout change in mobile view. */
 @media only screen and (max-width: 800px) {
 
-    .each-flavor-images-content {
-        margin: 20px 0;
-    }
-
-    .each-flavor-container {
+    .flvr-cont {
         display: block;
         text-align: center;
     }
 
-    .each-flavor-text-content {
+    .flvr-img-cont {
+        margin: 20px 0;
+        max-width: 420px;
+    }
+
+    .flvr-text-cont {
         display: inline-block;
         text-align: center;
         max-width: 420px;
         margin: 0 30px 20px 30px;
     }
 
-    .each-flavor-text-content > h2 {
+    .flvr-text-cont > h2 {
         font-size: 1.5rem;
         margin-top: 0;
     }
 
-    .each-flavor-text-content > p {
+    .flvr-text-cont > p {
         text-align: left;
         font-size: 1rem;
     }
 
-    .each-flavor-text-content > .each-flavor-price {
+    .flvr-text-cont > .flvr-price {
         font-size: 1.5rem;
     }
 }
