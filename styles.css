@@ -221,7 +221,7 @@ footer {
     .prompt-1, .prompt-2 {
         text-align: center;
         position: static;
-        margin: 30px 0 40px 0;
+        margin: 30px 10px 40px 10px;
     }
 
     .prompt-cont-1 {
