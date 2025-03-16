@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Search_Icon" data-name="Search Icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 183.8 179.86">
+  <defs>
+    <style>
+      .cls-1 {
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+
+      .cls-1, .cls-2 {
+        fill: none;
+        stroke: #745e4b;
+        stroke-width: 13px;
+      }
+
+      .cls-2 {
+        stroke-miterlimit: 10;
+      }
+    </style>
+  </defs>
+  <circle class="cls-2" cx="82.01" cy="81.7" r="74.63"/>
+  <path class="cls-1" d="M136.86,133.23l39.56,39.56-39.56-39.56Z"/>
+</svg>
