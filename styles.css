@@ -277,7 +277,6 @@ footer {
     display: grid;
     grid-template-rows: 2fr 2fr;
     grid-template-columns: 2fr 2fr 2fr;
-    justify-items: center;
 }
 
 .ea-flvr-grid {
@@ -333,17 +332,21 @@ footer {
     height: auto;
 }
 
-.img-off, .img-grid:hover > .img-on {
-    visibility: hidden;
-    opacity: 0;
-    position: absolute;
+.img-on {
+    position: relative;
 }
 
-.img-on, .img-grid:hover > .img-off {
-    visibility: visible;
+.img-off {
+    position: absolute;
+    left: 0;
+    right: 0;
+    justify-self: center;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.img-off:hover {
     opacity: 1;
-    position: static;
-    transition: opacity 0.7s ease-in-out;
 }
 
 /* Layout change in mobile view. */
