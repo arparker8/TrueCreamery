@@ -269,7 +269,8 @@ footer {
 .all-flvr-header > p {
     font-family: "LouisGeorgeCafe";
     font-size: 1.125rem;
-    margin: 0 200px;
+    justify-self: center;
+    max-width: 750px;
 }
 
 /* Making a grid 3 by 2. */
@@ -364,6 +365,7 @@ footer {
     .all-flvr-header > p {
         font-size: 1rem;
         margin: 0 40px;
+        max-width: 425px;
     }
 
     /* Changing the grid to fit 2 by 3. */
