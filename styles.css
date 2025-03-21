@@ -404,7 +404,7 @@ footer {
 }
 
 .flvr-img-cont {
-    margin: 20px 20px;
+    margin: 20px;
     position: relative;
     max-width: 600px;
 }
@@ -501,9 +501,16 @@ footer {
     opacity: 1;
 }
 
+.flvr-img-caption {
+    font-family: "LouisGeorgeCafe";
+    font-size: 0.875rem;
+    color: #745e4b;
+    margin: 10px 0;
+    text-align: right;
+}
+
 .flvr-text-cont {
-    max-width: 500px;
-    margin: 20px 20px;
+    margin-right: 50px;
 }
 
 .flvr-text-cont > h2 {
@@ -555,6 +562,34 @@ footer {
     margin: 10px 0;
 }
 
+.flvr-delivery {
+    align-items: center;
+}
+
+.delivery-sticker {
+    width: 20%;
+    height: auto;
+    float: left;
+    margin-right: 25px;
+}
+
+.flvr-delivery > h3 {
+    font-family: "Vergilia";
+    font-size: 1.5rem;
+    color: #75445f;
+    margin-top: 70px;
+}
+
+.flvr-delivery > ul {
+    font-family: "LouisGeorgeCafe";
+    font-size: 1.125rem;
+    list-style-type: none;
+}
+
+.flvr-delivery > ul > li {
+    margin: 12.5px 0;
+}
+
 /* Layout change in mobile view. */
 @media only screen and (max-width: 800px) {
 
@@ -565,7 +600,7 @@ footer {
 
     .flvr-img-cont {
         max-width: 420px;
-        margin: 20px 30px;
+        margin: 20px;
     }
 
     .flvr-text-cont {
@@ -587,5 +622,21 @@ footer {
 
     .flvr-text-cont > .flvr-price {
         font-size: 1.5rem;
+    }
+
+    .flvr-text-cont > h3 {
+        text-align: left;
+    }
+
+    .delivery-sticker {
+        margin-bottom: 25px;
+    }
+
+    .flvr-delivery {
+        text-align: left;
+    }
+
+    .flvr-delivery > h3 {
+        margin-top: 50px;
     }
 }
