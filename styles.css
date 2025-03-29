@@ -6,14 +6,15 @@ True Creamery - Lactose Free Ice Cream Brand
 Styling all pages as well as making them responsive for mobile.
 */
 
-/*** - All Pages - ***/
+/********** - All Pages - **********/
 
-/* Added this to make sure there wasn't any weird spacing on the page that I didn't add. */
+/* Resetting the Spacing on all Elements.  */
 * {
     margin: 0;
     padding: 0;
 }
 
+/* Adding Fonts */
 @font-face {
     font-family: "Vergilia";
     src: url(fonts/Vergilia-mL6aa.ttf);
@@ -29,12 +30,12 @@ Styling all pages as well as making them responsive for mobile.
     src: url(fonts/Louis\ George\ Cafe\ Bold.ttf)
 }
 
-/* I decided to set my font-size for the whole website so I could use rem units to make it more responsive. */
+/* Setting Font-Size for Website so rem units could be used. Making it more responsive. */
 html {
     font-size: 16px;
 }
 
-/* This style is connected to my div for my header and nav so it can have a drop-shadow and stick to the top of the page. */
+/* Styling for div of Header and Nav. To have a Drop-Shadow and stay at the Top when Scrolling. */
 .top-banner {
     display: flex;
     justify-content: space-between;
@@ -45,6 +46,7 @@ html {
     box-shadow: 0px 2.5px 10px 0px rgba(0,0,0,0.2);
 }
 
+/* Making Header and Nav centered vertically. */
 header, nav {
     display: flex;
     align-items: center;
@@ -56,7 +58,7 @@ header, nav {
     width: 300px;
 }
 
-/* Selecting the links in the menu or nav */
+/* Selecting the Links in the Nav */
 nav > a {
     font-family: "LouisGeorgeCafeBold";
     font-size: 1.125rem;
@@ -65,7 +67,7 @@ nav > a {
     margin: 0 30px;
 }
 
-/* Adding a line underneath the nav links when hovering over them. */
+/* Adding a Line underneath the Nav Links when Hovering. */
 nav > a:hover {
     text-decoration: underline;
     text-decoration-thickness: 2px;
@@ -88,20 +90,22 @@ footer {
     padding: 20px;
 }
 
-/* Layout change in mobile view. */
+/* Mobile View Layout */
 @media only screen and (max-width: 800px) {
 
-        /* The banner needed to be stacked so it would fit better. */
+        /* Styling for div of Header and Nav. Stacking them to visually fit on screen size. */
         .top-banner {
             display: block;
         }
         
+        /* Items in Header needed to be Centered Horizontally. */
         header {
             display: flex;
             justify-content: center;
             padding: 10px;
         }
         
+        /* Items in Nav Needed to be Spaced Evenly Horizontally. */
         nav {
             display: flex;
             justify-content: space-evenly;
@@ -126,9 +130,8 @@ footer {
         }
 }
 
-/*** - Home(index) Page - ***/
+/********** - Home(index) Page - **********/
 
-/* This is selecting the p tag in both my call to action to add spacing between the button and h2 tag. */
 .prompt-1 > p, .prompt-2 > p {
     font-family: "LouisGeorgeCafe";
     margin: 10px 0 30px 0;
@@ -139,24 +142,19 @@ footer {
     height: auto;
 }
 
-/* This style is attached to my first div, which is a call to action with an image. */
 .prompt-cont-1 {
-    /* I made this div position relative so that I could position my text and button on top of my image. */
     position: relative;
     display: flex;
     justify-content: flex-start;
 }
 
-/* This style is attached to my text and button for my first call to action. */
 .prompt-1 {
-    /* This div is absolute so that it could be positioned where I needed it to be on the image. */
     position: absolute;
     top: 15%;
     right: 8%;
     text-align: right;
 }
 
-/* This is selecting the h2 tag in my first call to action. */
 .prompt-1 > h2 {
     font-family: "Vergilia";
     font-size: 2.125rem;
@@ -177,24 +175,19 @@ footer {
     background-color: #e19ac1;
 }
 
-/* This style is attached to my second div, which is a call to action with an image. */
 .prompt-cont-2 {
-    /* I made this div position relative so that I could position my text and button on top of my image. */
     position: relative;
     display: flex;
     justify-content: flex-end;
 }
 
-/* This style is attached to my text and button for my second call to action. */
 .prompt-2 {
-    /* This div is absolute so that it could be positioned where I needed it to be on the image. */
     position: absolute;
     top: 15%;
     left: 8%;
     text-align: left;
 }
 
-/* This is selecting the h2 tag in my second call to action. */
 .prompt-2 > h2 {
     font-family: "Vergilia";
     font-size: 2.125rem;
@@ -215,7 +208,7 @@ footer {
     background-color: #b4c978;
 }
 
-/* Layout change in mobile view. */
+/* Mobile View Layout */
 @media only screen and (max-width: 800px) {
 
     .prompt-1, .prompt-2 {
@@ -250,14 +243,13 @@ footer {
 
 }
 
-/*** - Our Flavors Page - ***/
+/********** - Our Flavors Page - **********/
 
 .all-flvr-header {
     text-align: center;
     margin: 40px 0;
 }
 
-/* Selecting the title in my header on the Our Flavors Page. */
 .all-flvr-header > h2 {
     font-family: "Vergilia";
     font-size: 2rem;
@@ -265,7 +257,6 @@ footer {
     margin-bottom: 20px;
 }
 
-/* Selecting the description in my header on the Our Flavors Page. */
 .all-flvr-header > p {
     font-family: "LouisGeorgeCafe";
     font-size: 1.125rem;
@@ -273,7 +264,7 @@ footer {
     max-width: 750px;
 }
 
-/* Making a grid 3 by 2. */
+/* Making a Grid 3 by 2. */
 .all-flvr-cont {
     display: grid;
     grid-template-rows: 2fr 2fr;
@@ -285,7 +276,6 @@ footer {
     position: relative;
 }
 
-/* Adding a button that will add the item to the bag. */
 .add-btn {
     font-family: "LouisGeorgeCafeBold";
     font-size: 1.125rem;
@@ -300,7 +290,7 @@ footer {
     box-shadow: 0px 2.5px 2.5px 0px rgba(0,0,0,0.2);
 }
 
-/* This makes it so that when you hover over the button it changes to say 'Add to Bag'. */
+/* When hovering the Button it changes to say 'ADD' instead of just a '+' */
 .add-btn:hover::after {
     content: " ADD";
 }
@@ -309,7 +299,6 @@ footer {
     margin: 20px 0 40px 0;
 }
 
-/* Selecting the flavor name for each flavor. */
 .ea-flvr-grid-text > a {
     font-family: "Vergilia";
     font-size: 1.5rem;
@@ -321,7 +310,6 @@ footer {
     color: #b4c978;
 }
 
-/* Selecting the price for each flavor. */
 .ea-flvr-grid-text > p {
     font-family: "LouisGeorgeCafeBold";
     font-size: 1.125rem;
@@ -337,6 +325,7 @@ footer {
     position: relative;
 }
 
+/* This Image is above but not visible.(Zero Opacity) */
 .img-off {
     position: absolute;
     left: 0;
@@ -346,11 +335,12 @@ footer {
     transition: opacity 0.5s ease-in-out;
 }
 
+/* Then when Hovered over the Image is visible.(100 Opacity) */
 .img-off:hover {
     opacity: 1;
 }
 
-/* Layout change in mobile view. */
+/* Mobile View Layout */
 @media only screen and (max-width: 800px) {
 
     .all-flvr-header {
@@ -368,7 +358,7 @@ footer {
         max-width: 425px;
     }
 
-    /* Changing the grid to fit 2 by 3. */
+    /* Changing Grid to 2 by 3. */
     .all-flvr-cont {
         display: grid;
         grid-template-rows: 2fr 2fr 2fr;
@@ -395,8 +385,9 @@ footer {
 
 }
 
-/*** - Each Flavor - ***/
+/********** - Each Flavor - **********/
 
+/* Making Grid for content spacing to have more for Image than Info. */
 .flvr-cont {
     display: grid;
     grid-template-columns: 3fr 2fr;
@@ -590,7 +581,7 @@ footer {
     margin: 12.5px 0;
 }
 
-/* Layout change in mobile view. */
+/* Mobile View Layout */
 @media only screen and (max-width: 800px) {
 
     .flvr-cont {
