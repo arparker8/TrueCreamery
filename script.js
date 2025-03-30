@@ -6,7 +6,7 @@ True Creamery - Lactose Free Ice Cream Brand
 Document for all the Script that is being used for the project.
 */
 
-/********** - Each Flavor Page - Slide Show - **********/
+/********** - Each Flavor Page - Image Slide Show - **********/
 
 let slideIndex = 1;
 showSlides(slideIndex);
