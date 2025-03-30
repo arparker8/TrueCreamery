@@ -137,6 +137,11 @@ footer {
     margin: 10px 0 30px 0;
 }
 
+b {
+    font-family: "LouisGeorgeCafeBold";
+    color: #e19ac1;
+}
+
 .home-img {
     max-width: 70%;
     height: auto;
