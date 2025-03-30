@@ -405,10 +405,12 @@ footer {
     height: auto;
 }
 
+/* Being used in my JavaScript to selected which Images are being Displayed. */
 .flvr-img-slides {
     display: none;
 }
 
+/* When Displayed though the Images will Fill the Space. */
 .flvr-img-slides img {
     width: 100%;
     max-height: 100%;
