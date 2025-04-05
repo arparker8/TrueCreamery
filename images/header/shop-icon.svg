@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Shop_Icon" data-name="Shop Icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 183.88 179.86">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #745e4b;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 13px;
+      }
+    </style>
+  </defs>
+  <path class="cls-1" d="M13.1,50.81h157.68c3.14,0,5.68,2.55,5.68,5.68v72.91c0,23.94-19.44,43.38-43.38,43.38H50.73c-23.9,0-43.31-19.41-43.31-43.31V56.5c0-3.14,2.55-5.68,5.68-5.68Z"/>
+  <path class="cls-1" d="M142.38,68.49v-10.82c0-27.97-22.56-50.6-50.44-50.6-27.88,0-50.44,22.63-50.44,50.6v-.33,10.23"/>
+</svg>
