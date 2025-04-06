@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Email" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 6 6">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: .09px;
+      }
+
+      .cls-1, .cls-2 {
+        stroke: #7c8a42;
+      }
+
+      .cls-2 {
+        fill: #fff;
+        stroke-miterlimit: 10;
+        stroke-width: .08px;
+      }
+
+      .cls-3 {
+        fill: #b4c978;
+      }
+    </style>
+  </defs>
+  <rect class="cls-3" x="-.07" y="-.07" width="6.15" height="6.15"/>
+  <rect class="cls-2" x="1" y="1.55" width="4" height="2.9" rx=".2" ry=".2"/>
+  <polyline class="cls-1" points="4.94 1.62 4.93 1.62 2.99 3.23 1.07 1.62"/>
+</svg>
