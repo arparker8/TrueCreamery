@@ -831,6 +831,7 @@ b {
 
     .contact-stickers {
         width: 8%;
+        height: auto;
     }
 
     .contact-info-cont > h2, .contact-form > h2 {
