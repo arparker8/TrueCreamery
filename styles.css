@@ -844,6 +844,11 @@ b {
         font-size: 1rem;
     }
 
+    .contact-form {
+        display: block;
+        justify-self: center;
+    }
+
     .contact-form > form > input {
         width: 290px;
     }
