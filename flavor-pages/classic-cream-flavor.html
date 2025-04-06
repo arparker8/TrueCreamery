@@ -17,18 +17,39 @@ Classic Cream Flavor - Description, Price, Add to Bag button, Ingredients and ca
     <body>
         <!-- Container for my Header and Nav -->
         <div class="top-banner">
+            <!-- Nav holding the Menu Icon for Mobile -->
+            <nav class="mobile-menu">
+                <a href="#"><img src="../images/header/mobile-menu.svg" alt="Mobile Menu" class="icons hamburger"></a>
+            </nav>
             <!-- Header holding logo -->
             <header>
-                <a href="../index.html"><img src="../images/logo.svg" alt="True Creamery Logo" class="logo"></a>
+                <a href="../index.html"><img src="../images/header/logo.svg" alt="True Creamery Logo" class="logo"></a>
             </header>
-            <!-- Nav holding all the links -->
-            <nav>
+            <!-- Nav holding the Menu for Desktop -->
+            <nav class="menu">
                 <a href="../our-flavors.html">Our Flavors</a>
                 <a href="#">Our Story</a>
-                <a href="#">Contact</a>
-                <a href="#"><img src="../images/search-icon.svg" alt="Search icon" class="icons"></a>
-                <a href="#"><img src="../images/shop-icon.svg" alt="Shop icon" class="icons"></a>
+                <a href="../contact.html">Contact</a>
+                <input type="text" placeholder="Search" id="search-text-box">
+                <a href="#"><img src="../images/header/search-icon.svg" alt="Search icon" class="icons search"></a>
+                <a href="#"><img src="../images/header/shop-icon.svg" alt="Shop icon" class="icons"></a>
             </nav>
+            <!-- Nav holding the Bag Icon for Mobile -->
+            <nav class="mobile-menu">
+                <a href="#"><img src="../images/header/shop-icon.svg" alt="Shop icon" class="icons"></a>
+            </nav>
+        </div>
+        <!-- The Links under Menu Icon for Mobile -->
+        <div class="mobile-links">
+            <ul>
+                <li>
+                    <a href="#"><img src="../images/header/search-icon.svg" alt="Search icon" class="icons search"></a>
+                    <input type="text" placeholder="Search" id="search-text-box">
+                </li>
+                <li><a href="../our-flavors.html">Our Flavors</a></li>
+                <li><a href="#">Our Story</a></li>
+                <li><a href="../contact.html">Contact</a></li>
+            </ul>
         </div>
         <!-- Container for Content on Page-->
         <div class="flvr-cont">
@@ -81,7 +102,7 @@ Classic Cream Flavor - Description, Price, Add to Bag button, Ingredients and ca
                 <h3>INGREDIENTS</h3>
                 <p class="flvr-ingredients">Lactose-Free Whole Milk, Lactose-Free Heavy Cream, Granulated Sugar, Vanilla Bean, and Salt.</p>
                 <div class="flvr-delivery">
-                    <img src="../images/delivery-sticker.svg" alt="Delivery icon image." class="delivery-sticker">
+                    <img src="../images/stickers/delivery-sticker.svg" alt="Delivery icon image." class="delivery-sticker">
                     <h3>DELIVERY</h3>
                     <ul>
                         <li>Able to get every flavor in all 50 states!</li>
@@ -97,6 +118,7 @@ Classic Cream Flavor - Description, Price, Add to Bag button, Ingredients and ca
             <p>FAQ</p>
             <p>© 2025 True Creamery All Rights Reserved</p>
         </footer>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
         <script src="../script.js"></script>
     </body>
 </html>
