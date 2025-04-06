@@ -127,15 +127,18 @@ footer {
         }
         
         /* Items in Header needed to be Centered Horizontally. */
-        header, .mobile-menu {
-            display: flex;
-            align-items: center;
-            padding: 20px;
+        .mobile-menu {
+            display: inline;
+            align-self: center;
+        }
+
+        .icons {
+            margin: 0 20px;
         }
 
         .logo {
-            height: 90px;
-            width: 290px;
+            height: 80px;
+            width: 280px;
         }
 
         .menu {
@@ -145,7 +148,8 @@ footer {
         .mobile-links > ul > li {
             list-style: none;
             padding: 20px 0;
-            border: #75445f 1px solid;
+            border: #7c8a42 0.5px solid;
+            text-align: center;
         }
         
         .mobile-links > ul > li > a {
