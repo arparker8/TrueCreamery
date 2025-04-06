@@ -120,10 +120,8 @@ footer {
 /* Mobile View Layout */
 @media only screen and (max-width: 800px) {
 
-        /* Styling for div of Header and Nav. Stacking them to visually fit on screen size. */
         .top-banner {
-            display: flex;
-            justify-content: space-between;
+            display: inline-flex;
         }
         
         /* Items in Header needed to be Centered Horizontally. */
