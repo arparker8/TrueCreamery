@@ -50,7 +50,7 @@ html {
 header, .menu {
     display: flex;
     align-items: center;
-    padding: 20px;
+    margin: 20px;
 }
 
 .logo {
@@ -133,9 +133,13 @@ footer {
         .hamburger {
             margin-left: 20px;
         }
+
+        .header {
+            margin: 0;
+        }
         
         .logo {
-            width: 250px;
+            width: 230px;
             height: auto;
         }
 
