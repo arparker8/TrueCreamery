@@ -764,6 +764,7 @@ b {
 }
 
 .contact-form {
+    display: block;
     justify-self: center;
 }
 
@@ -841,11 +842,6 @@ b {
 
     .contact-info > p {
         font-size: 1rem;
-    }
-
-    .contact-form {
-        display: block;
-        justify-content: center;
     }
 
     .contact-form > form > input {
