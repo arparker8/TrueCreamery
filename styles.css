@@ -1,0 +1,851 @@
+/* 
+Ashleigh Parker - MGD2041
+
+True Creamery - Lactose Free Ice Cream Brand
+
+Styling all pages as well as making them responsive for mobile.
+*/
+
+/********** - All Pages - **********/
+
+/* Resetting the Spacing on all Elements.  */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Adding Fonts */
+@font-face {
+    font-family: "Vergilia";
+    src: url(fonts/Vergilia-mL6aa.ttf);
+}
+
+@font-face {
+    font-family: "LouisGeorgeCafe";
+    src: url(fonts/Louis\ George\ Cafe.ttf);
+}
+
+@font-face {
+    font-family: "LouisGeorgeCafeBold";
+    src: url(fonts/Louis\ George\ Cafe\ Bold.ttf)
+}
+
+/* Setting Font-Size for Website so rem units could be used. Making it more responsive. */
+html {
+    font-size: 16px;
+}
+
+/* Styling for div of Header and Nav. To have a Drop-Shadow and stay at the Top when Scrolling. */
+.top-banner {
+    display: flex;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    background-color: white;
+    box-shadow: 0px 2.5px 10px 0px rgba(0,0,0,0.2);
+}
+
+/* Making Header and Nav centered vertically. */
+header, .menu {
+    display: flex;
+    align-items: center;
+    margin: 20px;
+}
+
+.logo {
+    height: 100px;
+    width: 300px;
+}
+
+/* Selecting the Links in the Nav */
+.menu > a {
+    font-family: "LouisGeorgeCafeBold";
+    font-size: 1.125rem;
+    color: #745e4b;
+    text-decoration: none;
+    margin: 0 30px;
+}
+
+/* Adding a Line underneath the Nav Links when Hovering. */
+.menu > a:hover {
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-decoration-color: #b4c978;
+    text-underline-offset: 6px;
+}
+
+.mobile-menu {
+    display: none;
+}
+
+.mobile-links {
+    display: none;
+}
+
+.icons {
+    height: 25px;
+    width: 25px;
+}
+
+#search-text-box {
+    font-family: "LouisGeorgeCafe";
+    font-size: 1.125rem;
+    color: black;
+    background-color: rgba(0,0,0,0.07);
+    display: none;
+    max-width: 175px;
+    padding: 8px 10px;
+    border: none;
+}
+
+#search-text-box:focus {
+    outline: none;
+}
+
+#search-text-box::placeholder {
+    color: rgba(0,0,0,0.4)
+}
+
+footer {
+    font-family: "LouisGeorgeCafe";
+    color: #745e4b;
+    background-color: #ede6d9;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Mobile View Layout */
+@media only screen and (max-width: 800px) {
+
+        .top-banner {
+            display: flex;
+        }
+        
+        /* Items in Header needed to be Centered Horizontally. */
+        .mobile-menu {
+            display: inline-flex;
+            align-self: center;
+        }
+
+        .hamburger {
+            margin-left: 20px;
+        }
+
+        .header {
+            margin: 0;
+        }
+        
+        .logo {
+            width: 230px;
+            height: auto;
+        }
+
+        .shop {
+            margin-right: 20px;
+        }
+
+        .menu {
+            display: none;
+        }
+
+        .mobile-links > ul > li {
+            list-style: none;
+            padding: 20px 0;
+            border: #7c8a42 0.5px solid;
+            text-align: center;
+        }
+        
+        .mobile-links > ul > li > a {
+            font-family: "LouisGeorgeCafeBold";
+            font-size: 1.125rem;
+            color: #745e4b;
+            text-decoration: none;
+            padding: 0 40px;
+        }
+        
+        .mobile-links > ul > li > a:hover {
+            text-decoration: underline;
+            text-decoration-thickness: 2px;
+            text-decoration-color: #b4c978;
+            text-underline-offset: 8px;
+        }
+
+        .search {
+            align-items: center;
+        }
+
+        #search-text-box {
+            display: inline;
+            align-items: center;
+        }
+    
+        footer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            padding: 10px;
+        }
+    
+        footer > p {
+            margin: 5px 10px;
+        }
+}
+
+/********** - Home(index) Page - **********/
+
+.prompt-1 > p, .prompt-2 > p {
+    font-family: "LouisGeorgeCafe";
+    margin: 10px 0 30px 0;
+}
+
+b {
+    font-family: "LouisGeorgeCafeBold";
+    color: #e19ac1;
+}
+
+.home-img {
+    max-width: 70%;
+    height: auto;
+}
+
+.prompt-cont-1 {
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.prompt-1 {
+    position: absolute;
+    top: 15%;
+    right: 8%;
+    text-align: right;
+}
+
+.prompt-1 > h2 {
+    font-family: "Vergilia";
+    font-size: 2.125rem;
+    color: #75445f;
+}
+
+.shop-now-btn {
+    font-family: "LouisGeorgeCafeBold";
+    font-size: 1.125rem;
+    color: white;
+    background-color: #75445f;
+    text-decoration: none;
+    padding: 10px 20px;
+    box-shadow: 0px 2.5px 2.5px 0px rgba(0,0,0,0.2);
+}
+
+.shop-now-btn:hover {
+    background-color: #e19ac1;
+}
+
+.prompt-cont-2 {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.prompt-2 {
+    position: absolute;
+    top: 15%;
+    left: 8%;
+    text-align: left;
+}
+
+.prompt-2 > h2 {
+    font-family: "Vergilia";
+    font-size: 2.125rem;
+    color: #7c8a42;
+}
+
+.explore-btn {
+    font-family: "LouisGeorgeCafeBold";
+    font-size: 1.125rem;
+    color: white;
+    background-color: #7c8a42;
+    text-decoration: none;
+    padding: 10px 20px;
+    box-shadow: 0px 2.5px 2.5px 0px rgba(0,0,0,0.2);
+}
+
+.explore-btn:hover {
+    background-color: #b4c978;
+}
+
+/* Mobile View Layout */
+@media only screen and (max-width: 800px) {
+
+    .prompt-1, .prompt-2 {
+        text-align: center;
+        position: static;
+        margin: 30px 30px 40px 30px;
+    }
+
+    .prompt-cont-1 {
+        display: block;
+        text-align: left;
+        position: static;
+    }
+
+    .prompt-cont-2 {
+        display: block;
+        text-align: right;
+        position: static;
+    }
+
+    .prompt-1 > h2, .prompt-2 > h2 {
+        font-size: 1.5rem;
+    }
+
+    .prompt-1 > p, .prompt-2 > p {
+        font-size: 1rem;
+    }
+
+    .shop-now-btn, .explore-btn {
+        font-size: 1rem;
+    }
+
+}
+
+/********** - Our Flavors Page - **********/
+
+.all-flvr-header {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.all-flvr-header > h2 {
+    font-family: "Vergilia";
+    font-size: 2rem;
+    color: #75445f;
+    margin-bottom: 20px;
+}
+
+.all-flvr-header > p {
+    font-family: "LouisGeorgeCafe";
+    font-size: 1.125rem;
+    justify-self: center;
+    max-width: 750px;
+}
+
+/* Making a Grid 3 by 2. */
+.all-flvr-cont {
+    display: grid;
+    grid-template-rows: 2fr 2fr;
+    grid-template-columns: 2fr 2fr 2fr;
+}
+
+.ea-flvr-grid {
+    text-align: center;
+    position: relative;
+}
+
+.add-btn {
+    font-family: "LouisGeorgeCafeBold";
+    font-size: 1.125rem;
+    color: white;
+    background-color: #7c8a42;
+    padding: 5px 10px;
+    position: absolute;
+    top: 5%;
+    right: 15%;
+    text-align: center;
+    text-decoration: none;
+    box-shadow: 0px 2.5px 2.5px 0px rgba(0,0,0,0.2);
+}
+
+/* When hovering the Button it changes to say 'ADD' instead of just a '+' */
+.add-btn:hover::after {
+    content: " ADD";
+}
+
+.ea-flvr-grid-text {
+    margin: 20px 0 40px 0;
+}
+
+.ea-flvr-grid-text > a {
+    font-family: "Vergilia";
+    font-size: 1.5rem;
+    color: #7c8a42;
+    text-decoration: none;
+}
+
+.ea-flvr-grid-text > a:hover {
+    color: #b4c978;
+}
+
+.ea-flvr-grid-text > p {
+    font-family: "LouisGeorgeCafeBold";
+    font-size: 1.125rem;
+    margin-top: 15px;
+}
+
+.all-flvr-img {
+    max-width: 80%;
+    height: auto;
+}
+
+.img-on {
+    position: relative;
+}
+
+/* This Image is above but not visible.(Zero Opacity) */
+.img-off {
+    position: absolute;
+    left: 0;
+    right: 0;
+    justify-self: center;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+/* Then when Hovered over the Image is visible.(100 Opacity) */
+.img-off:hover {
+    opacity: 1;
+}
+
+/* Mobile View Layout */
+@media only screen and (max-width: 800px) {
+
+    .all-flvr-header {
+        margin: 20px 0;
+    }
+    
+    .all-flvr-header > h2 {
+        font-size: 1.5rem;
+        margin: 10px 0;
+    }
+
+    .all-flvr-header > p {
+        font-size: 1rem;
+        margin: 0 40px;
+        max-width: 425px;
+    }
+
+    /* Changing Grid to 2 by 3. */
+    .all-flvr-cont {
+        display: grid;
+        grid-template-rows: 2fr 2fr 2fr;
+        grid-template-columns: 2fr 2fr;
+        margin-bottom: 20px;
+    }
+
+    .ea-flvr-grid-text {
+        margin: 0 10px;
+    }
+
+    .add-btn {
+        padding: 5px 10px;
+        font-size: 1rem;
+    }
+
+    .ea-flvr-grid-text > a {
+        font-size: 1rem;
+    }
+
+    .ea-flvr-grid-text > p {
+        font-size: 1rem;
+    }
+
+}
+
+/********** - Each Flavor - **********/
+
+/* Making Grid for content spacing to have more for Image than Info. */
+.flvr-cont {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    justify-items: center;
+}
+
+.flvr-img-cont {
+    margin: 20px;
+    position: relative;
+    max-width: 600px;
+}
+
+.flvr-img {
+    max-width: 80%;
+    height: auto;
+}
+
+/* Being used in my JavaScript to selected which Images are being Displayed. */
+.flvr-img-slides {
+    display: none;
+}
+
+/* When Displayed though the Images will Fill the Space. */
+.flvr-img-slides img {
+    width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.cursor {
+    cursor: pointer;
+}
+
+.slides-prev-btn {
+    cursor: pointer;
+    position: absolute;
+    top: 40%;
+    left: 0;
+    padding: 5px 10px;
+    color: rgba(0, 0, 0, 0.5);
+    font-family: "LouisGeorgeCafeBold";
+    font-size: 1.5rem;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+.slides-next-btn {
+    cursor: pointer;
+    position: absolute;
+    top: 40%;
+    right: 0;
+    padding: 5px 10px;
+    color: rgba(0, 0, 0, 0.5);
+    font-family: "LouisGeorgeCafeBold";
+    font-size: 1.5rem;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+.slides-next-btn:hover, .slides-prev-btn:hover {
+    color: white;
+    background-color: #7c8a42;
+}
+
+.slides-num-text {
+    color:rgba(0, 0, 0, 0.5);
+    font-family: "LouisGeorgeCafeBold";
+    padding: 10px 15px;
+    position: absolute;
+    top: 0;
+}
+
+.flvr-img-caption-cont {
+    text-align: left;
+    padding: 2px 15px;
+    color: #75445f;
+}
+
+.thumbnail-row {
+    display: flex;
+    justify-content: center;
+}
+
+.thumbnail-row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.thumbnail-column {
+    width: 15%;
+    margin: 0 10px;
+}
+
+.thumbnail-column img {
+    max-width: 100%;
+}
+
+.demo {
+    opacity: 0.6;
+}
+
+.active, .demo:hover {
+    opacity: 1;
+}
+
+.flvr-img-caption {
+    font-family: "LouisGeorgeCafe";
+    font-size: 0.875rem;
+    color: #745e4b;
+    margin: 10px 0;
+    text-align: right;
+}
+
+.flvr-text-cont {
+    margin-right: 50px;
+}
+
+.flvr-text-cont > h2 {
+    font-family: "Vergilia";
+    font-size: 2rem;
+    color: #75445f;
+    margin-top: 40px;
+}
+
+.flvr-text-cont > p {
+    font-family: "LouisGeorgeCafe";
+    font-size: 1.125rem;
+    margin: 30px 0;
+}
+
+.flvr-text-cont > .flvr-price {
+    font-family: "LouisGeorgeCafeBold";
+    font-size: 1.875rem;
+    margin-bottom: 30px;
+}
+
+.add-to-bag-btn {
+    font-family: "LouisGeorgeCafeBold";
+    font-size: 1.125rem;
+    color: white;
+    background-color: #7c8a42;
+    text-decoration: none;
+    display: flex;
+    max-width: 100%;
+    justify-content: center;
+    padding: 10px 20px;
+    box-shadow: 0px 2.5px 2.5px 0px rgba(0,0,0,0.2);
+}
+
+.add-to-bag-btn:hover {
+    background-color: #b4c978;
+}
+
+.flvr-text-cont > h3 {
+    font-family: "Vergilia";
+    font-size: 1.125rem;
+    color: #75445f;
+    margin-top: 50px;
+}
+
+.flvr-text-cont > .flvr-ingredients {
+    font-family: "LouisGeorgeCafe";
+    font-size: 1rem;
+    margin: 10px 0;
+}
+
+.flvr-delivery {
+    align-items: center;
+}
+
+.delivery-sticker {
+    width: 20%;
+    height: auto;
+    float: left;
+    box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.2);
+    margin-right: 25px;
+}
+
+.flvr-delivery > h3 {
+    font-family: "Vergilia";
+    font-size: 1.5rem;
+    color: #75445f;
+    margin-top: 70px;
+}
+
+.flvr-delivery > ul {
+    font-family: "LouisGeorgeCafe";
+    font-size: 1.125rem;
+    list-style-type: none;
+}
+
+.flvr-delivery > ul > li {
+    margin: 12.5px 0;
+}
+
+/* Mobile View Layout */
+@media only screen and (max-width: 800px) {
+
+    .flvr-cont {
+        display: block;
+        text-align: center;
+    }
+
+    .flvr-img-cont {
+        max-width: 420px;
+        margin: 20px;
+    }
+
+    .flvr-text-cont {
+        display: inline-block;
+        text-align: center;
+        max-width: 420px;
+        margin: 0 30px 20px 30px;
+    }
+
+    .flvr-text-cont > h2 {
+        font-size: 1.5rem;
+        margin-top: 0;
+    }
+
+    .flvr-text-cont > p {
+        text-align: left;
+        font-size: 1rem;
+    }
+
+    .flvr-text-cont > .flvr-price {
+        font-size: 1.5rem;
+    }
+
+    .flvr-text-cont > h3 {
+        text-align: left;
+    }
+
+    .delivery-sticker {
+        margin-bottom: 25px;
+    }
+
+    .flvr-delivery {
+        text-align: left;
+    }
+
+    .flvr-delivery > h3 {
+        margin-top: 50px;
+    }
+}
+
+/********** - Contact - **********/
+
+.contact-cont {
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+}
+
+.contact-info-cont > h2, .contact-form > h2 {
+    font-family: "Vergilia";
+    font-size: 2rem;
+    color: #75445f;
+    margin: 40px 0 20px 0;
+}
+
+.contact-stickers {
+    width: 8%;
+    height: auto;
+    box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.2);
+}
+
+.contact-info-cont {
+    margin: 0 50px;
+}
+
+.contact-info {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.contact-info > h3 {
+    font-family: "LouisGeorgeCafeBold";
+    font-size: 1.5rem;
+    color: #7c8a42;
+    margin-left: 20px;
+}
+
+.contact-info > p {
+    font-family: "LouisGeorgeCafe";
+    font-size: 1.125rem;
+    margin-left: 20px;
+}
+
+.contact-info > p:hover {
+    text-decoration: underline;
+    text-decoration-thickness: 1.5px;
+    text-decoration-color: #b4c978;
+    text-underline-offset: 6px;
+}
+
+.googleMap {
+    width: 100%;
+    height: 300px;
+    border: none;
+    box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.2);
+    margin: 20px 0 40px 0;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    width: 60%;
+}
+
+.contact-form > form > label {
+    font-family: "LouisGeorgeCafeBold";
+    font-size: 1.125rem;
+    color: #7c8a42;
+}
+
+.contact-form > form > input {
+    font-family: "LouisGeorgeCafe";
+    font-size: 1rem;
+    color: black;
+    background-color: rgba(0,0,0,0.07);
+    border: none;
+    padding: 0 10px;
+    margin: 10px 0;
+    width: 100%;
+    height: 30px;
+}
+
+.contact-form > form > input:focus {
+    outline: 1px solid #7c8a42;
+}
+
+.contact-form > form > textarea {
+    font-family: "LouisGeorgeCafe";
+    font-size: 1rem;
+    color: black;
+    background-color: rgba(0,0,0,0.07);
+    border: none;
+    padding: 10px;
+    margin-top: 10px;
+    width: 100%;
+    height: 200px;
+}
+
+.contact-form > form > textarea:focus {
+    outline: 1px solid #7c8a42;
+}
+
+#submit {
+    font-family: "LouisGeorgeCafeBold";
+    font-size: 1.125rem;
+    color: white;
+    background-color: #7c8a42;
+    border: none;
+    height: 40px;
+    box-shadow: 0px 2.5px 2.5px 0px rgba(0,0,0,0.2);
+}
+
+#submit:hover {
+    background-color: #b4c978;
+}
+
+/* Mobile View Layout */
+@media only screen and (max-width: 800px) {
+
+    .contact-cont {
+        display: block;
+    }
+
+    .contact-stickers {
+        width: 8%;
+    }
+
+    .contact-info-cont > h2, .contact-form > h2 {
+        font-size: 1.5rem;
+    }
+
+    .contact-info > h3 {
+        font-size: 1.125rem;
+    }
+
+    .contact-info > p {
+        font-size: 1rem;
+    }
+
+    .contact-form {
+        margin-bottom: 40px;
+    }
+}
