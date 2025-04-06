@@ -121,22 +121,26 @@ footer {
 @media only screen and (max-width: 800px) {
 
         .top-banner {
-            display: inline-flex;
+            display: flex;
         }
         
         /* Items in Header needed to be Centered Horizontally. */
         .mobile-menu {
-            display: inline;
+            display: inline-flex;
             align-self: center;
         }
 
-        .icons {
-            margin: 0 20px;
+        .hamburger {
+            margin-left: 20px;
+        }
+        
+        .logo {
+            width: 250px;
+            height: auto;
         }
 
-        .logo {
-            height: 80px;
-            width: 280px;
+        .shop {
+            margin-right: 20px;
         }
 
         .menu {
