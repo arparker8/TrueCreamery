@@ -826,7 +826,7 @@ b {
 @media only screen and (max-width: 800px) {
 
     .contact-cont {
-        display: inline;
+        display: block;
     }
 
     .contact-info-cont > h2, .contact-form > h2 {
