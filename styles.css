@@ -47,7 +47,7 @@ html {
 }
 
 /* Making Header and Nav centered vertically. */
-header, nav {
+header, .menu {
     display: flex;
     align-items: center;
     padding: 20px;
@@ -59,7 +59,7 @@ header, nav {
 }
 
 /* Selecting the Links in the Nav */
-nav > a {
+.menu > a {
     font-family: "LouisGeorgeCafeBold";
     font-size: 1.125rem;
     color: #745e4b;
@@ -68,16 +68,43 @@ nav > a {
 }
 
 /* Adding a Line underneath the Nav Links when Hovering. */
-nav > a:hover {
+.menu > a:hover {
     text-decoration: underline;
     text-decoration-thickness: 2px;
     text-decoration-color: #b4c978;
-    text-underline-offset: 8px;
+    text-underline-offset: 6px;
+}
+
+.mobile-menu {
+    display: none;
+}
+
+.mobile-links {
+    display: none;
 }
 
 .icons {
     height: 25px;
     width: 25px;
+}
+
+#search-text-box {
+    font-family: "LouisGeorgeCafe";
+    font-size: 1.125rem;
+    color: black;
+    background-color: rgba(0,0,0,0.07);
+    display: none;
+    max-width: 175px;
+    padding: 8px 10px;
+    border: none;
+}
+
+#search-text-box:focus {
+    outline: none;
+}
+
+#search-text-box::placeholder {
+    color: rgba(0,0,0,0.4)
 }
 
 footer {
@@ -95,26 +122,54 @@ footer {
 
         /* Styling for div of Header and Nav. Stacking them to visually fit on screen size. */
         .top-banner {
-            display: block;
+            display: flex;
+            justify-content: space-between;
         }
         
         /* Items in Header needed to be Centered Horizontally. */
-        header {
+        header, .mobile-menu {
             display: flex;
-            justify-content: center;
-            padding: 10px;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .logo {
+            height: 90px;
+            width: 290px;
+        }
+
+        .menu {
+            display: none;
+        }
+
+        .mobile-links > ul > li {
+            list-style: none;
+            padding: 20px 0;
+            border: #75445f 1px solid;
         }
         
-        /* Items in Nav Needed to be Spaced Evenly Horizontally. */
-        nav {
-            display: flex;
-            justify-content: space-evenly;
-            padding: 10px;
+        .mobile-links > ul > li > a {
+            font-family: "LouisGeorgeCafeBold";
+            font-size: 1.125rem;
+            color: #745e4b;
+            text-decoration: none;
+            padding: 0 40px;
         }
-    
-        nav > a {
-            font-size: 1rem;
-            margin: 0 10px;
+        
+        .mobile-links > ul > li > a:hover {
+            text-decoration: underline;
+            text-decoration-thickness: 2px;
+            text-decoration-color: #b4c978;
+            text-underline-offset: 8px;
+        }
+
+        .search {
+            align-items: center;
+        }
+
+        #search-text-box {
+            display: inline;
+            align-items: center;
         }
     
         footer {
@@ -568,6 +623,7 @@ b {
     width: 20%;
     height: auto;
     float: left;
+    box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.2);
     margin-right: 25px;
 }
 
@@ -636,5 +692,144 @@ b {
 
     .flvr-delivery > h3 {
         margin-top: 50px;
+    }
+}
+
+/********** - Contact - **********/
+
+.contact-cont {
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+}
+
+.contact-info-cont > h2, .contact-form > h2 {
+    font-family: "Vergilia";
+    font-size: 2rem;
+    color: #75445f;
+    margin: 40px 0 20px 0;
+}
+
+.contact-stickers {
+    width: 8%;
+    height: auto;
+    box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.2);
+}
+
+.contact-info-cont {
+    margin: 0 50px;
+}
+
+.contact-info {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.contact-info > h3 {
+    font-family: "LouisGeorgeCafeBold";
+    font-size: 1.5rem;
+    color: #7c8a42;
+    margin-left: 20px;
+}
+
+.contact-info > p {
+    font-family: "LouisGeorgeCafe";
+    font-size: 1.125rem;
+    margin-left: 20px;
+}
+
+.contact-info > p:hover {
+    text-decoration: underline;
+    text-decoration-thickness: 1.5px;
+    text-decoration-color: #b4c978;
+    text-underline-offset: 6px;
+}
+
+.googleMap {
+    width: 100%;
+    height: 300px;
+    border: none;
+    box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.2);
+    margin: 20px 0 40px 0;
+}
+
+.contact-form {
+    justify-self: center;
+}
+
+.contact-form > form > label {
+    font-family: "LouisGeorgeCafeBold";
+    font-size: 1.125rem;
+    color: #7c8a42;
+}
+
+.contact-form > form > input {
+    font-family: "LouisGeorgeCafe";
+    font-size: 1rem;
+    color: black;
+    background-color: rgba(0,0,0,0.07);
+    border: none;
+    padding-left: 10px;
+    margin: 10px 0;
+    width: 490px;
+    height: 30px;
+}
+
+.contact-form > form > input:focus {
+    outline: 1px solid #7c8a42;
+}
+
+.contact-form > form > textarea {
+    font-family: "LouisGeorgeCafe";
+    font-size: 1rem;
+    color: black;
+    background-color: rgba(0,0,0,0.07);
+    border: none;
+    padding: 10px;
+    margin-top: 10px;
+    width: 480px;
+    height: 200px;
+}
+
+.contact-form > form > textarea:focus {
+    outline: 1px solid #7c8a42;
+}
+
+#submit {
+    font-family: "LouisGeorgeCafeBold";
+    font-size: 1.125rem;
+    color: white;
+    background-color: #7c8a42;
+    width: 500px;
+    height: 40px;
+    border: none;
+    box-shadow: 0px 2.5px 2.5px 0px rgba(0,0,0,0.2);
+}
+
+#submit:hover {
+    background-color: #b4c978;
+}
+
+/* Mobile View Layout */
+@media only screen and (max-width: 800px) {
+
+    .contact-cont {
+        display: block;
+    }
+
+    .contact-form {
+        margin-bottom: 40px;
+    }
+
+    .contact-info-cont > h2, .contact-form > h2 {
+        font-size: 1.5rem;
+    }
+
+    .contact-info > h3 {
+        font-size: 1.125rem;
+    }
+
+    .contact-info > p {
+        font-size: 1rem;
     }
 }

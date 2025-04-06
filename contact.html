@@ -3,7 +3,7 @@ Ashleigh Parker - MGD2041
 
 True Creamery - Lactose Free Ice Cream Brand
 
-Homepage - Has two call prompts with imagery.
+Contact Page - With contact info, form to ask Q&A's, and a API Google map for location.
 -->
 
 <!DOCTYPE html>
@@ -29,7 +29,7 @@ Homepage - Has two call prompts with imagery.
             <nav class="menu">
                 <a href="./our-flavors.html">Our Flavors</a>
                 <a href="#">Our Story</a>
-                <a href="./contact.html">Contact</a>
+                <a href="#">Contact</a>
                 <input type="text" placeholder="Search" id="search-text-box">
                 <a href="#"><img src="./images/header/search-icon.svg" alt="Search icon" class="icons search"></a>
                 <a href="#"><img src="./images/header/shop-icon.svg" alt="Shop icon" class="icons"></a>
@@ -51,25 +51,44 @@ Homepage - Has two call prompts with imagery.
                 <li><a href="./contact.html">Contact</a></li>
             </ul>
         </div>
-        <!-- Container for first prompt with image -->
-        <div class="prompt-cont-1">
-            <!-- Container for text and button -->
-            <div class="prompt-1">
-                <h2>Try our Simply Chocolate!</h2>
-                <p>Deep, decadent flavor in every smooth, creamy scoop!<br>Our <b>Flavor of the Month</b>, grab yours today!</p>
-                <a href="./flavor-pages/simply-chocolate-flavor.html" class="shop-now-btn">SHOP NOW</a>
+        <div class="contact-cont">
+            <div class="contact-info-cont">
+                <h2>CONTACT US</h2>
+                <div class="contact-info">
+                    <img src="./images/stickers/address-sticker.svg" alt="" class="contact-stickers">
+                    <h3  id="address">Address:</h3>
+                    <p>123 Creamery W, Parker, CO, 80138</p>
+                </div>
+                <div class="contact-info">
+                    <img src="./images/stickers/mail-sticker.svg" alt="" class="contact-stickers">
+                    <h3>Email:</h3>
+                    <p>truecreamery@gmail.com</p>
+                </div>
+                <div class="contact-info">
+                    <img src="./images/stickers/phone-sticker.svg" alt="" class="contact-stickers">
+                    <h3>Phone:</h3>
+                    <p>1-123-123-1234</p>
+                </div>
+                
+                <div>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d20707.273633031!2d-104.78086348691653!3d39.510999340163956!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x876c91ce239a3d55%3A0xd49aeed43d2e2426!2sParker%2C%20CO!5e0!3m2!1sen!2sus!4v1743569344915!5m2!1sen!2sus" 
+                    class="googleMap" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
             </div>
-            <img src="./images/top-view-chocolate-cup.jpg" alt="Chocolate ice cream in a cup." class="home-img">          
-        </div>
-        <!-- Container for second prompt with image -->
-        <div class="prompt-cont-2">
-            <!-- Container for text and button -->
-            <div class="prompt-2">
-                <h2>Enjoy every Scoop!</h2>
-                <p>Authentic taste and 100% lactose free!</p>
-                <a href="./our-flavors.html" class="explore-btn">EXPLORE OUR FLAVORS</a>
-            </div>
-            <img src="./images/two-pint-packaging.jpg" alt="True Creamery two pint packaging." class="home-img">
+            <div class="contact-form">
+                <h2>MESSAGE US</h2>
+                <form action="">
+                    <label for="name">Name:</label><br>
+                    <input type="text" name="name" id="name"><br>
+                    <label for="email">Email Address:</label><br>
+                    <input type="email" name="email" id="email"><br>
+                    <label for="phone">Phone Number:</label><br>
+                    <input type="phone" name="phone" id="phone"><br>
+                    <label for="message">Message:</label><br>
+                    <textarea name="message" id="message"></textarea><br>
+                    <input type="submit" value="SUBMIT" id="submit">
+                </form>
+            </div>            
         </div>
         <!-- Footer with rights info -->
         <footer>

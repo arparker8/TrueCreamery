@@ -6,6 +6,31 @@ True Creamery - Lactose Free Ice Cream Brand
 Document for all the Script that is being used for the project.
 */
 
+/********** - All Pages - Mobile Menu - **********/
+
+$(document).ready(function(){
+
+    $(".hamburger").click(function(){
+        $(".mobile-links").toggle();
+    })
+})
+
+/********** - All Pages - Search Icon - **********/
+
+$(document).ready(function(){
+
+    $(".search").click(function(){
+      $("#search-text-box").toggle();
+    });
+});
+
+document.getElementById("search-text-box").addEventListener("keydown", function(event) {
+    if (event.keyCode === 13) {
+        alert ("Search Complete")
+        window.location.reload();
+    }
+})
+
 /********** - Each Flavor Page - Image Slide Show - **********/
 
 let slideIndex = 1;
