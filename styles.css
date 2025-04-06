@@ -826,11 +826,7 @@ b {
 @media only screen and (max-width: 800px) {
 
     .contact-cont {
-        display: block;
-    }
-
-    .contact-form {
-        margin-bottom: 40px;
+        display: inline;
     }
 
     .contact-info-cont > h2, .contact-form > h2 {
@@ -843,5 +839,9 @@ b {
 
     .contact-info > p {
         font-size: 1rem;
+    }
+
+    .contact-form {
+        margin-bottom: 40px;
     }
 }
