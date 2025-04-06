@@ -842,4 +842,16 @@ b {
     .contact-info > p {
         font-size: 1rem;
     }
+
+    .contact-form > form > input {
+        width: 190px;
+    }
+
+    .contact-from > form > textarea {
+        width: 180px;
+    }
+
+    #submit {
+        width: 200px;
+    }
 }
