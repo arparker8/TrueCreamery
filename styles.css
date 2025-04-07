@@ -773,6 +773,7 @@ b {
     .contact-info-cont {
         display: block;
         justify-content: center;
+        max-width: 80%;
     }
 
     .contact-stickers {
