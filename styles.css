@@ -771,7 +771,7 @@ b {
     }
 
     .contact-info-cont {
-        margin: 0 30px;
+        margin: 0 25px;
     }
 
     .contact-stickers {
@@ -788,8 +788,6 @@ b {
     }
 
     .contact-info > p {
-        display: flex;
-        flex-wrap: wrap;
         font-size: 1rem;
     }
 
