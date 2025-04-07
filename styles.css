@@ -771,7 +771,8 @@ b {
     }
 
     .contact-info-cont {
-        margin: 0 25px;
+        display: block;
+        justify-content: center;
     }
 
     .contact-stickers {
