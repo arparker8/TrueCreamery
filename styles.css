@@ -741,14 +741,19 @@ b {
     align-items: center;
 }
 
-.contact-info > h3, .address-text > h3 {
+.hours-text {
+    display: flex;
+    align-items: center;
+}
+
+.contact-info > h3, .address-text > h3, .hours-text > h3 {
     font-family: "LouisGeorgeCafeBold";
     font-size: 1.5rem;
     color: #7c8a42;
     margin-left: 10px;
 }
 
-.contact-info > p, .address-text > p {
+.contact-info > p, .address-text > p, .hours-text > p {
     font-family: "LouisGeorgeCafe";
     font-size: 1.125rem;
     margin-left: 10px;
@@ -781,7 +786,7 @@ b {
     }
 
     .contact-stickers {
-        width: 35px;
+        width: 38px;
         height: auto;
     }
 
@@ -789,15 +794,23 @@ b {
         display: inline-block;
     }
 
-    .contact-info-cont > h2, .contact-form > h2 {
+    #hours-cont {
+        align-items: start;
+    }
+
+    .hours-text {
+        display: block;
+    }
+
+    .contact-info-cont > h2 {
         font-size: 1.5rem;
     }
 
-    .contact-info > h3, .address-text > h3 {
+    .contact-info > h3, .address-text > h3, .hours-text > h3 {
         font-size: 1.125rem;
     }
 
-    .contact-info > p, .address-text > p {
+    .contact-info > p, .address-text > p, .hours-text > p {
         font-size: 1rem;
     }
 
