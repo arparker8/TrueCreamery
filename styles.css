@@ -720,7 +720,7 @@ b {
 }
 
 .contact-stickers {
-    max-width: 50px;
+    max-width: 8%;
     height: auto;
     box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.2);
 }
@@ -739,7 +739,7 @@ b {
     font-family: "LouisGeorgeCafeBold";
     font-size: 1.5rem;
     color: #7c8a42;
-    margin-left: 20px;
+    margin-left: 15px;
 }
 
 .contact-info > p {
@@ -772,12 +772,6 @@ b {
 
     .contact-info-cont {
         margin: 0 30px;
-    }
-
-    .contact-stickers {
-        max-width: 30px;
-        height: auto;
-        box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.2);
     }
 
     .contact-info-cont > h2, .contact-form > h2 {
