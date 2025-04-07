@@ -774,11 +774,6 @@ b {
         margin: 0 30px;
     }
 
-    .contact-stickers {
-        max-width: 30px;
-        height: auto;
-    }
-
     .contact-info-cont > h2, .contact-form > h2 {
         font-size: 1.5rem;
     }
