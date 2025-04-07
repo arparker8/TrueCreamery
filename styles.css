@@ -786,12 +786,14 @@ b {
 
     .contact-info > h3 {
         font-size: 1.125rem;
-        margin-left: 5px;
+    }
+
+    #address {
+        margin-left: 45px;
     }
 
     .contact-info > p {
         font-size: 1rem;
-        margin-left: 5px;
     }
 
 }
