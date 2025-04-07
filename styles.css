@@ -720,7 +720,7 @@ b {
 }
 
 .contact-stickers {
-    max-width: 8%;
+    max-width: 50px;
     height: auto;
     box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.2);
 }
@@ -772,6 +772,11 @@ b {
 
     .contact-info-cont {
         margin: 0 30px;
+    }
+
+    .contact-stickers {
+        max-width: 30px;
+        height: auto;
     }
 
     .contact-info-cont > h2, .contact-form > h2 {
