@@ -731,6 +731,7 @@ b {
 
 .contact-info {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     margin: 20px 0;
 }
@@ -739,7 +740,7 @@ b {
     font-family: "LouisGeorgeCafeBold";
     font-size: 1.5rem;
     color: #7c8a42;
-    margin-left: 15px;
+    margin-left: 10px;
 }
 
 .contact-info > p {
