@@ -841,6 +841,6 @@ b {
     }
 
     .contact-form {
-        margin-bottom: 40px;
+        margin: 0 50px 40px 50px;
     }
 }
