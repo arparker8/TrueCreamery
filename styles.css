@@ -772,8 +772,9 @@ b {
 
     .contact-info-cont {
         display: block;
-        justify-content: center;
-        max-width: 80%;
+        justify-self: center;
+        width: 90%;
+        margin: 0;
     }
 
     .contact-stickers {
