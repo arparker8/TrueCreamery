@@ -764,8 +764,7 @@ b {
 }
 
 .contact-form {
-    display: flex;
-    flex-direction: column;
+    display: block;
     justify-self: center;
     width: 80%;
 }
