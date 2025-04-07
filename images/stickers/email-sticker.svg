@@ -6,17 +6,16 @@
         fill: none;
         stroke-linecap: round;
         stroke-linejoin: round;
-        stroke-width: .09px;
       }
 
       .cls-1, .cls-2 {
         stroke: #7c8a42;
+        stroke-width: .1px;
       }
 
       .cls-2 {
         fill: #fff;
         stroke-miterlimit: 10;
-        stroke-width: .08px;
       }
 
       .cls-3 {
