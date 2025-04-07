@@ -786,6 +786,7 @@ b {
 
     .contact-info > h3 {
         font-size: 1.125rem;
+        margin-left: 5px;
     }
 
     .contact-info > p {
