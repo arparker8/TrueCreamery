@@ -712,21 +712,21 @@ b {
     grid-template-columns: 2fr 2fr;
 }
 
-.contact-info-cont > h2, .contact-form > h2 {
+.contact-info-cont > h2 {
     font-family: "Vergilia";
     font-size: 2rem;
     color: #75445f;
     margin: 40px 0 20px 0;
 }
 
+.contact-info-cont {
+    margin: 0 50px;
+}
+
 .contact-stickers {
     width: 50px;
     height: auto;
     box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.2);
-}
-
-.contact-info-cont {
-    margin: 0 50px;
 }
 
 .contact-info {
@@ -736,14 +736,19 @@ b {
     margin: 20px 0;
 }
 
-.contact-info > h3 {
+.address-text {
+    display: flex;
+    align-items: center;
+}
+
+.contact-info > h3, .address-text > h3 {
     font-family: "LouisGeorgeCafeBold";
     font-size: 1.5rem;
     color: #7c8a42;
     margin-left: 10px;
 }
 
-.contact-info > p {
+.contact-info > p, .address-text > p {
     font-family: "LouisGeorgeCafe";
     font-size: 1.125rem;
     margin-left: 10px;
@@ -780,19 +785,19 @@ b {
         height: auto;
     }
 
+    .address-text {
+        display: inline-block;
+    }
+
     .contact-info-cont > h2, .contact-form > h2 {
         font-size: 1.5rem;
     }
 
-    .contact-info > h3 {
+    .contact-info > h3, .address-text > h3 {
         font-size: 1.125rem;
     }
 
-    #address {
-        margin-left: 45px;
-    }
-
-    .contact-info > p {
+    .contact-info > p, .address-text > p {
         font-size: 1rem;
     }
 
