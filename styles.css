@@ -767,7 +767,7 @@ b {
     display: flex;
     flex-direction: column;
     justify-self: center;
-    width: 60%;
+    width: 80%;
 }
 
 .contact-form > form > label {
@@ -827,11 +827,6 @@ b {
 
     .contact-cont {
         display: block;
-    }
-
-    .contact-stickers {
-        width: 8%;
-        height: auto;
     }
 
     .contact-info-cont > h2, .contact-form > h2 {
