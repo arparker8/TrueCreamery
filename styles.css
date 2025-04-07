@@ -720,7 +720,7 @@ b {
 }
 
 .contact-stickers {
-    width: 50px;
+    max-width: 50px;
     height: auto;
     box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.2);
 }
@@ -745,7 +745,7 @@ b {
 .contact-info > p {
     font-family: "LouisGeorgeCafe";
     font-size: 1.125rem;
-    margin-left: 20px;
+    margin-left: 10px;
 }
 
 .contact-info > p:hover {
@@ -775,7 +775,7 @@ b {
     }
 
     .contact-stickers {
-        width: 25px;
+        max-width: 30px;
         height: auto;
         box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.2);
     }
