@@ -712,7 +712,7 @@ b {
     grid-template-columns: 2fr 2fr;
 }
 
-.contact-info-cont > h2 {
+.contact-info-cont > h2, .message-info-cont > h2 {
     font-family: "Vergilia";
     font-size: 2rem;
     color: #75445f;
@@ -759,7 +759,7 @@ b {
     margin-left: 10px;
 }
 
-.contact-info > p:hover {
+.contact-info > p:hover, .address-text > p:hover {
     text-decoration: underline;
     text-decoration-thickness: 1.5px;
     text-decoration-color: #b4c978;
@@ -772,6 +772,61 @@ b {
     border: none;
     box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.2);
     margin: 20px 0 40px 0;
+}
+
+.message-info-cont {
+    display: flex;
+    flex-direction: column;
+    margin-left: 80px;
+}
+
+.form-cont > form > label {
+    font-family: "LouisGeorgeCafeBold";
+    font-size: 1.125rem;
+    color: #7c8a42;
+}
+
+.form-cont > form > input {
+    font-family: "LouisGeorgeCafe";
+    color: black;
+    background-color: rgba(0,0,0,0.07);
+    border: none;
+    display: block;
+    height: 25px;
+    width: 75%;
+    padding: 0 10px;
+    margin: 10px 0;
+}
+
+.form-cont > form > textarea {
+    font-family: "LouisGeorgeCafe";
+    color: black;
+    background-color: rgba(0,0,0,0.07);
+    border: none;
+    display: block;
+    height: 250px;
+    width: 75%;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+.form-cont > form > input:focus, .form-cont > form > textarea:focus {
+    outline: none;
+}
+
+#submit {
+    font-family: "LouisGeorgeCafeBold";
+    font-size: 1.125rem;
+    color: white;
+    background-color: #7c8a42;
+    border: none;
+    height: 40px;
+    width: 75%;
+    box-shadow: 0px 2.5px 2.5px 0px rgba(0,0,0,0.2);
+}
+
+#submit:hover {
+    background-color: #b4c978;
 }
 
 /* Mobile View Layout */
