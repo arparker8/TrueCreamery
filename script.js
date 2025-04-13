@@ -7,6 +7,7 @@ Document for all the Script that is being used for the project.
 */
 
 /********** - All Pages - Mobile Menu - **********/
+/* On Mobile Layout the Menu Icon when clicked toggles the below the header the Menu Links and Search. */
 
 $(document).ready(function(){
 
@@ -15,7 +16,8 @@ $(document).ready(function(){
     })
 })
 
-/********** - All Pages - Search Icon - **********/
+/********** - All Pages - **********/
+/* When Search Icon is clicked a Search Box is Toggled to Appear. When Search Box is selected and Enter is clicked an Alert Appears. After Alert Page Refreshes. */
 
 $(document).ready(function(){
 
@@ -81,7 +83,6 @@ if (document.getElementById("flvr-body")) {
 /********** - Contact Page - Sending Alert for Form Submission - **********/
 
 document.getElementById("contact-form").addEventListener("submit", function(event) {
-    event.defaultPrevented
     alert("Thank you for submitting!");
     window.location.reload();
 });
