@@ -6,19 +6,9 @@ True Creamery - Lactose Free Ice Cream Brand
 Document for all the Script that is being used for the project.
 */
 
-/********** - All Pages - Mobile Menu - **********/
-/* On Mobile Layout the Menu Icon when clicked toggles the below the header the Menu Links and Search. */
+/********** - All Pages - Search Icon - **********/
 
-$(document).ready(function(){
-
-    $(".hamburger").click(function(){
-        $(".mobile-links").toggle();
-    })
-})
-
-/********** - All Pages - **********/
-/* When Search Icon is clicked a Search Box is Toggled to Appear. When Search Box is selected and Enter is clicked an Alert Appears. After Alert Page Refreshes. */
-
+// When Search Icon is clicked a Search Box is Toggled to show.
 $(document).ready(function(){
 
     $(".search").click(function(){
@@ -26,6 +16,7 @@ $(document).ready(function(){
     });
 });
 
+// (On Desktop) When Search Box is selected and the Enter button is clicked an Alert Appears. After Alert is closed Page Refreshes.
 document.getElementById("search-desktop").addEventListener("keydown", function(event) {
     if (event.keyCode === 13) {
         alert ("Search Complete")
@@ -33,11 +24,22 @@ document.getElementById("search-desktop").addEventListener("keydown", function(e
     }
 })
 
+// (On Mobile) When Search Box is selected and the Enter button is clicked an Alert Appears. After Alert is closed Page Refreshes.
 document.getElementById("search-mobile").addEventListener("keydown", function(event) {
     if (event.keyCode === 13) {
         alert ("Search Complete")
         window.location.reload();
     }
+})
+
+/********** - All Pages - Mobile Layout - Menu Icon - **********/
+
+// The Menu Icon when clicked toggles to show below the header the Search and Menu Links.
+$(document).ready(function(){
+
+    $(".hamburger").click(function(){
+        $(".mobile-links").toggle();
+    })
 })
 
 /********** - Each Flavor Page - Image Slide Show - **********/
@@ -82,6 +84,7 @@ if (document.getElementById("flvr-body")) {
 
 /********** - Contact Page - Sending Alert for Form Submission - **********/
 
+// When Submit Button on Form is Clicked an Alert Appears. After Alert is closed Page Refreshes.
 document.getElementById("contact-form").addEventListener("submit", function(event) {
     alert("Thank you for submitting!");
     window.location.reload();
