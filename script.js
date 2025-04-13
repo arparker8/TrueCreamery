@@ -81,6 +81,7 @@ if (document.getElementById("flvr-body")) {
 /********** - Contact Page - Sending Alert for Form Submission - **********/
 
 document.getElementById("contact-form").addEventListener("submit", function(event) {
+    event.defaultPrevented
     alert("Thank you for submitting!");
     window.location.reload();
 });
