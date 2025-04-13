@@ -88,7 +88,7 @@ header, .menu {
     width: 25px;
 }
 
-#search-text-box {
+.search-text-box {
     font-family: "LouisGeorgeCafe";
     font-size: 1.125rem;
     color: black;
@@ -99,11 +99,11 @@ header, .menu {
     border: none;
 }
 
-#search-text-box:focus {
+.search-text-box:focus {
     outline: none;
 }
 
-#search-text-box::placeholder {
+.search-text-box::placeholder {
     color: rgba(0,0,0,0.4)
 }
 
@@ -177,7 +177,7 @@ footer {
             align-items: center;
         }
 
-        #search-text-box {
+        .search-text-box {
             display: inline;
             align-items: center;
         }

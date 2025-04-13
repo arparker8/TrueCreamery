@@ -20,11 +20,18 @@ $(document).ready(function(){
 $(document).ready(function(){
 
     $(".search").click(function(){
-      $("#search-text-box").toggle();
+      $(".search-text-box").toggle();
     });
 });
 
-document.getElementById("search-text-box").addEventListener("keydown", function(event) {
+document.getElementById("search-desktop").addEventListener("keydown", function(event) {
+    if (event.keyCode === 13) {
+        alert ("Search Complete")
+        window.location.reload();
+    }
+})
+
+document.getElementById("search-mobile").addEventListener("keydown", function(event) {
     if (event.keyCode === 13) {
         alert ("Search Complete")
         window.location.reload();
@@ -33,36 +40,40 @@ document.getElementById("search-text-box").addEventListener("keydown", function(
 
 /********** - Each Flavor Page - Image Slide Show - **********/
 
-let slideIndex = 1;
-showSlides(slideIndex);
 
-// Next/Previous Controls
-function plusSlides(n) {
-    showSlides(slideIndex += n);
-}
-
-// Thumbnail Image Controls
-function currentSlide(n) {
-    showSlides(slideIndex = n);
-}
-
-function showSlides(n) {
-    let i;
-    let slides = document.getElementsByClassName("flvr-img-slides");
-    let dots = document.getElementsByClassName("demo");
+if (document.getElementById("flvr-body")) {
     
-    if (n > slides.length) {
-        slideIndex = 1
+    let slideIndex = 1;
+    showSlides(slideIndex);
+
+    // Next/Previous Controls
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
     }
-    if (n < 1) {
-        slideIndex = slides.length
+
+    // Thumbnail Image Controls
+    function currentSlide(n) {
+        showSlides(slideIndex = n);
     }
-    for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
+
+    function showSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName("flvr-img-slides");
+        let dots = document.getElementsByClassName("demo");
+
+        if (n > slides.length) {
+            slideIndex = 1
+        }
+        if (n < 1) {
+            slideIndex = slides.length
+        }
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
     }
-    for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
-    }
-    slides[slideIndex - 1].style.display = "block";
-    dots[slideIndex - 1].className += " active";
 }
