@@ -455,7 +455,7 @@ b {
 
 }
 
-/********** - Each Flavor - **********/
+/********** - Each Flavor Pages - **********/
 
 /* Making Grid for content spacing to have more for Image than Info. */
 .flvr-cont {
@@ -705,7 +705,7 @@ b {
     }
 }
 
-/********** - Contact - **********/
+/********** - Contact Page - **********/
 
 .contact-cont {
     display: grid;
@@ -816,7 +816,7 @@ b {
     outline: none;
 }
 
-#submit {
+#submit, #reset {
     font-family: "LouisGeorgeCafeBold";
     font-size: 1.125rem;
     color: white;
@@ -828,7 +828,7 @@ b {
     margin-top: 15px;
 }
 
-#submit:hover {
+#submit:hover, #reset:hover {
     background-color: #b4c978;
 }
 
@@ -890,7 +890,7 @@ b {
         width: 90%;
     }
 
-    #submit {
+    #submit, #reset {
         width: 95%;
     }
 

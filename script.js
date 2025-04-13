@@ -42,7 +42,7 @@ document.getElementById("search-mobile").addEventListener("keydown", function(ev
 
 
 if (document.getElementById("flvr-body")) {
-    
+
     let slideIndex = 1;
     showSlides(slideIndex);
 
@@ -77,3 +77,10 @@ if (document.getElementById("flvr-body")) {
         dots[slideIndex - 1].className += " active";
     }
 }
+
+/********** - Contact Page - Sending Alert for Form Submission - **********/
+
+document.getElementById("contact-form").addEventListener("submit", function(event) {
+    alert("Thank you for submitting!");
+    window.location.reload();
+});
