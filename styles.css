@@ -155,7 +155,6 @@ footer {
             list-style: none;
             padding: 20px 0;
             border: #7c8a42 0.5px solid;
-            text-align: center;
         }
         
         .mobile-links > ul > li > a {
@@ -173,13 +172,15 @@ footer {
             text-underline-offset: 8px;
         }
 
-        .search {
+        .search-box {
+            display: flex;
             align-items: center;
         }
 
         .search-text-box {
             display: inline;
-            align-items: center;
+            margin-left: -25px;
+            max-width: 100%;
         }
     
         footer {
