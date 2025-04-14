@@ -44,7 +44,6 @@ $(document).ready(function(){
 
 /********** - Each Flavor Page - Image Slide Show - **********/
 
-
 if (document.getElementById("flvr-body")) {
 
     let slideIndex = 1;
@@ -84,11 +83,24 @@ if (document.getElementById("flvr-body")) {
 
 /********** - Contact Page - Sending Alert for Form Submission - **********/
 
-// When Submit Button on Form is Clicked an Alert Appears. After Alert is closed Page Refreshes.
-
 if (document.getElementById("contact-body")){
+
+    // When Submit Button on Form is Clicked an Alert Appears. After Alert is closed Page Refreshes.
     document.getElementById("contact-form").addEventListener("submit", function(event) {
         alert("Thank you for submitting!");
         window.location.reload();
     });
+
+    // This formats for Phone Numbers so that when typing it Adds Dashes.
+    $('#phone').keyup(function(){
+        adddashes(this);
+    });
+      
+    function adddashes(el){
+        let val = $(el).val().split('-').join('');      //remove all dashes (-)
+        if(val.length < 9){
+          let finalVal = val.match(/.{1,3}/g).join('-');//add dash (-) after every 3rd char.
+          $(el).val(finalVal);
+        }
+    }
 }
