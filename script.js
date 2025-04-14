@@ -85,7 +85,10 @@ if (document.getElementById("flvr-body")) {
 /********** - Contact Page - Sending Alert for Form Submission - **********/
 
 // When Submit Button on Form is Clicked an Alert Appears. After Alert is closed Page Refreshes.
-document.getElementById("contact-form").addEventListener("submit", function(event) {
-    alert("Thank you for submitting!");
-    window.location.reload();
-});
+
+if (document.getElementById("contact-body")){
+    document.getElementById("contact-form").addEventListener("submit", function(event) {
+        alert("Thank you for submitting!");
+        window.location.reload();
+    });
+}
