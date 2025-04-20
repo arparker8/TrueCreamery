@@ -789,11 +789,41 @@ b {
     opacity: 0;
 }
 
-.date-line {
+.date-line-1 {
     width: 12px;
     min-height: 200px;
     background-color: #7c8a42;
     margin-top: -2px;
+    animation: scroll-line;
+    animation-timeline: view(30%);
+    animation-duration: 50s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+.date-line-2 {
+    width: 12px;
+    min-height: 200px;
+    background-color: #7c8a42;
+    margin-top: -2px;
+    animation: scroll-line;
+    animation-timeline: view(50%);
+    animation-duration: 50s;
+    animation-delay: .5s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+.date-line-3 {
+    width: 12px;
+    min-height: 200px;
+    background-color: #7c8a42;
+    margin-top: -2px;
+    animation: scroll-line;
+    animation-timeline: view(-50px);
+    animation-duration: 25s;
+    animation-delay: 5s;
+    opacity: 0;
 }
 
 .timeline-info {
@@ -837,6 +867,19 @@ b {
 
 }
 
+@keyframes scroll-line {
+    from {
+        transform: scaleY(0);
+        transform-origin: top center;
+        opacity: 100%
+    }
+    to {
+        transform: scaleY(100%);
+        transform-origin: top center;
+        opacity: 100%
+    }
+}
+
 /* Mobile View Layout */
 @media only screen and (max-width: 800px) {
 
@@ -862,7 +905,7 @@ b {
     }
 
     .timeline-graph {
-        justify-content: center;
+        justify-items: center;
     }
 
     .timeline-graph > p {
@@ -872,6 +915,11 @@ b {
     }
 
     .date-back-dot {
+        animation: none;
+        opacity: 100%;
+    }
+
+    .date-line-1, .date-line-2, .date-line-3 {
         animation: none;
         opacity: 100%;
     }
