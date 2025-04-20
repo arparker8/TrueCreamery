@@ -1,0 +1,128 @@
+<!--
+Ashleigh Parker - MGD2041
+
+True Creamery - Lactose Free Ice Cream Brand
+
+Our Story Page - Information about the store with an image of store front. Animated timeline.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>True Creamery</title>
+        <link rel="stylesheet" href="./styles.css">
+    </head>
+    <body>
+        <!-- Container for my Header and Nav -->
+        <div class="top-banner">
+            <!-- Nav holding the Menu Icon for Mobile -->
+            <nav class="mobile-menu">
+                <a href="#"><img src="./images/header/mobile-menu.svg" alt="Mobile Menu" class="icons hamburger"></a>
+            </nav>
+            <!-- Header holding logo -->
+            <header>
+                <a href="./index.html"><img src="./images/header/logo.svg" alt="True Creamery Logo" class="logo"></a>
+            </header>
+            <!-- Nav holding the Menu for Desktop -->
+            <nav class="menu">
+                <a href="./our-flavors.html">Our Flavors</a>
+                <a href="./our-story.html">Our Story</a>
+                <a href="./contact.html">Contact</a>
+                <input type="text" placeholder="Search" class="search-text-box" id="search-desktop">
+                <a href="#"><img src="./images/header/search-icon.svg" alt="Search icon" class="icons search"></a>
+                <a href="#"><img src="./images/header/shop-icon.svg" alt="Shop icon" class="icons"></a>
+            </nav>
+            <!-- Nav holding the Bag Icon for Mobile -->
+            <nav class="mobile-menu">
+                <a href="#"><img src="./images/header/shop-icon.svg" alt="Shop icon" class="icons shop"></a>
+            </nav>
+        </div>
+        <!-- The Links under Menu Icon for Mobile -->
+        <div class="mobile-links">
+            <ul>
+                <li class="search-box">
+                    <a href="#"><img src="./images/header/search-icon.svg" alt="Search icon" class="icons search"></a>
+                    <input type="text" placeholder="Search" class="search-text-box" id="search-mobile">
+                </li>
+                <li><a href="./our-flavors.html">Our Flavors</a></li>
+                <li><a href="./our-story.html">Our Story</a></li>
+                <li><a href="./contact.html">Contact</a></li>
+            </ul>
+        </div>
+        <!-- Container for Story Info and Image -->
+        <div class="story-info-cont">
+            <div class="story-info">
+                <h2>OUR STORY</h2>
+                <p>
+                    In the heart of the small town of Parker, True Creamery began as a simple mission to bring back the 
+                    joy of ice cream to those who had to give it up. When the owner’s daughter, Lily, was diagnosed with 
+                    lactose intolerance, family ice cream nights suddenly lost their magic. Refusing to let her miss out, 
+                    the family began experimenting in their kitchen, determined to recreate the creamy, nostalgic taste 
+                    they all loved without the dairy. After months of perfecting their recipe using all-natural, lactose-free 
+                    ingredients, they opened True Creamery, a cozy shop that now serves the whole community. What started 
+                    as a labor of love quickly became a town favorite, proving that great ice cream doesn’t need to come 
+                    with compromises.
+                </p>
+            </div>
+            <div class="story-img-cont">
+                <img src="./images/store-front.jpg" alt="Front of Store." class="store-img">
+            </div>
+        </div>
+        <h2 class="timeline-header">OUR HISTORY</h2>
+        <!-- Container for Timeline-->
+        <div class="story-timeline-cont">
+            <div class="timeline-graph">
+                <div class="date-line-scroll line-scroll"></div>
+                <div class="timeline-date-dot">
+                    <p class="fade-in">2020</p>
+                    <div class="date-back-dot"></div>
+                    <div class="date-dot fade-in"></div> 
+                </div>
+                <div class="timeline-date-dot timeline-spacing">
+                    <p class="fade-in">2023</p>
+                    <div class="date-back-dot"></div>
+                    <div class="date-dot fade-in"></div>
+                </div>
+                <div class="timeline-date-dot timeline-spacing">
+                    <p class="fade-in">2025</p>
+                    <div class="date-back-dot"></div>
+                    <div class="date-dot fade-in"></div>
+                </div>
+            </div>
+            <div class="timeline-info-cont">
+                <div class="timeline-info fade-in">
+                    <h3>True Creamery opens in Parker</h3>
+                    <p>
+                        True Creamery opens its doors in Parker, offering handcrafted, lactose-free ice cream inspired by 
+                        the founders’ mission to create treats everyone can enjoy.
+                    </p>
+                </div>
+                <div class="timeline-info fade-in">
+                    <h3 class="sub-header-space">Packaged Ice Cream Launch</h3>
+                    <p>
+                        True Creamery begins packaging their popular flavors, expanding into local grocery stores and making 
+                        their ice cream more accessible beyond the shop.
+                    </p>
+                </div>
+                <div class="timeline-info fade-in">
+                    <h3 class="sub-header-space">Online Store Launch</h3>
+                    <p>
+                        The company launches a new website with nationwide shipping, allowing customers across the country to 
+                        order and enjoy True Creamery’s lactose-free ice cream from home.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!-- Footer with rights info -->
+        <footer>
+            <p>Term of Use</p>
+            <p>Privacy Policy</p>
+            <p>FAQ</p>
+            <p>© 2025 True Creamery All Rights Reserved</p>
+        </footer>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script src="./script.js"></script>
+    </body>
+</html>

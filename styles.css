@@ -182,6 +182,8 @@ footer {
             margin-left: -25px;
             max-width: 100%;
         }
+
+        
     
         footer {
             display: flex;
@@ -333,6 +335,7 @@ b {
     font-size: 1.125rem;
     justify-self: center;
     max-width: 750px;
+    line-height: 28px;
 }
 
 /* Making a Grid 3 by 2. */
@@ -587,7 +590,8 @@ b {
 .flvr-text-cont > p {
     font-family: "LouisGeorgeCafe";
     font-size: 1.125rem;
-    margin: 30px 0;
+    margin: 20px 0 30px 0;
+    line-height: 28px;
 }
 
 .flvr-text-cont > .flvr-price {
@@ -704,6 +708,247 @@ b {
     .flvr-delivery > h3 {
         margin-top: 50px;
     }
+}
+
+/********** - Our Story Page - **********/
+
+.story-info-cont {
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+}
+
+.story-info {
+    margin: 40px 50px;
+}
+
+.story-info > h2 {
+    font-family: "Vergilia";
+    font-size: 2rem;
+    color: #75445f;
+}
+
+.story-info > p {
+    font-family: "LouisGeorgeCafe";
+    font-size: 1.125rem;
+    margin: 20px 0;
+    line-height: 28px;
+}
+
+.story-img-cont {
+    margin: 40px 50px;
+}
+
+.store-img {
+    width: 100%;
+    height: auto;
+}
+
+.timeline-header {
+    font-family: "Vergilia";
+    font-size: 2rem;
+    color: #75445f;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.story-timeline-cont {
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    margin: 80px 0;
+}
+
+.timeline-graph {
+    position: relative;
+    justify-items: center;
+}
+
+.timeline-date-dot {
+    display: flex;
+    justify-items: center;
+    align-items: center;
+}
+
+.timeline-spacing {
+    margin-top: 180px;
+}
+
+.timeline-date-dot > p {
+    font-family: "LouisGeorgeCafeBold";
+    font-size: 2rem;
+    color: #75445f;
+    margin-right: 20px;
+    position: relative;
+    opacity: 0;
+}
+
+.date-dot {
+    position: absolute;
+    left: 56.25%;
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    border-radius: 50%;
+    opacity: 0;
+}
+
+.date-back-dot {
+    width: 40px;
+    height: 40px;
+    background-color: #7c8a42;
+    border-radius: 50%;
+    margin-top: -1px;
+}
+
+.date-line-scroll {
+    position: absolute;
+    top:  5%;
+    left: 57%;
+    width: 13px;
+    height: 650px;
+    background-color: #7c8a42;
+}
+
+.timeline-info-cont {
+    display: flex;
+    flex-direction: column;
+}
+
+.timeline-info {
+    opacity: 0;
+}
+
+.timeline-info > h3 {
+    font-family: "Vergilia";
+    font-size: 1.725rem;
+    color: #7c8a42;
+    max-width: 70%;
+}
+
+.sub-header-space {
+    margin-top: 65px;
+}
+
+.timeline-info > p {
+    font-family: "LouisGeorgeCafe";
+    font-size: 1.125rem;
+    color: white;
+    background-color: #75445f;
+    padding: 20px;
+    margin-top: 20px;
+    max-width: 70%;
+    line-height: 28px;
+}
+
+
+@keyframes fade-in {
+    15% {
+        opacity: 0;
+    }
+
+    45% {
+        opacity: 100%;
+    }
+
+    100% {
+        opacity: 100%;
+    }
+
+}
+
+@keyframes line-scroll {
+    0% {
+        transform:scaleY(0);
+        transform-origin: top center;
+    }
+
+    50% {
+        opacity: 100%;
+    }
+
+    70% {
+        transform: scaleY(100%);
+        transform-origin: top center;
+        opacity: 100%;
+    }
+}
+  
+@media (prefers-reduced-motion: no-preference) {
+    .fade-in {
+        animation: fade-in;
+        animation-timeline: view();
+        animation-duration: 2s;
+    }
+
+    .line-scroll {
+        animation: line-scroll ease-in-out;
+        animation-timeline: view();
+        animation-duration: 2s;
+    }
+}
+
+/* Mobile View Layout */
+@media only screen and (max-width: 800px) {
+
+    .story-info-cont {
+        display: block;
+    }
+
+    .story-info {
+        text-align: center;
+        margin: 40px 20px;
+    }
+
+    .story-info > h2, .timeline-header, .timeline-info > h3 {
+        font-size: 1.5rem;
+    }
+
+    .story-info > p, .timeline-info > p {
+        font-size: 1rem;
+    }
+
+    .story-img-cont {
+        margin: 40px 20px;
+    }
+
+    .story-timeline-cont {
+        margin: 40px 0;
+    }
+
+    .timeline-spacing {
+        margin-top: 235px;
+    }
+
+    .timeline-date-dot > p {
+        font-size: 1.125rem;
+        margin-right: 0;
+    }
+
+    .date-line-scroll {
+        position: absolute;
+        top:  3%;
+        left: 58%;
+        width: 13px;
+        height: 650px;
+        background-color: #7c8a42;
+    }
+
+    .timeline-info > h3 {
+        font-size: 1.125rem;
+        max-width: 80%;
+    }
+    
+    .sub-header-space {
+        margin-top: 26px;
+    }
+    
+    .timeline-info > p {
+        font-size: 1rem;
+        max-width: 80%;
+        padding: 10px;
+        margin-top: 10px;
+    }
+
+
 }
 
 /********** - Contact Page - **********/
