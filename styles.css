@@ -754,14 +754,13 @@ b {
 .story-timeline-cont {
     display: flex;
     flex-direction: column;
-    margin: 40px 100px;
+    margin: 40px 20px;
 }
 
 .timeline-cont {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    height: auto;
+    justify-content: center;
 }
 
 .timeline-graph {
@@ -799,6 +798,7 @@ b {
 
 .timeline-info {
     max-width: 65%;
+    margin-left: 100px;
     animation: fade-in;
     animation-timeline: view();
     animation-duration: 2s;
@@ -827,7 +827,7 @@ b {
         opacity: 0;
     }
 
-    30% {
+    25% {
         opacity: 100%;
     }
 
@@ -858,10 +858,6 @@ b {
     }
 
     .story-img-cont {
-        margin: 40px 20px;
-    }
-
-    .story-timeline-cont {
         margin: 40px 20px;
     }
 
