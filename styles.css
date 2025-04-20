@@ -762,11 +762,6 @@ b {
     margin-right: 40%;
 }
 
-.timeline-date-dot {
-    display: flex;
-    align-items: center;
-}
-
 .timeline-graph > p {
     font-family: "LouisGeorgeCafeBold";
     font-size: 2rem;
