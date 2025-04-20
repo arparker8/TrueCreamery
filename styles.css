@@ -874,6 +874,8 @@ b {
     }
 
     .story-timeline-cont {
+        display: grid;
+        grid-template-columns: 2fr 2fr;
         margin: 40px 0;
     }
 
