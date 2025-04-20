@@ -860,10 +860,6 @@ b {
     .story-img-cont {
         margin: 40px 20px;
     }
-    
-    .timeline-graph {
-        justify-items: center;
-    }
 
     .timeline-graph > p {
         font-size: 1.5rem;
@@ -885,7 +881,6 @@ b {
 
     .timeline-info > h3 {
         font-size: 1.125rem;
-        margin-top: 10px;
     }
     
     .timeline-info > p {
