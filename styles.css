@@ -862,7 +862,7 @@ b {
     }
 
     .timeline-graph {
-        justify-items: center;
+        justify-content: center;
     }
 
     .timeline-graph > p {
