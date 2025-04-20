@@ -758,8 +758,7 @@ b {
 }
 
 .timeline-graph {
-    justify-items: right;
-    margin-right: 40%;
+    justify-items: center;
 }
 
 .timeline-graph > p {
@@ -767,7 +766,7 @@ b {
     font-size: 2rem;
     color: #75445f;
     float: left;
-    margin-left: 200px;
+    margin-left: 25%;
     animation: fade-in;
     animation-timeline: view();
     animation-duration: 2s;
@@ -790,7 +789,6 @@ b {
     width: 12px;
     height: 200px;
     background-color: #7c8a42;
-    margin-right: 12.5px;
     margin-top: -2px;
 }
 
@@ -873,21 +871,15 @@ b {
         margin: 40px 0;
     }
 
-    .timeline-graph {
-        margin-right: 0;
-    }
-
     .timeline-graph > p {
         font-size: 1.125rem;
         margin-top: 5px;
-        margin-left: 0;
         animation: none;
         opacity: 100%;
     }
 
     .date-line {
         height: 215px;
-        margin-right: 0;
     }
 
     .date-back-dot {
