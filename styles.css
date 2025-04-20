@@ -796,7 +796,6 @@ b {
     margin-top: -2px;
     animation: scroll-line;
     animation-timeline: view(30%);
-    animation-duration: 50s;
     animation-fill-mode: forwards;
     opacity: 0;
 }
@@ -807,8 +806,7 @@ b {
     background-color: #7c8a42;
     margin-top: -2px;
     animation: scroll-line;
-    animation-timeline: view(50%);
-    animation-duration: 50s;
+    animation-timeline: view(35%);
     animation-delay: .5s;
     animation-fill-mode: forwards;
     opacity: 0;
@@ -820,9 +818,8 @@ b {
     background-color: #7c8a42;
     margin-top: -2px;
     animation: scroll-line;
-    animation-timeline: view(-50px);
-    animation-duration: 25s;
-    animation-delay: 5s;
+    animation-timeline: view(25%);
+    animation-delay: .5s;
     opacity: 0;
 }
 
