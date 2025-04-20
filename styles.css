@@ -877,6 +877,10 @@ b {
         margin: 40px 0;
     }
 
+    .timeline-graph {
+        margin-right: 25%;
+    }
+
     .timeline-graph > p {
         font-size: 1.125rem;
         margin-top: 10px;
@@ -886,7 +890,8 @@ b {
     }
 
     .date-line {
-        height: 250px;
+        height: 300px;
+        margin-right: 5px;
     }
 
     .date-back-dot {
