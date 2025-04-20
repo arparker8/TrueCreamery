@@ -861,6 +861,10 @@ b {
         margin: 40px 20px;
     }
 
+    .timeline-graph {
+        justify-items: center;
+    }
+
     .timeline-graph > p {
         font-size: 1.5rem;
         animation: none;
