@@ -773,6 +773,9 @@ b {
     color: #75445f;
     float: left;
     margin-left: 200px;
+    animation: fade-in;
+    animation-timeline: view();
+    animation-duration: 2s;
     opacity: 0;
 }
 
@@ -782,6 +785,9 @@ b {
     background-color: #7c8a42;
     border-radius: 50%;
     margin-top: -2px;
+    animation: fade-in;
+    animation-timeline: view();
+    animation-duration: 2s;
     opacity: 0;
 }
 
@@ -799,6 +805,9 @@ b {
 }
 
 .timeline-info {
+    animation: fade-in;
+    animation-timeline: view();
+    animation-duration: 2s;
     opacity: 0;
 }
 
@@ -840,34 +849,6 @@ b {
 
 }
 
-@keyframes line-scroll-1 {
-    0% {
-        transform:scaleY(0);
-        transform-origin: top center;
-        opacity: 100%;
-    }
-
-    60% {
-        transform: scaleY(100%);
-        transform-origin: top center;
-        opacity: 100%;
-    }
-}
-  
-@media (prefers-reduced-motion: no-preference) {
-    .fade-in {
-        animation: fade-in;
-        animation-timeline: view();
-        animation-duration: 2s;
-    }
-
-    .line-scroll-1 {
-        animation: line-scroll-1;
-        animation-timeline: view();
-        animation-duration: 2s;
-    }
-}
-
 /* Mobile View Layout */
 @media only screen and (max-width: 800px) {
 
@@ -900,10 +881,22 @@ b {
         font-size: 1.125rem;
         margin-top: 10px;
         margin-left: 0;
+        animation: none;
+        opacity: 100%;
     }
 
     .date-line {
         height: 250px;
+    }
+
+    .date-back-dot {
+        animation: none;
+        opacity: 100%;
+    }
+
+    .timeline-info {
+        animation: none;
+        opacity: 100%
     }
 
     .timeline-info > h3 {
