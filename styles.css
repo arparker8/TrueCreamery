@@ -900,43 +900,6 @@ b {
     .story-img-cont {
         margin: 40px 20px;
     }
-
-    .timeline-graph {
-        justify-items: center;
-    }
-
-    .timeline-graph > p {
-        font-size: 1.5rem;
-        animation: none;
-        opacity: 100%;
-    }
-
-    .date-back-dot {
-        animation: none;
-        opacity: 100%;
-    }
-
-    .date-line-1, .date-line-2, .date-line-3 {
-        animation: none;
-        opacity: 100%;
-    }
-
-    .timeline-info {
-        max-width: 100%;
-        margin-left: 30px;
-        animation: none;
-        opacity: 100%
-    }
-
-    .timeline-info > h3 {
-        font-size: 1.125rem;
-    }
-    
-    .timeline-info > p {
-        font-size: 1rem;
-        padding: 10px;
-        margin-top: 5px;
-    }
 }
 
 /********** - Contact Page - **********/
