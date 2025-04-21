@@ -200,6 +200,26 @@ footer {
 
 /********** - Home(index) Page - **********/
 
+@keyframes prompt1-fade-in {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 100%;
+    }
+}
+
+@keyframes prompt2-fade-in {
+    0% {
+        opacity: 0;
+    }
+
+    60% {
+        opacity: 100%;
+    }
+}
+
 .prompt-1 > p, .prompt-2 > p {
     font-family: "LouisGeorgeCafe";
     margin: 10px 0 30px 0;
@@ -226,6 +246,10 @@ b {
     top: 15%;
     right: 8%;
     text-align: right;
+    animation: prompt1-fade-in ease-in;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+    opacity: 0;
 }
 
 .prompt-1 > h2 {
@@ -259,6 +283,10 @@ b {
     top: 15%;
     left: 8%;
     text-align: left;
+    animation: prompt2-fade-in ease-in;
+    animation-timeline: view();
+    animation-fill-mode: forwards;
+    opacity: 0;
 }
 
 .prompt-2 > h2 {
@@ -724,21 +752,6 @@ b {
     100% {
         opacity: 100%;
     }
-}
-
-@-webkit-keyframes story-fade-in {
-    15% {
-        -webkit-opacity: 0;
-    }
-
-    25% {
-        -webkit-opacity: 100%;
-    }
-
-    100% {
-        -webkit-opacity: 100%;
-    }
-
 }
 
 @keyframes scroll-line {
