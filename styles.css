@@ -884,7 +884,7 @@ b {
     animation: story-fade-in linear;
     animation-timeline: view();
     animation-duration: auto;
-    animation-range: entry 10% contain 10%;
+    animation-range: entry 10% contain 5%;
     animation-fill-mode: forwards;
     opacity: 0;
 }
@@ -945,8 +945,6 @@ b {
 
     .timeline-graph > p {
         font-size: 1.5rem;
-        opacity: 100%;
-        animation: none;
     }
     
     .date-back-dot {
