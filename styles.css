@@ -891,17 +891,9 @@ b {
     }
 
     .story-timeline-cont {
-        margin: 20px;
-    }
-
-    .timeline-cont {
-        display: flex;
         justify-self: center;
         max-width: 85%;
-    }
-
-    .timeline-graph {
-        justify-items: center;
+        margin: 20px;
     }
 
     .timeline-graph > p {
