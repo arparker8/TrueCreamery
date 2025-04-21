@@ -724,6 +724,20 @@ b {
     100% {
         opacity: 100%;
     }
+}
+
+@-webkit-keyframes story-fade-in {
+    15% {
+        -webkit-opacity: 0;
+    }
+
+    25% {
+        -webkit-opacity: 100%;
+    }
+
+    100% {
+        -webkit-opacity: 100%;
+    }
 
 }
 
@@ -902,8 +916,6 @@ b {
 
     .timeline-graph > p {
         font-size: 1.5rem;
-        opacity: 100%;
-        animation: none;
     }
     
     .date-back-dot {
