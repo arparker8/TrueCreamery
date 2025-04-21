@@ -215,7 +215,7 @@ footer {
         opacity: 0;
     }
 
-    60% {
+    50% {
         opacity: 100%;
     }
 }
