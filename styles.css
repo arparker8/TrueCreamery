@@ -900,7 +900,7 @@ b {
 
     .timeline-graph > p {
         font-size: 1.5rem;
-        margin-right: 10px;
+        margin-right: 15px;
         opacity: 100%;
         animation: none;
     }
@@ -911,7 +911,7 @@ b {
     }
 
     .date-line, #date-line-end {
-        margin-left: 10px;
+        margin-left: 15px;
         opacity: 100%;
         animation: none;
     }
