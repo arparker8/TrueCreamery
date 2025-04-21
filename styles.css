@@ -768,12 +768,9 @@ b {
     font-family: "LouisGeorgeCafeBold";
     font-size: 2rem;
     color: #75445f;
-    animation-name: fade-in;
-    -webkit-animation-name: fade-in;
+    animation: fade-in ease-in;
+    -webkit-animation: fade-in ease-in;
     animation-timeline: view();
-    -webkit-animation-timeline: view();
-    animation-timing-function: ease-in;
-    -webkit-animation-timing-function: ease-in;
     opacity: 0;
 }
 
@@ -783,9 +780,9 @@ b {
     background-color: #7c8a42;
     border-radius: 50%;
     margin-top: -2px;
-    animation-name: fade-in;
+    animation: fade-in ease-in;
+    -webkit-animation: fade-in ease-in;
     animation-timeline: view();
-    animation-timing-function: ease-in;
     opacity: 0;
 }
 
@@ -817,9 +814,9 @@ b {
     max-width: 65%;
     margin-top: 35px;
     margin-left: 100px;
-    animation-name: fade-in;
+    animation: fade-in ease-in;
+    -webkit-animation: fade-in ease-in;
     animation-timeline: view();
-    animation-timing-function: ease-in;
     opacity: 0;
 }
 
@@ -839,6 +836,19 @@ b {
     line-height: 28px;
 }
 
+@-webkit-keyframes fade-in {
+    15% {
+        -webkit-opacity: 0;
+    }
+
+    25% {
+        -webkit-opacity: 100%;
+    }
+
+    100% {
+        -webkit-opacity: 100%;
+    }
+}
 
 @keyframes fade-in {
     15% {
@@ -903,7 +913,14 @@ b {
 
     .timeline-graph > p {
         font-size: 1.5rem;
+        /* opacity: 100%;
+        animation: none; */
     }
+    
+    /* .date-back-dot {
+        opacity: 100%;
+        animation: none;
+    } */
 
     .date-line, #date-line-end {
         opacity: 100%;
@@ -913,6 +930,8 @@ b {
     .timeline-info {
         max-width: 100%;
         margin-left: 20px;
+        /* opacity: 100%;
+        animation: none; */
     }
 
     .timeline-info > h3 {
