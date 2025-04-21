@@ -789,37 +789,39 @@ b {
     opacity: 0;
 }
 
-.date-line-1 {
+#date-line-1 {
     width: 12px;
-    min-height: 200px;
+    min-height: 225px;
     background-color: #7c8a42;
     margin-top: -2px;
     animation: scroll-line;
-    animation-timeline: view(30%);
+    animation-timeline: view(50%);
+    animation-timing-function: ease-in-out;
     animation-fill-mode: forwards;
     opacity: 0;
 }
 
-.date-line-2 {
+#date-line-2 {
     width: 12px;
-    min-height: 200px;
+    min-height: 225px;
     background-color: #7c8a42;
     margin-top: -2px;
     animation: scroll-line;
-    animation-timeline: view(35%);
-    animation-delay: .5s;
+    animation-timeline: view(50%);
+    animation-timing-function: ease-in-out;
     animation-fill-mode: forwards;
     opacity: 0;
 }
 
-.date-line-3 {
+#date-line-3 {
     width: 12px;
-    min-height: 200px;
+    min-height: 225px;
     background-color: #7c8a42;
     margin-top: -2px;
     animation: scroll-line;
-    animation-timeline: view(25%);
-    animation-delay: .5s;
+    animation-timeline: view(20%);
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
     opacity: 0;
 }
 
@@ -870,6 +872,7 @@ b {
         transform-origin: top center;
         opacity: 100%
     }
+
     to {
         transform: scaleY(100%);
         transform-origin: top center;
@@ -880,26 +883,6 @@ b {
 /* Mobile View Layout */
 @media only screen and (max-width: 800px) {
 
-    .story-info-cont {
-        display: block;
-    }
-
-    .story-info {
-        text-align: center;
-        margin: 40px 20px;
-    }
-
-    .story-info > h2, .timeline-header, .timeline-info > h3 {
-        font-size: 1.5rem;
-    }
-
-    .story-info > p, .timeline-info > p {
-        font-size: 1rem;
-    }
-
-    .story-img-cont {
-        margin: 40px 20px;
-    }
 }
 
 /********** - Contact Page - **********/
