@@ -769,7 +769,6 @@ b {
     font-size: 2rem;
     color: #75445f;
     animation: fade-in ease-in;
-    -webkit-animation: fade-in ease-in;
     animation-timeline: view();
     opacity: 0;
 }
@@ -781,7 +780,6 @@ b {
     border-radius: 50%;
     margin-top: -2px;
     animation: fade-in ease-in;
-    -webkit-animation: fade-in ease-in;
     animation-timeline: view();
     opacity: 0;
 }
@@ -815,7 +813,6 @@ b {
     margin-top: 35px;
     margin-left: 100px;
     animation: fade-in ease-in;
-    -webkit-animation: fade-in ease-in;
     animation-timeline: view();
     opacity: 0;
 }
@@ -834,20 +831,6 @@ b {
     padding: 20px;
     margin-top: 20px;
     line-height: 28px;
-}
-
-@-webkit-keyframes fade-in {
-    15% {
-        -webkit-opacity: 0;
-    }
-
-    25% {
-        -webkit-opacity: 100%;
-    }
-
-    100% {
-        -webkit-opacity: 100%;
-    }
 }
 
 @keyframes fade-in {
@@ -913,14 +896,14 @@ b {
 
     .timeline-graph > p {
         font-size: 1.5rem;
-        /* opacity: 100%;
-        animation: none; */
-    }
-    
-    /* .date-back-dot {
         opacity: 100%;
         animation: none;
-    } */
+    }
+    
+    .date-back-dot {
+        opacity: 100%;
+        animation: none;
+    }
 
     .date-line, #date-line-end {
         opacity: 100%;
@@ -930,8 +913,8 @@ b {
     .timeline-info {
         max-width: 100%;
         margin-left: 20px;
-        /* opacity: 100%;
-        animation: none; */
+        opacity: 100%;
+        animation: none;
     }
 
     .timeline-info > h3 {
