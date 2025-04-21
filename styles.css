@@ -895,7 +895,8 @@ b {
     }
 
     .timeline-graph {
-        width: 200px;
+        width: 500px;
+        justify-items: center;
     }
 
     .timeline-graph > p {
