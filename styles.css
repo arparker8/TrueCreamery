@@ -894,13 +894,18 @@ b {
         margin: 20px;
     }
 
+    .timeline-cont {
+        display: flex;
+        justify-self: center;
+        max-width: 85%;
+    }
+
     .timeline-graph {
         justify-items: center;
     }
 
     .timeline-graph > p {
         font-size: 1.5rem;
-        margin-right: 15px;
         opacity: 100%;
         animation: none;
     }
@@ -911,7 +916,6 @@ b {
     }
 
     .date-line, #date-line-end {
-        margin-left: 15px;
         opacity: 100%;
         animation: none;
     }
@@ -929,7 +933,7 @@ b {
 
     .timeline-info > p {
         font-size: 1rem;
-        padding: 15px;
+        padding: 12px;
     }
 
 }
