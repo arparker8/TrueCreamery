@@ -963,6 +963,11 @@ b {
     .timeline-info {
         max-width: 100%;
         margin-left: 20px;
+        animation: story-fade-in linear;
+        animation-timeline: scroll(root y);
+        animation-duration: auto;
+        animation-range: entry 10% contain 5%;
+        animation-fill-mode: forwards;
     }
 
     .timeline-info > h3 {
