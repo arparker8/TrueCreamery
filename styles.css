@@ -891,8 +891,6 @@ b {
     }
 
     .story-timeline-cont {
-        justify-self: center;
-        max-width: 85%;
         margin: 20px;
     }
 
@@ -908,6 +906,7 @@ b {
     }
 
     .date-line, #date-line-end {
+        margin-left: 15px;
         opacity: 100%;
         animation: none;
     }
