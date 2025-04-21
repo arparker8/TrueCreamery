@@ -812,6 +812,7 @@ b {
     font-size: 2rem;
     color: #75445f;
     animation: story-fade-in ease-in;
+    -webkit-animation: story-fade-in ease-in;
     animation-timeline: view();
     opacity: 0;
 }
