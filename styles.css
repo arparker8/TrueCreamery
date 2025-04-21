@@ -773,7 +773,7 @@ b {
     color: #75445f;
     animation: fade-in;
     animation-timeline: view();
-    animation-duration: 2s;
+    animation-timing-function: ease-in;
     opacity: 0;
 }
 
@@ -785,7 +785,7 @@ b {
     margin-top: -2px;
     animation: fade-in;
     animation-timeline: view();
-    animation-duration: 2s;
+    animation-timing-function: ease-in;
     opacity: 0;
 }
 
@@ -830,7 +830,7 @@ b {
     margin-left: 100px;
     animation: fade-in;
     animation-timeline: view();
-    animation-duration: 2s;
+    animation-timing-function: ease-in;
     opacity: 0;
 }
 
