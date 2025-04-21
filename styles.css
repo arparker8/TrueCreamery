@@ -752,14 +752,11 @@ b {
 }
 
 .story-timeline-cont {
-    display: flex;
-    flex-direction: column;
     margin: 40px 20px;
 }
 
 .timeline-cont {
     display: flex;
-    flex-direction: row;
     justify-content: center;
 }
 
@@ -771,8 +768,10 @@ b {
     font-family: "LouisGeorgeCafeBold";
     font-size: 2rem;
     color: #75445f;
-    animation: fade-in;
+    animation-name: fade-in;
+    -webkit-animation-name: fade-in;
     animation-timeline: view();
+    -webkit-animation-timeline: view();
     animation-timing-function: ease-in;
     -webkit-animation-timing-function: ease-in;
     opacity: 0;
@@ -784,7 +783,7 @@ b {
     background-color: #7c8a42;
     border-radius: 50%;
     margin-top: -2px;
-    animation: fade-in;
+    animation-name: fade-in;
     animation-timeline: view();
     animation-timing-function: ease-in;
     opacity: 0;
@@ -795,7 +794,7 @@ b {
     min-height: 225px;
     background-color: #7c8a42;
     margin-top: -2px;
-    animation: scroll-line;
+    animation-name: scroll-line;
     animation-timeline: view(50%);
     animation-timing-function: ease-in-out;
     animation-fill-mode: forwards;
@@ -807,7 +806,7 @@ b {
     min-height: 225px;
     background-color: #7c8a42;
     margin-top: -2px;
-    animation: scroll-line;
+    animation-name: scroll-line;
     animation-timeline: view(20%);
     animation-timing-function: ease-in-out;
     animation-fill-mode: forwards;
@@ -816,8 +815,9 @@ b {
 
 .timeline-info {
     max-width: 65%;
+    margin-top: 35px;
     margin-left: 100px;
-    animation: fade-in;
+    animation-name: fade-in;
     animation-timeline: view();
     animation-timing-function: ease-in;
     opacity: 0;
@@ -903,13 +903,6 @@ b {
 
     .timeline-graph > p {
         font-size: 1.5rem;
-        opacity: 100%;
-        animation: none;
-    }
-    
-    .date-back-dot {
-        opacity: 100%;
-        animation: none;
     }
 
     .date-line, #date-line-end {
@@ -920,8 +913,6 @@ b {
     .timeline-info {
         max-width: 100%;
         margin-left: 20px;
-        opacity: 100%;
-        animation: none;
     }
 
     .timeline-info > h3 {
@@ -930,6 +921,7 @@ b {
 
     .timeline-info > p {
         font-size: 1rem;
+        padding: 15px;
     }
 
 }
