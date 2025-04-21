@@ -745,16 +745,12 @@ b {
 /********** - Our Story Page - **********/
 
 @keyframes story-fade-in {
-    15% {
+    0% {
         opacity: 0;
     }
 
-    25% {
-        opacity: 100%;
-    }
-
     100% {
-        opacity: 100%;
+        opacity: 1;
     }
 }
 
@@ -762,13 +758,13 @@ b {
     from {
         transform: scaleY(0);
         transform-origin: top center;
-        opacity: 100%
+        opacity: 1
     }
 
     to {
-        transform: scaleY(100%);
+        transform: scaleY(1);
         transform-origin: top center;
-        opacity: 100%
+        opacity: 1
     }
 }
 
@@ -821,15 +817,20 @@ b {
 }
 
 .timeline-graph {
-    justify-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .timeline-graph > p {
     font-family: "LouisGeorgeCafeBold";
     font-size: 2rem;
     color: #75445f;
-    animation: story-fade-in ease-in;
+    animation: story-fade-in linear;
     animation-timeline: view();
+    animation-duration: auto;
+    animation-range: entry 10% contain 25%;
+    animation-fill-mode: forwards;
     opacity: 0;
 }
 
@@ -839,8 +840,11 @@ b {
     background-color: #7c8a42;
     border-radius: 50%;
     margin-top: -2px;
-    animation: story-fade-in ease-in;
+    animation: story-fade-in linear;
     animation-timeline: view();
+    animation-duration: auto;
+    animation-range: entry 10% contain 25%;
+    animation-fill-mode: forwards;
     opacity: 0;
 }
 
@@ -850,8 +854,9 @@ b {
     background-color: #7c8a42;
     margin-top: -2px;
     animation-name: scroll-line;
-    animation-timeline: view(50%);
-    animation-timing-function: ease-in-out;
+    animation-timeline: view();
+    animation-duration: auto;
+    animation-range: entry 20% contain 25%;
     animation-fill-mode: forwards;
     opacity: 0;
 }
@@ -862,18 +867,24 @@ b {
     background-color: #7c8a42;
     margin-top: -2px;
     animation-name: scroll-line;
-    animation-timeline: view(20%);
-    animation-timing-function: ease-in-out;
-    animation-fill-mode: forwards;
+    animation-timeline: view();
+    animation-duration: auto;
+    animation-range: entry 10% contain 25%;
     opacity: 0;
 }
 
 .timeline-info {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
     max-width: 65%;
     margin-top: 35px;
     margin-left: 100px;
-    animation: story-fade-in ease-in;
+    animation: story-fade-in linear;
     animation-timeline: view();
+    animation-duration: auto;
+    animation-range: entry 10% contain 25%;
+    animation-fill-mode: forwards;
     opacity: 0;
 }
 
@@ -923,12 +934,6 @@ b {
 
     .story-timeline-cont {
         margin: 20px;
-    }
-
-    .timeline-graph {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
     }
 
     .timeline-graph > p {
