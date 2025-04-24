@@ -527,7 +527,6 @@ b {
     color: rgba(0, 0, 0, 0.5);
     font-family: "LouisGeorgeCafeBold";
     font-size: 1.5rem;
-    user-select: none;
 }
 
 .slides-next-btn {
@@ -539,7 +538,6 @@ b {
     color: rgba(0, 0, 0, 0.5);
     font-family: "LouisGeorgeCafeBold";
     font-size: 1.5rem;
-    user-select: none;
 }
 
 .slides-next-btn:hover, .slides-prev-btn:hover {
