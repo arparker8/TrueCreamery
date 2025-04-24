@@ -902,28 +902,13 @@ b {
         align-items: center;
     }
 
-    .timeline-graph > p {
+    .date {
         font-size: 1.5rem;
-        opacity: 100%;
-        animation: none;
-    }
-    
-    .date-back-dot {
-        opacity: 100%;
-        animation: none;
-    }
-
-    .date-line, #date-line-end {
-        width: 15px;
-        opacity: 100%;
-        animation: none;
     }
 
     .timeline-info {
         max-width: 100%;
         margin-left: 20px;
-        opacity: 100%;
-        animation: none;
     }
 
     .timeline-info > h3 {
