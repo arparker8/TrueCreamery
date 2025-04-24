@@ -206,17 +206,7 @@ footer {
     }
 
     to {
-        opacity: 100%;
-    }
-}
-
-@keyframes prompt2-fade-in {
-    from {
-        opacity: 0;
-    }
-
-    to {
-        opacity: 100%;
+        opacity: 1;
     }
 }
 
@@ -247,7 +237,7 @@ b {
     right: 8%;
     text-align: right;
     animation: prompt1-fade-in ease-in;
-    animation-duration: 1.5s;
+    animation-duration: .5s;
     animation-fill-mode: forwards;
     opacity: 0;
 }
@@ -283,12 +273,12 @@ b {
     top: 15%;
     left: 8%;
     text-align: left;
-    animation: prompt2-fade-in linear;
-    animation-timeline: view();
-    animation-duration: auto;
-    animation-range: entry 10% contain 25%;
-    animation-fill-mode: forwards;
     opacity: 0;
+}
+
+.prompt-fade-in {
+    opacity: 1;
+    transition: opacity .5s ease-in;
 }
 
 .prompt-2 > h2 {
@@ -538,7 +528,6 @@ b {
     font-family: "LouisGeorgeCafeBold";
     font-size: 1.5rem;
     user-select: none;
-    -webkit-user-select: none;
 }
 
 .slides-next-btn {
@@ -551,7 +540,6 @@ b {
     font-family: "LouisGeorgeCafeBold";
     font-size: 1.5rem;
     user-select: none;
-    -webkit-user-select: none;
 }
 
 .slides-next-btn:hover, .slides-prev-btn:hover {
@@ -745,16 +733,6 @@ b {
 
 /********** - Our Story Page - **********/
 
-@keyframes story-fade-in {
-    from {
-        opacity: 0;
-    }
-
-    to {
-        opacity: 1;
-    }
-}
-
 @keyframes scroll-line {
     from {
         transform: scaleY(0);
@@ -823,29 +801,19 @@ b {
     justify-items: center;
 }
 
-.timeline-graph > p {
+.date {
     font-family: "LouisGeorgeCafeBold";
     font-size: 2rem;
     color: #75445f;
-    animation: story-fade-in linear;
-    animation-timeline: view();
-    animation-duration: auto;
-    animation-range: entry 10% contain 25%;
-    animation-fill-mode: forwards;
     opacity: 0;
 }
 
-.date-back-dot {
+.date-dot {
     width: 40px;
     height: 40px;
     background-color: #7c8a42;
     border-radius: 50%;
     margin-top: -2px;
-    animation: story-fade-in linear;
-    animation-timeline: view();
-    animation-duration: auto;
-    animation-range: entry 10% contain 25%;
-    animation-fill-mode: forwards;
     opacity: 0;
 }
 
@@ -854,38 +822,17 @@ b {
     min-height: 225px;
     background-color: #7c8a42;
     margin-top: -2px;
-    animation-name: scroll-line;
-    animation-timeline: view();
-    animation-duration: auto;
-    animation-range: entry 30% contain 25%;
-    animation-fill-mode: forwards;
-    opacity: 0;
-}
-
-#date-line-end {
-    width: 12px;
-    min-height: 225px;
-    background-color: #7c8a42;
-    margin-top: -2px;
-    animation-name: scroll-line;
-    animation-timeline: view();
-    animation-duration: auto;
-    animation-range: entry 35% contain 25%;
+    transform: scaleY(0);
     opacity: 0;
 }
 
 .timeline-info {
     display: flex;
     flex-direction: column;
-    align-items: left;
+    align-items: start;
     max-width: 65%;
     margin-top: 35px;
     margin-left: 100px;
-    animation: story-fade-in linear;
-    animation-timeline: view();
-    animation-duration: auto;
-    animation-range: entry 10% contain 5%;
-    animation-fill-mode: forwards;
     opacity: 0;
 }
 
@@ -903,6 +850,18 @@ b {
     padding: 20px;
     margin-top: 20px;
     line-height: 28px;
+}
+
+.timeline-fade-in {
+    opacity: 1;
+    transition: opacity .5s ease-in;
+}
+
+.timeline-draw-line {
+    transform: scaleY(1);
+    transform-origin: top center;
+    opacity: 1;
+    transition: transform .5s;
 }
 
 /* Mobile View Layout */

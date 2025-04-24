@@ -42,6 +42,25 @@ $(document).ready(function(){
     })
 })
 
+/********** - Homepage - Fade in on Scroll - **********/
+
+const observer1 = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        // Element is in view, add the animation class
+        entry.target.classList.add("prompt-fade-in");
+      } else {
+        // Element is out of view, remove the animation class; If you want the animation to trigger every time it comes in view
+        entry.target.classList.remove("prompt-fade-in");
+      }
+    });
+});
+  
+const prompts = document.querySelectorAll(".prompt-2");
+prompts.forEach(prompt => {
+    observer1.observe(prompt);
+});
+
 /********** - Each Flavor Page - Image Slide Show - **********/
 
 if (document.getElementById("flvr-body")) {
@@ -80,6 +99,44 @@ if (document.getElementById("flvr-body")) {
         dots[slideIndex - 1].className += " active";
     }
 }
+
+/********** - Our Story - Fade in on Scroll - **********/
+
+const observer2 = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        // Element is in view, add the animation class
+        entry.target.classList.add("timeline-fade-in");
+      } else {
+        // Element is out of view, remove the animation class; If you want the animation to trigger every time it comes in view
+        entry.target.classList.remove("timeline-fade-in");
+      }
+    });
+});
+
+const timelines = document.querySelectorAll(".date, .date-dot, .timeline-info")
+timelines.forEach(timeline => {
+    observer2.observe(timeline);
+})
+
+/********** - Our Story - Fade in on Scroll - **********/
+
+const observer3 = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        // Element is in view, add the animation class
+        entry.target.classList.add("timeline-draw-line");
+      } else {
+        // Element is out of view, remove the animation class; If you want the animation to trigger every time it comes in view
+        entry.target.classList.remove("timeline-draw-line");
+      }
+    });
+});
+
+const lines = document.querySelectorAll(".date-line")
+lines.forEach(line => {
+    observer3.observe(line);
+})
 
 /********** - Contact Page - Sending Alert for Form Submission - **********/
 
