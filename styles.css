@@ -117,6 +117,10 @@ footer {
     padding: 20px;
 }
 
+.credit {
+    font-size: .875rem;
+}
+
 /* Mobile View Layout */
 @media only screen and (max-width: 800px) {
 
@@ -776,6 +780,14 @@ b {
 .store-img {
     width: 100%;
     height: auto;
+}
+
+.story-img-cont > p {
+    font-family: "LouisGeorgeCafe";
+    font-size: .875rem;
+    color: #745e4b;
+    text-align: right;
+    margin-top: 10px;
 }
 
 .timeline-header {
