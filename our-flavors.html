@@ -14,12 +14,12 @@ Our Flavors Page - All the ice cream flavors available with price and link to in
         <title>True Creamery - Our Flavors</title>
         <link rel="stylesheet" href="./styles.css">
     </head>
-    <body>
+    <body data-page="our-flavors">
         <!-- Container for my Header and Nav -->
         <div class="top-banner">
             <!-- Nav holding the Menu Icon for Mobile -->
             <nav class="mobile-menu">
-                <a href="#"><img src="./images/header/mobile-menu.svg" alt="Mobile Menu" class="icons hamburger"></a>
+                <button class="header-icons"><img src="./images/header/mobile-menu.svg" alt="Mobile Menu" class="mobile-menu-icon"></button>
             </nav>
             <!-- Header holding logo -->
             <header>
@@ -30,26 +30,49 @@ Our Flavors Page - All the ice cream flavors available with price and link to in
                 <a href="./our-flavors.html">Our Flavors</a>
                 <a href="./our-story.html">Our Story</a>
                 <a href="./contact.html">Contact</a>
-                <input type="text" placeholder="Search" class="search-text-box" id="search-desktop">
-                <a href="#"><img src="./images/header/search-icon.svg" alt="Search icon" class="icons search"></a>
-                <a href="#"><img src="./images/header/shop-icon.svg" alt="Shop icon" class="icons"></a>
+                <div class="search-cont">
+                    <input type="text" placeholder="Search" class="search-text-box" id="search-desktop">
+                    <button class="header-icons"><img src="./images/header/search-icon.svg" alt="Search icon" class="search-icon"></button>
+                </div>
+                <div class="shop-cont">
+                    <button class="header-icons"><img src="./images/header/shop-icon.svg" alt="Shop icon" class="shop-icon"></button>
+                    <span class="shop-item-count"></span>
+                </div>
             </nav>
             <!-- Nav holding the Bag Icon for Mobile -->
             <nav class="mobile-menu">
-                <a href="#"><img src="./images/header/shop-icon.svg" alt="Shop icon" class="icons shop"></a>
+                <div class="shop-cont">
+                    <button class="header-icons"><img src="./images/header/shop-icon.svg" alt="Shop icon" class="shop-icon"></button>
+                    <span class="shop-item-count"></span>
+                </div>
             </nav>
         </div>
         <!-- The Links under Menu Icon for Mobile -->
         <div class="mobile-links">
             <ul>
-                <li class="search-box">
-                    <a href="#"><img src="./images/header/search-icon.svg" alt="Search icon" class="icons search"></a>
+                <li class="search-cont">
+                    <button class="header-icons"><img src="./images/header/search-icon.svg" alt="Search icon" class="search-icon"></button>
                     <input type="text" placeholder="Search" class="search-text-box" id="search-mobile">
                 </li>
                 <li><a href="./our-flavors.html">Our Flavors</a></li>
                 <li><a href="./our-story.html">Our Story</a></li>
                 <li><a href="./contact.html">Contact</a></li>
             </ul>
+        </div>
+        <!-- Cart Pop Out Layout -->
+        <div class="bag">
+            <div class="bag-header">
+                <h2>YOUR BAG</h2>
+                <button class="close-icon"><img src="./images/header/close-icon.svg" alt="Close icon" id="bag-close"></button>
+            </div>
+            <div class="bag-cont">
+            </div>
+            <hr>
+            <div class="subtotal">
+                <h3 class="subtotal-title">Subtotal</h3>
+                <h4 class="subtotal-price">$0.00</h4>
+            </div>
+            <a href="./bag.html" class="check-out">CHECK OUT</a>
         </div>
         <!-- Container for title and description header -->
         <div class="all-flvr-header">
@@ -64,80 +87,80 @@ Our Flavors Page - All the ice cream flavors available with price and link to in
         <div class="all-flvr-cont">
             <!-- Container for each flavor -->
             <div class="ea-flvr-grid">
-                <a href="./flavor-pages/classic-cream-flavor.html">
+                <a href="./flvr1-classic-vanilla.html">
                     <img src="./images/vanilla-img/packaging-vanilla.jpg" alt="True Creamery Classic Cream pint packaging." class="all-flvr-img img-on">
                     <img src="./images/vanilla-img/scoop-vanilla.jpg" alt="Vanilla ice cream in scoop." class="all-flvr-img img-off">
                 </a>
-                <a href="#" class="add-btn">+</a>
+                <button class="add-btn" id="add-btn-1"><span>+</span></button>
                 <!-- Container for title and price of each flavor -->
                 <div class="ea-flvr-grid-text">
-                    <a href="./flavor-pages/classic-cream-flavor.html">Classic Cream</a>
-                    <p>$12.00</p>
+                    <a href="./flvr1-classic-vanilla.html" class="flvr-title">Classic Cream</a>
+                    <p class="flvr-price">$12.00</p>
                 </div>
             </div>
             <!-- Container for each flavor -->
             <div class="ea-flvr-grid">
-                <a href="./flavor-pages/simply-chocolate-flavor.html">
+                <a href="./flvr2-simply-chocolate.html">
                     <img src="./images/chocolate-img/packaging-chocolate.jpg" alt="True Creamery Simply Chocolate pint packaging." class="all-flvr-img img-on">
                     <img src="./images/chocolate-img/scoop-chocolate.jpg" alt="Chocolate ice cream in scoop." class="all-flvr-img img-off">
                 </a>
-                <a href="#" class="add-btn">+</a>
+                <button class="add-btn" id="add-btn-2"><span>+</span></button>
                 <!-- Container for title and price of each flavor -->
                 <div class="ea-flvr-grid-text">
-                    <a href="./flavor-pages/simply-chocolate-flavor.html">Simply Chocolate</a>
-                    <p>$12.00</p>
+                    <a href="./flvr2-simply-chocolate.html" class="flvr-title">Simply Chocolate</a>
+                    <p class="flvr-price">$12.00</p>
                 </div>
             </div>
             <!-- Container for each flavor -->
             <div class="ea-flvr-grid">
-                <a href="./flavor-pages/pure-strawberry-flavor.html">
+                <a href="./flvr3-pure-strawberry.html">
                     <img src="./images/strawberry-img/packaging-strawberry.jpg" alt="True Creamery Pure Strawberry pint packaging." class="all-flvr-img img-on">
                     <img src="./images/strawberry-img/scoop-strawberry.jpg" alt="Strawberry ice cream in scoop." class="all-flvr-img img-off">
                 </a>
-                <a href="#" class="add-btn">+</a>
+                <button class="add-btn" id="add-btn-3"><span>+</span></button>
                 <!-- Container for title and price of each flavor -->
                 <div class="ea-flvr-grid-text">
-                    <a href="./flavor-pages/pure-strawberry-flavor.html">Pure Strawberry</a>
-                    <p>$12.00</p>
+                    <a href="./flvr3-pure-strawberry.html" class="flvr-title">Pure Strawberry</a>
+                    <p class="flvr-price">$12.00</p>
                 </div>
             </div>
             <!-- Container for each flavor -->
             <div class="ea-flvr-grid">
-                <a href="./flavor-pages/cookies-n-cream-flavor.html">
+                <a href="./flvr4-cookies-n-cream.html">
                     <img src="./images/cookies-img/packaging-cookies.jpg" alt="True Creamery Cookies 'n Cream pint packaging." class="all-flvr-img img-on">
                     <img src="./images/cookies-img/scoop-cookies.jpg" alt="Cookies 'n Cream ice cream in scoop." class="all-flvr-img img-off">
                 </a>
-                <a href="#" class="add-btn">+</a>
+                <button class="add-btn" id="add-btn-4"><span>+</span></button>
                 <!-- Container for title and price of each flavor -->
                 <div class="ea-flvr-grid-text">
-                    <a href="./flavor-pages/cookies-n-cream-flavor.html">Cookies 'n Cream</a>
-                    <p>$12.00</p>
+                    <a href="./flvr4-cookies-n-cream.html" class="flvr-title">Cookies 'n Cream</a>
+                    <p class="flvr-price">$12.00</p>
                 </div>
             </div>
             <!-- Container for each flavor -->
             <div class="ea-flvr-grid">
-                <a href="./flavor-pages/mint-chocolate-chip-flavor.html">
+                <a href="./flvr5-mint-chocolate-chip.html">
                     <img src="./images/mint-img/packaging-mint.jpg" alt="True Creamery Mint Chocolate Chip pint packaging." class="all-flvr-img img-on">
                     <img src="./images/mint-img/scoop-mint.jpg" alt="Mint Chocolate Chip ice cream in scoop." class="all-flvr-img img-off">
                 </a>
-                <a href="#" class="add-btn">+</a>
+                <button class="add-btn" id="add-btn-5"><span>+</span></button>
                 <!-- Container for title and price of each flavor -->
                 <div class="ea-flvr-grid-text">
-                    <a href="./flavor-pages/mint-chocolate-chip-flavor.html">Mint Chocolate Chip</a>
-                    <p>$12.00</p>
+                    <a href="./flvr5-mint-chocolate-chip.html" class="flvr-title">Mint Chocolate Chip</a>
+                    <p class="flvr-price">$12.00</p>
                 </div>
             </div>
             <!-- Container for each flavor -->
             <div class="ea-flvr-grid">
-                <a href="./flavor-pages/butter-pecan-flavor.html">
+                <a href="./flvr6-butter-pecan.html">
                     <img src="./images/pecan-img/packaging-pecan.jpg" alt="True Creamery Butter Pecan pint packaging." class="all-flvr-img img-on">
                     <img src="./images/pecan-img/scoop-pecan.jpg" alt="Butter Pecan ice cream in scoop." class="all-flvr-img img-off">
                 </a>
-                <a href="#" class="add-btn">+</a>
+                <button class="add-btn" id="add-btn-6"><span>+</span></button>
                 <!-- Container for title and price of each flavor -->
                 <div class="ea-flvr-grid-text">
-                    <a href="./flavor-pages/butter-pecan-flavor.html">Butter Pecan</a>
-                    <p>$12.00</p>
+                    <a href="./flvr6-butter-pecan.html" class="flvr-title">Butter Pecan</a>
+                    <p class="flvr-price">$12.00</p>
                 </div>
             </div>
         </div>

@@ -3,7 +3,7 @@ Ashleigh Parker - MGD2041
 
 True Creamery - Lactose Free Ice Cream Brand
 
-Our Story Page - Information about the store with an image of store front. Animated timeline.
+Bag Page - Which will display the products that are added to the bag.
 -->
 
 <!DOCTYPE html>
@@ -14,7 +14,7 @@ Our Story Page - Information about the store with an image of store front. Anima
         <title>True Creamery</title>
         <link rel="stylesheet" href="./styles.css">
     </head>
-    <body>
+    <body data-page="bag">
         <!-- Container for my Header and Nav -->
         <div class="top-banner">
             <!-- Nav holding the Menu Icon for Mobile -->
@@ -72,72 +72,35 @@ Our Story Page - Information about the store with an image of store front. Anima
                 <h3 class="subtotal-title">Subtotal</h3>
                 <h4 class="subtotal-price">$0.00</h4>
             </div>
-            <a href="./bag.html" class="check-out">CHECK OUT</a>
+            <a href="#" class="check-out">CHECK OUT</a>
         </div>
-        <!-- Container for Story Info and Image -->
-        <div class="story-info-cont">
-            <div class="story-info">
-                <h2>OUR STORY</h2>
-                <p>
-                    In the heart of the small town of Parker, True Creamery began as a simple mission to bring back the 
-                    joy of ice cream to those who had to give it up. When the owner’s daughter, Lily, was diagnosed with 
-                    lactose intolerance, family ice cream nights suddenly lost their magic. Refusing to let her miss out, 
-                    the family began experimenting in their kitchen, determined to recreate the creamy, nostalgic taste 
-                    they all loved without the dairy. After months of perfecting their recipe using all-natural, lactose-free 
-                    ingredients, they opened True Creamery, a cozy shop that now serves the whole community. What started 
-                    as a labor of love quickly became a town favorite, proving that great ice cream doesn’t need to come 
-                    with compromises.
-                </p>
+        <div class="checkout-cont">
+            <div class="checkout-header">
+                <h2>BAG</h2>
             </div>
-            <div class="story-img-cont">
-                <img src="./images/store-front.jpg" alt="Front of Store." class="store-img">
-                <p>Photo by Maria Lupan on Unsplash</p>
-            </div>
+            <!-- <div class="checkout-box">
+                <img src="./images/vanilla-img/packaging-vanilla.jpg" class="checkout-img">
+                <div class="checkout-detail">
+                    <div class="checkout-text">
+                        <h3>Classic Cream</h3>
+                        <p class="checkout-price">$12.00</p>
+                    </div>
+                    <div class="checkout-amount">
+                        <div class="checkout-quantity">
+                            <button id="checkout-decrement">-</button>
+                            <p class="checkout-number">1</p>
+                            <button id="checkout-increment">+</button>
+                        </div>
+                        <button class="checkout-remove">Remove</button>
+                    </div>
+                </div>
+            </div> -->
         </div>
-        <h2 class="timeline-header">OUR HISTORY</h2>
-        <!-- Container for Timeline-->
-        <div class="story-timeline-cont">
-            <div class="timeline-cont">
-                <div class="timeline-graph">
-                    <p class="date">2020</p>
-                    <div class="date-dot"></div>
-                    <div class="date-line"></div>
-                </div>
-                <div class="timeline-info">
-                    <h3>True Creamery opens in Parker</h3>
-                    <p>
-                        True Creamery opens its doors in Parker, offering handcrafted, lactose-free ice cream inspired by 
-                        the founders’ mission to create treats everyone can enjoy.
-                    </p>
-                </div>
-            </div>
-            <div class="timeline-cont">
-                <div class="timeline-graph">
-                    <p class="date">2023</p>
-                    <div class="date-dot"></div>
-                    <div class="date-line"></div>
-                </div>
-                <div class="timeline-info">
-                    <h3>Packaged Ice Cream Launch</h3>
-                    <p>
-                        True Creamery begins packaging their popular flavors, expanding into local grocery stores and making 
-                        their ice cream more accessible beyond the shop.
-                    </p>
-                </div>
-            </div>
-            <div class="timeline-cont">
-                <div class="timeline-graph">
-                    <p class="date">2025</p>
-                    <div class="date-dot"></div>
-                    <div class="date-line"></div>
-                </div>
-                <div class="timeline-info">
-                    <h3>Online Store Launch</h3>
-                    <p>
-                        The company launches a new website with nationwide shipping, allowing customers across the country to 
-                        order and enjoy True Creamery’s lactose-free ice cream from home.
-                    </p>
-                </div>
+        <div class="total-cont">
+            <hr>
+            <div class="total">
+                <h3>Total</h3>
+                <h4 class="total-price">$0.00</h4>
             </div>
         </div>
         <!-- Footer with rights info -->

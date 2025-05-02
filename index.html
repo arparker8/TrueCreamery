@@ -19,7 +19,7 @@ Homepage - Has two call prompts with imagery.
         <div class="top-banner">
             <!-- Nav holding the Menu Icon for Mobile -->
             <nav class="mobile-menu">
-                <a href="#"><img src="./images/header/mobile-menu.svg" alt="Mobile Menu" class="icons hamburger"></a>
+                <button class="header-icons"><img src="./images/header/mobile-menu.svg" alt="Mobile Menu" class="mobile-menu-icon"></button>
             </nav>
             <!-- Header holding logo -->
             <header>
@@ -30,20 +30,28 @@ Homepage - Has two call prompts with imagery.
                 <a href="./our-flavors.html">Our Flavors</a>
                 <a href="./our-story.html">Our Story</a>
                 <a href="./contact.html">Contact</a>
-                <input type="text" placeholder="Search" class="search-text-box" id="search-desktop">
-                <a href="#"><img src="./images/header/search-icon.svg" alt="Search icon" class="icons search"></a>
-                <a href="#"><img src="./images/header/shop-icon.svg" alt="Shop icon" class="icons"></a>
+                <div class="search-cont">
+                    <input type="text" placeholder="Search" class="search-text-box" id="search-desktop">
+                    <button class="header-icons"><img src="./images/header/search-icon.svg" alt="Search icon" class="search-icon"></button>
+                </div>
+                <div class="shop-cont">
+                    <button class="header-icons"><img src="./images/header/shop-icon.svg" alt="Shop icon" class="shop-icon"></button>
+                    <span class="shop-item-count"></span>
+                </div>
             </nav>
             <!-- Nav holding the Bag Icon for Mobile -->
             <nav class="mobile-menu">
-                <a href="#"><img src="./images/header/shop-icon.svg" alt="Shop icon" class="icons shop"></a>
+                <div class="shop-cont">
+                    <button class="header-icons"><img src="./images/header/shop-icon.svg" alt="Shop icon" class="shop-icon"></button>
+                    <span class="shop-item-count"></span>
+                </div>
             </nav>
         </div>
         <!-- The Links under Menu Icon for Mobile -->
         <div class="mobile-links">
             <ul>
-                <li class="search-box">
-                    <a href="#"><img src="./images/header/search-icon.svg" alt="Search icon" class="icons search"></a>
+                <li class="search-cont">
+                    <button class="header-icons"><img src="./images/header/search-icon.svg" alt="Search icon" class="search-icon"></button>
                     <input type="text" placeholder="Search" class="search-text-box" id="search-mobile">
                 </li>
                 <li><a href="./our-flavors.html">Our Flavors</a></li>
@@ -51,13 +59,28 @@ Homepage - Has two call prompts with imagery.
                 <li><a href="./contact.html">Contact</a></li>
             </ul>
         </div>
+        <!-- Cart Pop Out Layout -->
+        <div class="bag">
+            <div class="bag-header">
+                <h2>YOUR BAG</h2>
+                <button class="close-icon"><img src="./images/header/close-icon.svg" alt="Close icon" id="bag-close"></button>
+            </div>
+            <div class="bag-cont">
+            </div>
+            <hr>
+            <div class="subtotal">
+                <h3 class="subtotal-title">Subtotal</h3>
+                <h4 class="subtotal-price">$0.00</h4>
+            </div>
+            <a href="./bag.html" class="check-out">CHECK OUT</a>
+        </div>
         <!-- Container for first prompt with image -->
         <div class="prompt-cont-1">
             <!-- Container for text and button -->
             <div class="prompt-1">
                 <h2>Try our Simply Chocolate!</h2>
                 <p>Deep, decadent flavor in every smooth, creamy scoop!<br>Our <b>Flavor of the Month</b>, grab yours today!</p>
-                <a href="./flavor-pages/simply-chocolate-flavor.html" class="shop-now-btn">SHOP NOW</a>
+                <a href="./flvr2-simply-chocolate.html" class="shop-now-btn">SHOP NOW</a>
             </div>
             <img src="./images/top-view-chocolate-cup.jpg" alt="Chocolate ice cream in a cup." class="home-img">    
         </div>

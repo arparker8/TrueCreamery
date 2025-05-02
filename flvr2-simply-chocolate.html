@@ -3,7 +3,7 @@ Ashleigh Parker - MGD2041
 
 True Creamery - Lactose Free Ice Cream Brand
 
-Our Story Page - Information about the store with an image of store front. Animated timeline.
+Simply Chocolate Flavor - Description, Price, Add to Bag button, Ingredients and call to action about being lactose free. With Photo gallery
 -->
 
 <!DOCTYPE html>
@@ -11,10 +11,10 @@ Our Story Page - Information about the store with an image of store front. Anima
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>True Creamery</title>
+        <title>True Creamery - Shop Simply Chocolate Flavor</title>
         <link rel="stylesheet" href="./styles.css">
     </head>
-    <body>
+    <body id="flvr-body" data-page="product-2">
         <!-- Container for my Header and Nav -->
         <div class="top-banner">
             <!-- Nav holding the Menu Icon for Mobile -->
@@ -74,69 +74,65 @@ Our Story Page - Information about the store with an image of store front. Anima
             </div>
             <a href="./bag.html" class="check-out">CHECK OUT</a>
         </div>
-        <!-- Container for Story Info and Image -->
-        <div class="story-info-cont">
-            <div class="story-info">
-                <h2>OUR STORY</h2>
+        <!-- Container for Content on Page-->
+        <div class="flvr-cont">
+
+            <!-- Container for Image Gallery -->
+            <div class="flvr-img-cont">
+                
+                <!-- Full-Width Images with Number text and caption -->
+                <div class="flvr-img-slides">
+                    <div class="slides-num-text">1 / 3</div>
+                    <img src="./images/chocolate-img/packaging-chocolate.jpg" alt="True Creamery Simply Chocolate pint packaging." class="img-on">
+                    <p class="flvr-img-caption">Designed by Free-PSD-Templates</p>
+                </div>
+                <div class="flvr-img-slides">
+                    <div class="slides-num-text">2 / 3</div>
+                    <img src="./images/chocolate-img/scoop-chocolate.jpg" alt="Chocolate ice cream in scoop.">
+                    <p class="flvr-img-caption">Designed by Freepik</p>
+                </div>
+                <div class="flvr-img-slides">
+                    <div class="slides-num-text">3 / 3</div>
+                    <img src="./images/chocolate-img/top-view-chocolate.jpg" alt="Chocolate ice cream on plate.">
+                    <p class="flvr-img-caption">Designed by Freepik</p>
+                </div>
+                
+                <!-- Next and Previous Buttons -->
+                <a class="slides-prev-btn" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="slides-next-btn" onclick="plusSlides(1)">&#10095;</a>
+                
+                <!-- Thumbnail Images -->
+                <div class="thumbnail-row">
+                    <div class="thumbnail-column">
+                        <img class="demo cursor" src="./images/chocolate-img/packaging-chocolate.jpg" onclick="currentSlide(1)" alt="True Creamery Simply Chocolate pint packaging.">
+                    </div>
+                    <div class="thumbnail-column">
+                        <img class="demo cursor" src="./images/chocolate-img/scoop-chocolate.jpg" onclick="currentSlide(2)" alt="Chocolate ice cream in scoop.">
+                    </div>
+                    <div class="thumbnail-column">
+                        <img class="demo cursor" src="./images/chocolate-img/top-view-chocolate.jpg" onclick="currentSlide(3)" alt="Chocolate ice cream in plate.">
+                    </div>
+                </div>
+            </div>
+            <!-- Container for Text on Page -->
+            <div class="flvr-text-cont">
+                <h2>Simply Chocolate</h2>
                 <p>
-                    In the heart of the small town of Parker, True Creamery began as a simple mission to bring back the 
-                    joy of ice cream to those who had to give it up. When the owner’s daughter, Lily, was diagnosed with 
-                    lactose intolerance, family ice cream nights suddenly lost their magic. Refusing to let her miss out, 
-                    the family began experimenting in their kitchen, determined to recreate the creamy, nostalgic taste 
-                    they all loved without the dairy. After months of perfecting their recipe using all-natural, lactose-free 
-                    ingredients, they opened True Creamery, a cozy shop that now serves the whole community. What started 
-                    as a labor of love quickly became a town favorite, proving that great ice cream doesn’t need to come 
-                    with compromises.
+                    Indulge in the rich, velvety taste of chocolate—without the lactose! Our lactose-free chocolate ice cream is crafted for pure 
+                    cocoa lovers, delivering a smooth, creamy texture and deep chocolate flavor in every bite. It’s the perfect treat for those 
+                    who crave classic chocolate without compromise.
                 </p>
-            </div>
-            <div class="story-img-cont">
-                <img src="./images/store-front.jpg" alt="Front of Store." class="store-img">
-                <p>Photo by Maria Lupan on Unsplash</p>
-            </div>
-        </div>
-        <h2 class="timeline-header">OUR HISTORY</h2>
-        <!-- Container for Timeline-->
-        <div class="story-timeline-cont">
-            <div class="timeline-cont">
-                <div class="timeline-graph">
-                    <p class="date">2020</p>
-                    <div class="date-dot"></div>
-                    <div class="date-line"></div>
-                </div>
-                <div class="timeline-info">
-                    <h3>True Creamery opens in Parker</h3>
-                    <p>
-                        True Creamery opens its doors in Parker, offering handcrafted, lactose-free ice cream inspired by 
-                        the founders’ mission to create treats everyone can enjoy.
-                    </p>
-                </div>
-            </div>
-            <div class="timeline-cont">
-                <div class="timeline-graph">
-                    <p class="date">2023</p>
-                    <div class="date-dot"></div>
-                    <div class="date-line"></div>
-                </div>
-                <div class="timeline-info">
-                    <h3>Packaged Ice Cream Launch</h3>
-                    <p>
-                        True Creamery begins packaging their popular flavors, expanding into local grocery stores and making 
-                        their ice cream more accessible beyond the shop.
-                    </p>
-                </div>
-            </div>
-            <div class="timeline-cont">
-                <div class="timeline-graph">
-                    <p class="date">2025</p>
-                    <div class="date-dot"></div>
-                    <div class="date-line"></div>
-                </div>
-                <div class="timeline-info">
-                    <h3>Online Store Launch</h3>
-                    <p>
-                        The company launches a new website with nationwide shipping, allowing customers across the country to 
-                        order and enjoy True Creamery’s lactose-free ice cream from home.
-                    </p>
+                <p class="flvr-price">$12.00</p>
+                <button class="add-to-bag-btn" id="add-btn-2">ADD TO BAG</button>
+                <h3>INGREDIENTS</h3>
+                <p class="flvr-ingredients">Lactose-Free Whole Milk, Lactose-Free Heavy Cream, Granulated Sugar, Unsweetened Cocoa Powder, Pure Vanilla Extract, and Salt.</p>
+                <div class="flvr-delivery">
+                    <img src="./images/stickers/delivery-sticker.svg" alt="" class="delivery-sticker">
+                    <h3>DELIVERY</h3>
+                    <ul>
+                        <li>Able to get every flavor in all 50 states!</li>
+                        <li>Insulated packaging with dry ice to keep them nice and cold!</li>
+                    </ul>
                 </div>
             </div>
         </div>

@@ -83,9 +83,19 @@ header, .menu {
     display: none;
 }
 
-.icons {
-    height: 25px;
+.header-icons {
+    border: none;
+    cursor: pointer;
+    appearance: none;
+    background-color: inherit;
     width: 25px;
+    height: 25px;
+    margin: 0 30px;
+}
+
+.search-cont {
+    display: flex;
+    align-items: center;
 }
 
 .search-text-box {
@@ -105,6 +115,186 @@ header, .menu {
 
 .search-text-box::placeholder {
     color: rgba(0,0,0,0.4)
+}
+
+.shop-cont {
+    position: relative;
+    display: flex;
+    cursor: pointer;
+}
+
+.shop-cont > .shop-item-count {
+    position: absolute;
+    top: 0;
+    right: 22px;
+    width: 18px;
+    height: 18px;
+    background-color: #7c8a42;
+    border-radius: 50%;
+    font-family: "LouisGeorgeCafe";
+    font-size: .875rem;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+}
+
+.bag {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 360px;
+    height: 100vh;
+    background: white;
+    box-shadow: 0px 2.5px 10px 0px rgba(0,0,0,0.2);
+    padding: 0 20px;
+    z-index: 999;
+    overflow: scroll;
+    transition: 0.5s;
+}
+
+.bag.active {
+    right: 0;
+}
+
+.bag-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.bag-header > h2 {
+    font-family: "Vergilia";
+    font-size: 1.5rem;
+    color: #75445f;
+    margin: 20px 0;
+}
+
+.close-icon {
+    border: none;
+    cursor: pointer;
+    appearance: none;
+    background-color: inherit;
+    width: 25px;
+    height: 25px;
+}
+
+.bag-box {
+    display: flex;
+    margin: 20px 0;
+    width: 100%;
+    height: auto;
+}
+
+.bag-img {
+    max-width: 30%;
+    height: auto;
+}
+
+.bag-detail {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+}
+
+.bag-detail > h3 {
+    font-family: "Vergilia";
+    font-size: 1.125rem;
+    color: #7c8a42;
+    width: 100%;
+    height: auto;
+}
+
+.bag-price {
+    font-family: "LouisGeorgeCafeBold";
+    font-size: 1.125rem;
+    margin-top: 10px;
+}
+
+.bag-amount {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.bag-quantity {
+    display: flex;
+    margin: 5px 0;
+}
+
+#decrement, #increment {
+    font-family: "LouisGeorgeCafeBold";
+    width: 22px;
+    height: 20px;
+    background-color: #75445f;
+    color: white;
+    border: none;
+    cursor: pointer;
+    user-select: none;
+    box-shadow: 0px 2.5px 2.5px 0px rgba(0,0,0,0.2);
+}
+
+#decrement:hover, #increment:hover {
+    background-color: #e19ac1;
+}
+
+.number {
+    font-family: "LouisGeorgeCafe";
+    margin: 0 20px;
+}
+
+.bag-remove {
+    font-family: "LouisGeorgeCafe";
+    font-size: 1rem;
+    text-align: right;
+    background-color: inherit;
+    border: none;
+    margin-left: 50px;
+}
+
+.bag-remove:hover {
+    text-decoration: underline #7c8a42 1.5px;
+    text-underline-offset: 3px;
+}
+
+hr {
+    margin-top: 20px;
+    border: #7c8a42 solid 1.5px;
+}
+
+.subtotal {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+
+.subtotal-title {
+    font-family: "Vergilia";
+    font-size: 1.125rem;
+    color: #75445f;
+}
+
+.subtotal-price {
+    font-family: "LouisGeorgeCafeBold";
+}
+
+.check-out {
+    font-family: "LouisGeorgeCafeBold";
+    font-size: 1rem;
+    background-color: #7c8a42;
+    color: white;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    box-shadow: 0px 2.5px 2.5px 0px rgba(0,0,0,0.2);
+}
+
+.check-out:hover {
+    background-color: #b4c978;
 }
 
 footer {
@@ -132,10 +322,6 @@ footer {
         .mobile-menu {
             display: inline-flex;
             align-self: center;
-        }
-
-        .hamburger {
-            margin-left: 20px;
         }
 
         .header {
@@ -166,7 +352,7 @@ footer {
             font-size: 1.125rem;
             color: #745e4b;
             text-decoration: none;
-            padding: 0 40px;
+            padding: 0 30px;
         }
         
         .mobile-links > ul > li > a:hover {
@@ -176,18 +362,11 @@ footer {
             text-underline-offset: 8px;
         }
 
-        .search-box {
-            display: flex;
-            align-items: center;
-        }
-
         .search-text-box {
             display: inline;
-            margin-left: -25px;
+            margin-left: -20px;
             max-width: 100%;
         }
-
-        
     
         footer {
             display: flex;
@@ -381,19 +560,32 @@ b {
     font-family: "LouisGeorgeCafeBold";
     font-size: 1.125rem;
     color: white;
-    background-color: #7c8a42;
-    padding: 5px 10px;
+    background-color: #75445f;
+    border: none;
+    width: 30px;
+    height: 30px;
     position: absolute;
     top: 5%;
     right: 15%;
-    text-align: center;
-    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     box-shadow: 0px 2.5px 2.5px 0px rgba(0,0,0,0.2);
+    cursor: pointer;
+}
+
+.add-btn:hover {
+    width: 50px;
+}
+
+.add-btn:hover span {
+    display: none;
 }
 
 /* When hovering the Button it changes to say 'ADD' instead of just a '+' */
-.add-btn:hover::after {
-    content: " ADD";
+.add-btn:hover::before {
+    content: "ADD";
+    padding-top: 2px;
 }
 
 .ea-flvr-grid-text {
@@ -631,10 +823,11 @@ b {
     color: white;
     background-color: #7c8a42;
     text-decoration: none;
-    display: flex;
-    max-width: 100%;
+    border: none;
+    width: 100%;
     justify-content: center;
     padding: 10px 20px;
+    cursor: pointer;
     box-shadow: 0px 2.5px 2.5px 0px rgba(0,0,0,0.2);
 }
 
@@ -1122,4 +1315,122 @@ b {
     #submit, #reset {
         width: 95%;
     }
+}
+
+/********** - Bag Page - **********/
+
+.checkout-cont {
+    display: flex;
+    flex-direction: column;
+    margin: 40px 50px;
+}
+
+.checkout-header {
+    display: flex;
+    justify-content: center;
+}
+
+.checkout-header > h2 {
+    font-family: "Vergilia";
+    font-size: 2rem;
+    color: #75445f;
+    margin-bottom: 30px;
+}
+
+.checkout-box {
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    justify-content: center;
+    margin: 10px 0;
+}
+
+.checkout-img {
+    width: 35%;
+    height: auto;
+}
+
+.checkout-detail {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.checkout-text > h3 {
+    font-family: "Vergilia";
+    font-size: 1.5rem;
+    color: #7c8a42;
+}
+
+.checkout-text > p {
+    font-family: "LouisGeorgeCafeBold";
+    font-size: 1.5rem;
+    margin-top: 30px;
+}
+
+.checkout-amount {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.checkout-quantity {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#checkout-decrement, #checkout-increment {
+    font-family: "LouisGeorgeCafeBold";
+    font-size: 1.125rem;
+    width: 32px;
+    height: 30px;
+    background-color: #75445f;
+    color: white;
+    border: none;
+    cursor: pointer;
+    user-select: none;
+    box-shadow: 0px 2.5px 2.5px 0px rgba(0,0,0,0.2);
+}
+
+.checkout-number {
+    font-family: "LouisGeorgeCafe";
+    font-size: 1.225rem;
+    margin: 0 20px;
+}
+
+.checkout-remove {
+    font-family: "LouisGeorgeCafe";
+    font-size: 1.125rem;
+    text-align: right;
+    background-color: inherit;
+    border: none;
+    margin-left: 50px;
+}
+
+.checkout-remove:hover {
+    text-decoration: underline #7c8a42 1.5px;
+    text-underline-offset: 3px;
+}
+
+.total-cont {
+    margin: 0 50px;
+    display: flex;
+    flex-direction: column;
+}
+
+.total {
+    display: flex;
+    justify-content: space-between;
+    margin: 40px 0;
+}
+
+.total > h3 {
+    font-family: "Vergilia";
+    font-size: 1.5rem;
+    color: #7c8a42;
+}
+
+.total-price {
+    font-family: "LouisGeorgeCafe";
+    font-size: 1.5rem;
 }
