@@ -18,12 +18,16 @@ const products = [
     {name: "Butter Pecan", price: 12.00, photo: "./images/pecan-img/packaging-pecan.jpg", quantity: 1}
 ]
 
+if (document.body.dataset.page !== "bag") {
+
 const bagIcon = document.querySelector(".shop-cont");
 const bag = document.querySelector(".bag");
 const bagClose = document.querySelector("#bag-close");
 
 bagIcon.addEventListener("click", () => bag.classList.add("active"));
 bagClose.addEventListener("click", () => bag.classList.remove("active"));
+
+}
 
 // This is for the Add to Bag buttons on my Flavors Page
 if (document.body.dataset.page === "our-flavors") {
