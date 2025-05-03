@@ -10,12 +10,12 @@ Document for all the Script that is being used for the project.
 
 // An Array of my Products so that it can be stored in localStorage.
 const products = [
-    {name: "Classic Cream", price: 12.00, photo: "./images/vanilla-img/packaging-vanilla.jpg"},
-    {name: "Simply Chocolate", price: 12.00, photo: "./images/chocolate-img/packaging-chocolate.jpg"},
-    {name: "Pure Strawberry", price: 12.00, photo: "./images/strawberry-img/packaging-strawberry.jpg"},
-    {name: "Cookies 'n Cream", price: 12.00, photo: "./images/cookies-img/packaging-cookies.jpg"},
-    {name: "Mint Chocolate Chip", price: 12.00, photo: "./images/mint-img/packaging-mint.jpg"},
-    {name: "Butter Pecan", price: 12.00, photo: "./images/pecan-img/packaging-pecan.jpg"}
+    {name: "Classic Cream", price: 12.00, photo: "./images/vanilla-img/packaging-vanilla.jpg", quantity: 1},
+    {name: "Simply Chocolate", price: 12.00, photo: "./images/chocolate-img/packaging-chocolate.jpg", quantity: 1},
+    {name: "Pure Strawberry", price: 12.00, photo: "./images/strawberry-img/packaging-strawberry.jpg", quantity: 1},
+    {name: "Cookies 'n Cream", price: 12.00, photo: "./images/cookies-img/packaging-cookies.jpg", quantity: 1},
+    {name: "Mint Chocolate Chip", price: 12.00, photo: "./images/mint-img/packaging-mint.jpg", quantity: 1},
+    {name: "Butter Pecan", price: 12.00, photo: "./images/pecan-img/packaging-pecan.jpg", quantity: 1}
 ]
 
 const bagIcon = document.querySelector(".shop-cont");
@@ -160,7 +160,7 @@ function displayItem(eachFlavor) {
             <div class="bag-amount">
                 <div class="bag-quantity">
                     <button id="decrement">-</button>
-                    <p class="number">${quantity}</p>
+                    <p class="number">${eachFlavor.quantity}</p>
                     <button id="increment">+</button>
                 </div>
                 <button class="bag-remove">Remove</button>
@@ -179,6 +179,8 @@ function displayItem(eachFlavor) {
         updateSubtotalPrice();
     
         removeObjectByName("cart", eachFlavor.name);
+
+        window.location.reload();
     
     });
     
@@ -198,25 +200,40 @@ function displayItem(eachFlavor) {
     // Changing the Quantity of the items when minus or plus buttons are clicked.
     bagBox.querySelector(".bag-quantity").addEventListener("click", event => {
         const numberElement = bagBox.querySelector(".number");
+        const myArray = JSON.parse(localStorage.getItem("cart"));
+        const desiredName = eachFlavor.name;
+        const index = myArray.findIndex(data => data.name === desiredName)
     
-        if (event.target.id === "decrement" && quantity > 1) {
-            quantity--;
+        if (event.target.id === "decrement" && eachFlavor.quantity > 1) {
+            eachFlavor.quantity--;
     
             updateBagCount(-1);
+
+            if (myArray && myArray.length > index) {
+                myArray[index].quantity = eachFlavor.quantity;
+            }
+    
+            localStorage.setItem("cart", JSON.stringify(myArray));
     
         } else if (event.target.id === "increment") {
-            quantity++;
+            eachFlavor.quantity++;
     
             updateBagCount(1);
-        }
+
+            if (myArray && myArray.length > index) {
+                myArray[index].quantity = eachFlavor.quantity;
+            }
     
-        numberElement.textContent = quantity;
+            localStorage.setItem("cart", JSON.stringify(myArray));
+        }
+
+        numberElement.textContent = eachFlavor.quantity;
     
         updateSubtotalPrice();
     
     });
     
-    updateBagCount(1);
+    updateBagCount(eachFlavor.quantity);
     
     updateSubtotalPrice();
 }
@@ -437,7 +454,7 @@ function checkoutDisplay(eachFlavor) {
                 <div class="checkout-amount">
                     <div class="checkout-quantity">
                         <button id="checkout-decrement">-</button>
-                        <p class="checkout-number">${quantity}</p>
+                        <p class="checkout-number">${eachFlavor.quantity}</p>
                         <button id="checkout-increment">+</button>
                     </div>
                     <button class="bag-remove">Remove</button>
@@ -451,11 +468,13 @@ function checkoutDisplay(eachFlavor) {
         checkoutBox.querySelector(".bag-remove").addEventListener("click", () => {
             checkoutBox.remove();
         
-            updateBagCount(-(quantity));
+            updateBagCount(-(eachFlavor.quantity));
         
             updateTotalPrice();
         
             removeObjectByName("cart", eachFlavor.name);
+
+            window.location.reload();
         
         });
         
@@ -475,19 +494,35 @@ function checkoutDisplay(eachFlavor) {
         // Changing the Quantity of the items when minus or plus buttons are clicked.
         checkoutBox.querySelector(".checkout-quantity").addEventListener("click", event => {
             const numberElement = checkoutBox.querySelector(".checkout-number");
+            const myArray = JSON.parse(localStorage.getItem("cart"));
+            const desiredName = eachFlavor.name;
+            const index = myArray.findIndex(data => data.name === desiredName)
         
-            if (event.target.id === "checkout-decrement" && quantity > 1) {
-                quantity--;
+            if (event.target.id === "checkout-decrement" && eachFlavor.quantity > 1) {
+                eachFlavor.quantity--;
         
                 updateBagCount(-1);
+
+                if (myArray && myArray.length > index) {
+                    myArray[index].quantity = eachFlavor.quantity;
+                }
+        
+                localStorage.setItem("cart", JSON.stringify(myArray));
         
             } else if (event.target.id === "checkout-increment") {
-                quantity++;
+                eachFlavor.quantity++;
         
                 updateBagCount(1);
+
+                if (myArray && myArray.length > index) {
+                    myArray[index].quantity = eachFlavor.quantity;
+                }
+        
+                localStorage.setItem("cart", JSON.stringify(myArray));
+
             }
         
-            numberElement.textContent = quantity;
+            numberElement.textContent = eachFlavor.quantity;
         
             updateTotalPrice();
         
@@ -496,7 +531,7 @@ function checkoutDisplay(eachFlavor) {
         updateTotalPrice();
 }
 
-// Adding together the Subtotal of the Items and Updating if things change.
+// Adding together the Total of the Items and Updating if things change.
 function updateTotalPrice() {
     const totalPriceElement = document.querySelector(".total-price");
     const checkoutBoxes = checkoutCont.querySelectorAll(".checkout-box");
