@@ -333,13 +333,13 @@ footer {
 
         .top-banner {
             display: flex;
+            padding: 0 15px;
         }
         
         /* Items in Header needed to be Centered Horizontally. */
         .mobile-menu {
             display: inline-flex;
             align-self: center;
-            margin: 0 25px;
         }
 
         .mobile-menu-icon {
