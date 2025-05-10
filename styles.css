@@ -1504,6 +1504,11 @@ b {
     }
 
     .total-cont {
+        margin: 0 20px;
+        display: flex;
+        flex-direction: column;
         width: 90%;
+        height: auto;
+        justify-self: center;
     }
 }
