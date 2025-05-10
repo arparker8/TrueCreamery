@@ -83,18 +83,29 @@ header, .menu {
     display: none;
 }
 
-.header-icons {
+.mobile-menu-icon {
     border: none;
     cursor: pointer;
     appearance: none;
     background-color: inherit;
     width: 25px;
     height: 25px;
+    margin: 0 25px;
 }
 
 .search-cont {
     display: flex;
     align-items: center;
+}
+
+.search-icon {
+    border: none;
+    cursor: pointer;
+    appearance: none;
+    background-color: inherit;
+    width: 25px;
+    height: 25px;
+    margin: 0 25px;
 }
 
 .search-text-box {
@@ -122,6 +133,16 @@ header, .menu {
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    margin: 0 25px;
+}
+
+.shop-icon {
+    border: none;
+    cursor: pointer;
+    appearance: none;
+    background-color: inherit;
+    width: 25px;
+    height: 25px;
 }
 
 .shop-cont > .shop-item-count {
@@ -358,7 +379,6 @@ footer {
 
         .search-text-box {
             display: inline;
-            margin-left: -20px;
             max-width: 100%;
         }
     
