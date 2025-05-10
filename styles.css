@@ -248,6 +248,7 @@ header, .menu {
     border: none;
     cursor: pointer;
     user-select: none;
+    -webkit-user-select: none;
     box-shadow: 0px 2.5px 2.5px 0px rgba(0,0,0,0.2);
 }
 
@@ -748,6 +749,7 @@ b {
     font-family: "LouisGeorgeCafeBold";
     font-size: 1.5rem;
     user-select: none;
+    -webkit-user-select: none;
 }
 
 .slides-next-btn {
@@ -760,6 +762,7 @@ b {
     font-family: "LouisGeorgeCafeBold";
     font-size: 1.5rem;
     user-select: none;
+    -webkit-user-select: none;
 }
 
 .slides-next-btn:hover, .slides-prev-btn:hover {
@@ -1416,6 +1419,7 @@ b {
     border: none;
     cursor: pointer;
     user-select: none;
+    -webkit-user-select: none;
     box-shadow: 0px 2.5px 2.5px 0px rgba(0,0,0,0.2);
 }
 
