@@ -458,9 +458,9 @@ function checkoutDisplay(eachFlavor) {
                 </div>
                 <div class="checkout-amount">
                     <div class="checkout-quantity">
-                        <button id="checkout-decrement">-</button>
+                        <button class="checkout-decrement">-</button>
                         <p class="checkout-number">${eachFlavor.quantity}</p>
-                        <button id="checkout-increment">+</button>
+                        <button class="checkout-increment">+</button>
                     </div>
                     <button class="bag-remove">Remove</button>
                 </div>
@@ -503,7 +503,7 @@ function checkoutDisplay(eachFlavor) {
             const desiredName = eachFlavor.name;
             const index = myArray.findIndex(data => data.name === desiredName)
         
-            if (event.target.id === "checkout-decrement" && eachFlavor.quantity > 1) {
+            if (event.target.className === "checkout-decrement" && eachFlavor.quantity > 1) {
                 eachFlavor.quantity--;
         
                 updateBagCount(-1);
@@ -514,7 +514,7 @@ function checkoutDisplay(eachFlavor) {
         
                 localStorage.setItem("cart", JSON.stringify(myArray));
         
-            } else if (event.target.id === "checkout-increment") {
+            } else if (event.target.className === "checkout-increment") {
                 eachFlavor.quantity++;
         
                 updateBagCount(1);

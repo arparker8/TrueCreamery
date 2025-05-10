@@ -333,7 +333,7 @@ footer {
 
         .top-banner {
             display: flex;
-            padding: 0 15px;
+            padding: 0 20px;
         }
         
         /* Items in Header needed to be Centered Horizontally. */
@@ -1409,7 +1409,7 @@ b {
     align-items: center;
 }
 
-#checkout-decrement, #checkout-increment {
+.checkout-decrement, .checkout-increment {
     font-family: "LouisGeorgeCafeBold";
     font-size: 1.125rem;
     width: 32px;
@@ -1421,6 +1421,10 @@ b {
     user-select: none;
     -webkit-user-select: none;
     box-shadow: 0px 2.5px 2.5px 0px rgba(0,0,0,0.2);
+}
+
+.checkout-decrement:hover, .checkout-increment:hover {
+    background-color: #e19ac1;
 }
 
 .checkout-number {
@@ -1467,4 +1471,30 @@ b {
 .total-price {
     font-family: "LouisGeorgeCafe";
     font-size: 1.5rem;
+}
+
+/* Mobile View Layout */
+@media only screen and (max-width: 800px) {
+
+    .checkout-img {
+        max-width: 80%;
+        height: auto;
+    }
+
+    .checkout-text > h3 {
+        font-size: 1.225rem;
+    }
+
+    .checkout-text > p {
+        font-size: 1.225rem;
+        margin-top: 15px;
+    }
+
+    .checkout-detail {
+        display: block;
+    }
+
+    .checkout-amount {
+        margin-top: 20px;
+    }
 }
