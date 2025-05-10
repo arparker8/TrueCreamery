@@ -1476,6 +1476,11 @@ b {
 /* Mobile View Layout */
 @media only screen and (max-width: 800px) {
 
+    .checkout-cont {
+        max-width: 100%;
+        margin: 40px 20px;
+    }
+
     .checkout-img {
         max-width: 80%;
         height: auto;
@@ -1496,5 +1501,9 @@ b {
 
     .checkout-amount {
         margin-top: 20px;
+    }
+
+    .total-cont {
+        width: 90%;
     }
 }
