@@ -1503,6 +1503,10 @@ b {
         margin-top: 20px;
     }
 
+    .checkout-remove {
+        color: red;
+    }
+
     .total-cont {
         margin: 0 20px;
         display: flex;
@@ -1510,5 +1514,9 @@ b {
         width: 90%;
         height: auto;
         justify-self: center;
+    }
+
+    .total > h3, .total-price {
+        font-size: 1.225rem;
     }
 }
