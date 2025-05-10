@@ -157,6 +157,7 @@ header, .menu {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-left: 20px;
 }
 
 .bag {
@@ -337,6 +338,11 @@ footer {
         .mobile-menu {
             display: inline-flex;
             align-self: center;
+            margin: 0 25px;
+        }
+
+        .mobile-menu-icon {
+            margin: 0;
         }
 
         .header {
@@ -380,6 +386,10 @@ footer {
         .search-text-box {
             display: inline;
             max-width: 100%;
+        }
+
+        .shop-cont {
+            margin: 0;
         }
     
         footer {
