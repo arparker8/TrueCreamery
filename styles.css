@@ -1349,7 +1349,7 @@ b {
 .checkout-cont {
     display: flex;
     flex-direction: column;
-    margin: 40px 50px;
+    margin: 40px 50px 0 50px;
     max-width: 75%;
     height: auto;
     justify-self: center;
@@ -1478,7 +1478,7 @@ b {
 
     .checkout-cont {
         max-width: 100%;
-        margin: 40px 20px;
+        margin: 20px 20px 0 20px;
     }
 
     .checkout-img {
@@ -1486,12 +1486,16 @@ b {
         height: auto;
     }
 
+    .checkout-header > h2 {
+        margin: 0 20px;
+    }
+
     .checkout-text > h3 {
-        font-size: 1.225rem;
+        font-size: 1.125rem;
     }
 
     .checkout-text > p {
-        font-size: 1.225rem;
+        font-size: 1.125rem;
         margin-top: 10px;
     }
 
@@ -1504,9 +1508,11 @@ b {
     }
 
     .checkout-remove {
-        appearance: none;
-        -webkit-appearance: none;
-        color: #b4c978;
+        font-size: 1rem;
+    }
+
+    .total {
+        margin: 20px 0;
     }
 
     .total-cont {
