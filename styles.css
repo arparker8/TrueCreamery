@@ -151,11 +151,12 @@ header, .menu {
     padding: 0 20px;
     z-index: 999;
     overflow: scroll;
-    transition: 0.5s;
+    display: none;
 }
 
 .bag.active {
     right: 0;
+    display: block;
 }
 
 .bag-header {
