@@ -1501,6 +1501,10 @@ b {
         font-size: 1rem;
     }
 
+    .checkout-number {
+        font-size: 1rem;
+    }
+
     .total {
         margin: 20px 0;
     }
