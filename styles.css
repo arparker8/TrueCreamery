@@ -1492,7 +1492,7 @@ b {
 
     .checkout-text > p {
         font-size: 1.225rem;
-        margin-top: 15px;
+        margin-top: 10px;
     }
 
     .checkout-detail {
@@ -1500,11 +1500,13 @@ b {
     }
 
     .checkout-amount {
-        margin-top: 20px;
+        margin-top: 10px;
     }
 
     .checkout-remove {
-        color: red;
+        appearance: none;
+        -webkit-appearance: none;
+        color: #b4c978;
     }
 
     .total-cont {
