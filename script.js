@@ -20,12 +20,20 @@ const products = [
 
 if (document.body.dataset.page !== "bag") {
 
-    const bagIcon = document.querySelector(".shop-cont");
-    const bag = document.querySelector(".bag");
-    const bagClose = document.querySelector("#bag-close");
+    // const bagIcon = document.querySelector(".shop-cont");
+    // const bag = document.querySelector(".bag");
+    // const bagClose = document.querySelector("#bag-close");
 
-    bagIcon.addEventListener("click", () => bag.classList.add("active"));
-    bagClose.addEventListener("click", () => bag.classList.remove("active"));
+    // bagIcon.addEventListener("click", () => bag.classList.add("active"));
+    // bagClose.addEventListener("click", () => bag.classList.remove("active"));
+
+    $("#bag-close").click(function(){
+        $(".bag").hide();
+      });
+      
+    $(".shop-cont").click(function(){
+        $(".bag").show();
+    });
 
 }
 

@@ -143,7 +143,7 @@ header, .menu {
 .bag {
     position: fixed;
     top: 0;
-    right: -100%;
+    right: 0;
     width: 360px;
     height: 100vh;
     background: white;
@@ -154,10 +154,9 @@ header, .menu {
     display: none;
 }
 
-.bag.active {
-    right: 0;
-    display: block;
-}
+/* .bag.active {
+    display: inline;
+} */
 
 .bag-header {
     display: flex;
