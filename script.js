@@ -158,17 +158,17 @@ function displayItem(eachFlavor) {
     let quantity = 1;
     bagBox.classList.add("bag-box");
     bagBox.innerHTML = `
-        <img src="${eachFlavor.photo}" class="bag-img">
+        <img src="${eachFlavor.photo}" alt="Image of Item in Bag." class="bag-img">
         <div class="bag-detail">
             <h3>${eachFlavor.name}</h3>
             <p class="bag-price">$${eachFlavor.price.toFixed(2)}</p>
             <div class="bag-amount">
                 <div class="bag-quantity">
-                    <button id="decrement">-</button>
+                    <button type="button" class="decrement">-</button>
                     <p class="number">${eachFlavor.quantity}</p>
-                    <button id="increment">+</button>
+                    <button type="button" class="increment">+</button>
                 </div>
-                <button class="bag-remove">Remove</button>
+                <button type="button" class="bag-remove">Remove</button>
             </div>
         </div>
     `;
@@ -209,7 +209,7 @@ function displayItem(eachFlavor) {
         const desiredName = eachFlavor.name;
         const index = myArray.findIndex(data => data.name === desiredName)
     
-        if (event.target.id === "decrement" && eachFlavor.quantity > 1) {
+        if (event.target.className === "decrement" && eachFlavor.quantity > 1) {
             eachFlavor.quantity--;
     
             updateBagCount(-1);
@@ -220,7 +220,7 @@ function displayItem(eachFlavor) {
     
             localStorage.setItem("cart", JSON.stringify(myArray));
     
-        } else if (event.target.id === "increment") {
+        } else if (event.target.className === "increment") {
             eachFlavor.quantity++;
     
             updateBagCount(1);
