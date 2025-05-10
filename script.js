@@ -20,13 +20,6 @@ const products = [
 
 if (document.body.dataset.page !== "bag") {
 
-    // const bagIcon = document.querySelector(".shop-cont");
-    // const bag = document.querySelector(".bag");
-    // const bagClose = document.querySelector("#bag-close");
-
-    // bagIcon.addEventListener("click", () => bag.classList.add("active"));
-    // bagClose.addEventListener("click", () => bag.classList.remove("active"));
-
     $("#bag-close").click(function(){
         $(".bag").hide();
       });
@@ -273,10 +266,10 @@ const updateBagCount = change => {
     const bagItemCountBadge = document.querySelector(".shop-item-count");
     bagItemCount += change;
     if (bagItemCount > 0) {
-        bagItemCountBadge.style.visibility = "visible";
+        bagItemCountBadge.style.display = "flex";
         bagItemCountBadge.textContent = bagItemCount;
     } else {
-        bagItemCountBadge.style.visibility = "hidden";
+        bagItemCountBadge.style.display = "none";
         bagItemCountBadge.textContent = "";
     }
 }

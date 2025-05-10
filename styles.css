@@ -90,7 +90,6 @@ header, .menu {
     background-color: inherit;
     width: 25px;
     height: 25px;
-    margin: 0 30px;
 }
 
 .search-cont {
@@ -120,13 +119,13 @@ header, .menu {
 .shop-cont {
     position: relative;
     display: flex;
+    justify-content: center;
+    align-items: center;
     cursor: pointer;
 }
 
 .shop-cont > .shop-item-count {
     position: absolute;
-    top: 0;
-    right: 22px;
     width: 18px;
     height: 18px;
     background-color: #7c8a42;
@@ -137,7 +136,6 @@ header, .menu {
     display: flex;
     justify-content: center;
     align-items: center;
-    visibility: hidden;
 }
 
 .bag {
@@ -153,10 +151,6 @@ header, .menu {
     overflow: scroll;
     display: none;
 }
-
-/* .bag.active {
-    display: inline;
-} */
 
 .bag-header {
     display: flex;
