@@ -392,6 +392,10 @@ footer {
         .shop-cont {
             margin: 0;
         }
+
+        .bag-remove {
+            color: #75445f;
+        }
     
         footer {
             display: flex;
@@ -1433,20 +1437,6 @@ b {
     margin: 0 20px;
 }
 
-.checkout-remove {
-    font-family: "LouisGeorgeCafe";
-    font-size: 1.125rem;
-    text-align: right;
-    background-color: inherit;
-    border: none;
-    margin-left: 50px;
-}
-
-.checkout-remove:hover {
-    text-decoration: underline #7c8a42 1.5px;
-    text-underline-offset: 3px;
-}
-
 .total-cont {
     margin: 0 50px;
     display: flex;
@@ -1491,11 +1481,11 @@ b {
     }
 
     .checkout-text > h3 {
-        font-size: 1.125rem;
+        font-size: 1rem;
     }
 
     .checkout-text > p {
-        font-size: 1.125rem;
+        font-size: 1rem;
         margin-top: 10px;
     }
 
