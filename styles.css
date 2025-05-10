@@ -393,6 +393,22 @@ footer {
             margin: 0;
         }
 
+        .bag {
+            width: 340px;
+        }
+
+        .bag-detail > h3 {
+            font-size: 1rem;
+        }
+
+        .bag-price {
+            font-size: 1rem;
+        }
+
+        .bag-amount {
+            margin-top: 10px;
+        }
+
         .bag-remove {
             color: #75445f;
         }
