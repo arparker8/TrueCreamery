@@ -178,9 +178,9 @@ function displayItem(eachFlavor) {
     bagBox.querySelector(".bag-remove").addEventListener("click", () => {
         bagBox.remove();
 
-        updateBagCountMobile(-(eachFlavor.quantity));
-        
         updateBagCount(-(eachFlavor.quantity));
+
+        updateBagCountMobile(-(eachFlavor.quantity));
     
         updateSubtotalPrice();
     
@@ -498,6 +498,8 @@ function checkoutDisplay(eachFlavor) {
             checkoutBox.remove();
         
             updateBagCount(-(eachFlavor.quantity));
+
+            updateBagCountMobile(-(eachFlavor.quantity));
         
             updateTotalPrice();
         
@@ -532,6 +534,8 @@ function checkoutDisplay(eachFlavor) {
         
                 updateBagCount(-1);
 
+                updateBagCountMobile(-1);
+
                 if (myArray && myArray.length > index) {
                     myArray[index].quantity = eachFlavor.quantity;
                 }
@@ -542,6 +546,8 @@ function checkoutDisplay(eachFlavor) {
                 eachFlavor.quantity++;
         
                 updateBagCount(1);
+
+                updateBagCountMobile(1);
 
                 if (myArray && myArray.length > index) {
                     myArray[index].quantity = eachFlavor.quantity;
