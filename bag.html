@@ -14,7 +14,7 @@ Bag Page - Which will display the products that are added to the bag.
         <title>True Creamery</title>
         <link rel="stylesheet" href="./styles.css">
     </head>
-    <body data-page="bag">
+    <body data-page="bag" id="checkout-body">
         <!-- Container for my Header and Nav -->
         <div class="top-banner">
             <!-- Nav holding the Menu Icon for Mobile -->
@@ -75,15 +75,54 @@ Bag Page - Which will display the products that are added to the bag.
             <a href="#" class="check-out">CHECK OUT</a>
         </div>
         <div class="checkout-cont">
-            <div class="checkout-header">
-                <h2>BAG</h2>
+            <!-- Container for Display of Items in Bag to Checkout. -->
+            <div class="checkout-display">
+                <h2>YOUR BAG</h2>
+                <div class="checkout-box">
+                    
+                </div>
+                <div class="total-cont">
+                    <hr>
+                    <div class="total">
+                        <h3>Total</h3>
+                        <h4 class="total-price">$0.00</h4>
+                    </div>
+                </div>
             </div>
-        </div>
-        <div class="total-cont">
-            <hr>
-            <div class="total">
-                <h3>Total</h3>
-                <h4 class="total-price">$0.00</h4>
+            <!-- Container for Checkout Form -->
+            <div class="checkout-form-display">
+                <h2>ORDER HERE</h2>
+                <div class="checkout-form-cont">
+                    <form method="get" id="checkout-form">
+                        <div class="form-sections">
+                            <p>Contact Info</p>
+                            <div class="input-spacing">
+                                <input type="email" name="email" id="email" placeholder="Email" required>
+                                <input type="tel" name="phone" id="phone" placeholder="Phone" maxlength="12" required>
+                            </div>
+                        </div>
+                        <div class="form-sections">
+                            <p>Delivery Address</p>
+                            <div class="input-spacing">
+                                <input type="text" name="first-name" id="first-name" placeholder="First Name" required>
+                                <input type="text" name="last-name" id="last-name" placeholder="Last Name" required>
+                            </div>
+                            <input type="text" name="address" id="address" placeholder="Street Address" required>
+                            <input type="text" name="optional" id="optional" placeholder="Apt/Suite/Floor(Optional)">
+                            <div class="input-spacing">
+                                <input type="text" name="city" id="city" placeholder="City" required>
+                                <input type="text" name="states" id="states" placeholder="States" maxlength="2" required>
+                                <input type="text" name="zipcode" id="zipcode" placeholder="Zipcode" maxlength="5" required>
+                            </div>
+                            <div class="checkbox-info">
+                                <input type="checkbox" name="billing-address" id="billing-address" value="billing-address">
+                                <label for="billing-address">Use for Billing Address</label>
+                            </div>
+                        </div>
+                        <input type="submit" id="checkout" value="Checkout">
+                        <input type="reset" id="checkout-reset">
+                    </form>
+                </div>
             </div>
         </div>
         <!-- Footer with rights info -->
