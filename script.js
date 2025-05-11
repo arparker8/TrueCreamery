@@ -155,7 +155,6 @@ function displayItem(eachFlavor) {
 
     // Creating the div with the items information for the Bag.
     const bagBox = document.createElement("div");
-    let quantity = 1;
     bagBox.classList.add("bag-box");
     bagBox.innerHTML = `
         <img src="${eachFlavor.photo}" alt="Image of Item in Bag." class="bag-img">
@@ -178,8 +177,10 @@ function displayItem(eachFlavor) {
     // This is for when the Remove button is clicked.
     bagBox.querySelector(".bag-remove").addEventListener("click", () => {
         bagBox.remove();
-    
-        updateBagCount(-(quantity));
+
+        updateBagCountMobile(-(eachFlavor.quantity));
+        
+        updateBagCount(-(eachFlavor.quantity));
     
         updateSubtotalPrice();
     
@@ -211,8 +212,10 @@ function displayItem(eachFlavor) {
     
         if (event.target.className === "decrement" && eachFlavor.quantity > 1) {
             eachFlavor.quantity--;
-    
+
             updateBagCount(-1);
+
+            updateBagCountMobile(-1);
 
             if (myArray && myArray.length > index) {
                 myArray[index].quantity = eachFlavor.quantity;
@@ -222,8 +225,10 @@ function displayItem(eachFlavor) {
     
         } else if (event.target.className === "increment") {
             eachFlavor.quantity++;
-    
+
             updateBagCount(1);
+
+            updateBagCountMobile(1);
 
             if (myArray && myArray.length > index) {
                 myArray[index].quantity = eachFlavor.quantity;
@@ -237,10 +242,15 @@ function displayItem(eachFlavor) {
         updateSubtotalPrice();
     
     });
-    
-    updateBagCount(eachFlavor.quantity);
-    
+
+    if (window.innerWidth <= 800) {
+        updateBagCountMobile(eachFlavor.quantity);
+    } else {
+        updateBagCount(eachFlavor.quantity);
+    }
+
     updateSubtotalPrice();
+
 }
 
 // Adding together the Subtotal of the Items and Updating if things change.
@@ -268,6 +278,20 @@ const updateBagCount = change => {
     if (bagItemCount > 0) {
         bagItemCountBadge.style.display = "flex";
         bagItemCountBadge.textContent = bagItemCount;
+    } else {
+        bagItemCountBadge.style.display = "none";
+        bagItemCountBadge.textContent = "";
+    }
+}
+
+// Updating the Bag Icon Count on Mobile View.
+let bagItemCountMobile = 0;
+const updateBagCountMobile = change => {
+    const bagItemCountBadge = document.querySelector(".shop-item-count-mobile");
+    bagItemCountMobile += change;
+    if (bagItemCountMobile > 0) {
+        bagItemCountBadge.style.display = "flex";
+        bagItemCountBadge.textContent = bagItemCountMobile;
     } else {
         bagItemCountBadge.style.display = "none";
         bagItemCountBadge.textContent = "";
