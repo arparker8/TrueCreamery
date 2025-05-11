@@ -466,15 +466,15 @@ if (document.getElementById("contact-body")){
 
 /********** - Bag Page - Adding items to Check Out Page - **********/
 
-const checkoutCont = document.querySelector(".checkout-cont");
+const checkoutCont = document.querySelector(".checkout-box");
 
 function checkoutDisplay(eachFlavor) {
         // Creating the div with the items information for the Bag.
         const checkoutBox = document.createElement("div");
         let quantity = 1;
-        checkoutBox.classList.add("checkout-box");
+        checkoutBox.classList.add("checkout-items");
         checkoutBox.innerHTML = `
-            <img src="${eachFlavor.photo}" class="checkout-img">
+            <img src="${eachFlavor.photo}" alt="Product image of Item in Bag." class="checkout-img">
             <div class="checkout-detail">
                 <div class="checkout-text">
                     <h3>${eachFlavor.name}</h3>
@@ -569,7 +569,7 @@ function checkoutDisplay(eachFlavor) {
 // Adding together the Total of the Items and Updating if things change.
 function updateTotalPrice() {
     const totalPriceElement = document.querySelector(".total-price");
-    const checkoutBoxes = checkoutCont.querySelectorAll(".checkout-box");
+    const checkoutBoxes = checkoutCont.querySelectorAll(".checkout-items");
     let total = 0;
 
     checkoutBoxes.forEach(checkoutBox => {
@@ -590,4 +590,28 @@ if (document.body.dataset.page === "bag") {
         });
     }
 
+}
+
+/********** - Checkout Page - Sending Alert for Form Submission - **********/
+
+if (document.getElementById("checkout-body")){
+
+    // When Submit Button on Form is Clicked an Alert Appears. After Alert is closed Page Refreshes.
+    document.getElementById("checkout-form").addEventListener("submit", function(event) {
+        alert("Thank you for Ordering!");
+        window.location.reload();
+    });
+
+    // This formats for Phone Numbers so that when typing it Adds Dashes.
+    $('#phone').keyup(function(){
+        adddashes(this);
+    });
+      
+    function adddashes(el){
+        let val = $(el).val().split('-').join('');      //remove all dashes (-)
+        if(val.length < 9){
+          let finalVal = val.match(/.{1,3}/g).join('-');//add dash (-) after every 3rd char.
+          $(el).val(finalVal);
+        }
+    }
 }

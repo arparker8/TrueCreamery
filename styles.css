@@ -1368,35 +1368,27 @@ b {
 /********** - Bag Page - **********/
 
 .checkout-cont {
-    display: flex;
-    flex-direction: column;
-    margin: 40px 50px 0 50px;
-    max-width: 75%;
-    height: auto;
-    justify-self: center;
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    margin: 40px 50px;
 }
 
-.checkout-header {
-    display: flex;
-    justify-content: center;
-}
-
-.checkout-header > h2 {
-    font-family: "Vergilia";
+.checkout-display > h2 {
+font-family: "Vergilia";
     font-size: 2rem;
     color: #75445f;
     margin-bottom: 30px;
 }
 
-.checkout-box {
+.checkout-items {
     display: grid;
-    grid-template-columns: 2fr 3fr;
+    grid-template-columns: 1fr 5fr;
     justify-content: center;
     margin: 10px 0;
 }
 
 .checkout-img {
-    max-width: 40%;
+    width: 150px;
     height: auto;
 }
 
@@ -1404,18 +1396,19 @@ b {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    margin-left: 60px;
 }
 
 .checkout-text > h3 {
     font-family: "Vergilia";
-    font-size: 1.5rem;
+    font-size: 1.225rem;
     color: #7c8a42;
 }
 
 .checkout-text > p {
     font-family: "LouisGeorgeCafeBold";
-    font-size: 1.5rem;
-    margin-top: 30px;
+    font-size: 1.225rem;
+    margin-top: 40px;
 }
 
 .checkout-amount {
@@ -1432,7 +1425,7 @@ b {
 
 .checkout-decrement, .checkout-increment {
     font-family: "LouisGeorgeCafeBold";
-    font-size: 1.125rem;
+    font-size: 1rem;
     width: 30px;
     height: 25px;
     background-color: #75445f;
@@ -1450,7 +1443,7 @@ b {
 
 .checkout-number {
     font-family: "LouisGeorgeCafe";
-    font-size: 1.225rem;
+    font-size: 1rem;
     margin: 0 20px;
 }
 
@@ -1458,7 +1451,7 @@ b {
     margin: 0 50px;
     display: flex;
     flex-direction: column;
-    width: 75%;
+    width: 100%;
     height: auto;
     justify-self: center;
 }
@@ -1466,7 +1459,7 @@ b {
 .total {
     display: flex;
     justify-content: space-between;
-    margin: 40px 0;
+    margin: 30px 0;
 }
 
 .total > h3 {
@@ -1480,22 +1473,123 @@ b {
     font-size: 1.5rem;
 }
 
+.checkout-form-display {
+    display: flex;
+    flex-direction: column;
+    margin-left: 60px;
+}
+
+.checkout-form-display > h2 {
+    font-family: "Vergilia";
+    font-size: 2rem;
+    color: #75445f;
+}
+
+.checkout-form-cont {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-sections {
+    margin: 30px 0;
+}
+
+.form-sections > p {
+    font-family: "LouisGeorgeCafeBold";
+    font-size: 1.125rem;
+    color: #7c8a42;
+}
+
+.input-spacing {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+}
+
+.input-spacing > input {
+    font-family: "LouisGeorgeCafe";
+    font-size: 1rem;
+    color: black;
+    background-color: rgba(0,0,0,0.07);
+    border: none;
+    width: 100%;
+    height: 25px;
+    padding: 0 10px;
+}
+
+.form-sections > input {
+    font-family: "LouisGeorgeCafe";
+    font-size: 1rem;
+    color: black;
+    background-color: rgba(0,0,0,0.07);
+    border: none;
+    width: 96%;
+    height: 25px;
+    padding: 0 10px;
+    margin: 10px 0;
+}
+
+#phone, #last-name, #states, #zipcode {
+    margin-left: 10px;
+}
+
+#states {
+    width: 50%;
+}
+
+.input-spacing > input:focus, .form-sections > input:focus {
+    outline: none;
+}
+
+.checkbox-info {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.checkbox-info > input {
+    width: 20px;
+    height: 20px;
+    margin-right: 15px;
+}
+
+.checkbox-info > label {
+    font-family: "LouisGeorgeCafeBold";
+    color: #7c8a42;
+}
+
+#checkout, #checkout-reset {
+    font-family: "LouisGeorgeCafeBold";
+    font-size: 1.125rem;
+    color: white;
+    background-color: #7c8a42;
+    border: none;
+    width: 100%;
+    height: 40px;
+    box-shadow: 0px 2.5px 2.5px 0px rgba(0,0,0,0.2);
+    margin-bottom: 10px;
+}
+
 /* Mobile View Layout */
 @media only screen and (max-width: 800px) {
 
     .checkout-cont {
-        max-width: 100%;
-        margin: 20px 20px 0 20px;
+        display: block;
+        margin: 20px 20px;
+    }
+
+    .checkout-display > h2 {
+        font-size: 1.5rem;
     }
 
     .checkout-img {
-        max-width: 80%;
+        width: 125px;
         height: auto;
     }
 
-    .checkout-header > h2 {
-        font-size: 1.5rem;
-        margin: 0 20px;
+    .checkout-detail {
+        display: block;
+        margin-left: 20px;
     }
 
     .checkout-text > h3 {
@@ -1505,10 +1599,6 @@ b {
     .checkout-text > p {
         font-size: 1rem;
         margin-top: 10px;
-    }
-
-    .checkout-detail {
-        display: block;
     }
 
     .checkout-amount {
@@ -1521,28 +1611,19 @@ b {
         height: 20px;
     }
 
-    .checkout-remove {
-        font-size: 1rem;
-    }
-
-    .checkout-number {
-        font-size: 1rem;
-    }
-
-    .total {
-        margin: 20px 0;
-    }
-
     .total-cont {
-        margin: 0 20px;
-        display: flex;
-        flex-direction: column;
-        width: 90%;
-        height: auto;
-        justify-self: center;
+        margin: 0;
     }
 
     .total > h3, .total-price {
         font-size: 1.225rem;
+    }
+
+    .checkout-form-display > h2 {
+        font-size: 1.5rem;
+    }
+
+    .checkout-form-display {
+        margin: 0;
     }
 }
