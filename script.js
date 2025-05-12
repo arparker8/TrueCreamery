@@ -18,14 +18,17 @@ const products = [
     {name: "Butter Pecan", price: 12.00, photo: "./images/pecan-img/packaging-pecan.jpg", quantity: 1}
 ]
 
+// All Pages but Bag Page when the Bag Icon is Clicked a Bag Pop Out will Display.
 if (document.body.dataset.page !== "bag") {
 
-    $("#bag-close").click(function(){
-        $(".bag").hide();
-      });
-      
+    // When Bag Icon is clicked the Bag Pop Out shows.
     $(".shop-cont").click(function(){
         $(".bag").show();
+    });
+
+    // When X is clicked the Bag Pop Out hides.
+    $("#bag-close").click(function(){
+        $(".bag").hide();
     });
 
 }
@@ -134,12 +137,12 @@ if (document.body.dataset.page === "product-6") {
 const bagCont = document.querySelector(".bag-cont");
 let cart = JSON.parse(localStorage.getItem("cart") || "[]");
 
-// Function to add to cart.
+// Function to Add to Bag.
 function addToBag(eachFlavor) {
     const existingItem = cart.find(cart => cart.name === eachFlavor.name);
     console.log(existingItem);
 
-    // If the items is already added this alert will be sent saying it's already in the Bag.
+    // If the product is already in the bag an alert will be sent.
     if (existingItem) {
         alert("Item is already in the cart.")
         return;
@@ -148,12 +151,13 @@ function addToBag(eachFlavor) {
         displayItem(eachFlavor);
     }
 
+    // Storing the product in the localStorage so it will stay on all pages.
     localStorage.setItem("cart", JSON.stringify(cart));
 }
 
 function displayItem(eachFlavor) {
 
-    // Creating the div with the items information for the Bag.
+    // Creating a Div with the product information for the Bag.
     const bagBox = document.createElement("div");
     bagBox.classList.add("bag-box");
     bagBox.innerHTML = `
@@ -174,7 +178,7 @@ function displayItem(eachFlavor) {
 
     bagCont.appendChild(bagBox);
 
-    // This is for when the Remove button is clicked.
+    // When the Remove Button is clicked.
     bagBox.querySelector(".bag-remove").addEventListener("click", () => {
         bagBox.remove();
 
@@ -190,7 +194,7 @@ function displayItem(eachFlavor) {
     
     });
     
-    // A function to connect remove Button and the localStorage.
+    // A function to connect Remove Button and the localStorage.
     function removeObjectByName(key, objectName) {
         const storedArrayString = localStorage.getItem(key);
         
@@ -203,13 +207,14 @@ function displayItem(eachFlavor) {
         }
     }
     
-    // Changing the Quantity of the items when minus or plus buttons are clicked.
+    // Changing the Quantity of the product amount when Minus or Plus Buttons are clicked.
     bagBox.querySelector(".bag-quantity").addEventListener("click", event => {
         const numberElement = bagBox.querySelector(".number");
         const myArray = JSON.parse(localStorage.getItem("cart"));
         const desiredName = eachFlavor.name;
         const index = myArray.findIndex(data => data.name === desiredName)
     
+        // When Minus Button is clicked.
         if (event.target.className === "decrement" && eachFlavor.quantity > 1) {
             eachFlavor.quantity--;
 
@@ -223,6 +228,7 @@ function displayItem(eachFlavor) {
     
             localStorage.setItem("cart", JSON.stringify(myArray));
     
+        // When Plus Button is clicked.
         } else if (event.target.className === "increment") {
             eachFlavor.quantity++;
 
@@ -243,6 +249,7 @@ function displayItem(eachFlavor) {
     
     });
 
+    // This for the Bag Icon count to work on Mobile and Desktop.
     if (window.innerWidth <= 800) {
         updateBagCountMobile(eachFlavor.quantity);
     } else {
@@ -253,7 +260,7 @@ function displayItem(eachFlavor) {
 
 }
 
-// Adding together the Subtotal of the Items and Updating if things change.
+// Adding together the Subtotal of the products and Updating as quantity changes.
 const updateSubtotalPrice = () => {
     const totalPriceElement = document.querySelector(".subtotal-price");
     const bagBoxes = bagCont.querySelectorAll(".bag-box");
@@ -298,7 +305,7 @@ const updateBagCountMobile = change => {
     }
 }
 
-// Retrieve and display data (e.g., on page load)
+// Retrieve and Display Data (e.g., on page load)
 const storedData = localStorage.getItem("cart");
 const myArray = JSON.parse(storedData);
 
@@ -336,7 +343,7 @@ document.getElementById("search-mobile").addEventListener("keydown", function(ev
 
 /********** - All Pages - Mobile Layout - Menu Icon - **********/
 
-// The Menu Icon when clicked toggles to show below the header the Search and Menu Links.
+// The Menu Icon when clicked toggles to show below the header the Menu Links and Search Bar.
 $(document).ready(function(){
 
     $(".mobile-menu-icon").click(function(){
@@ -344,7 +351,7 @@ $(document).ready(function(){
     })
 })
 
-/********** - Homepage - Fade in on Scroll - **********/
+/********** - Homepage - Fading in on View for Prompt Two Info - **********/
 
 const observer1 = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
@@ -357,13 +364,13 @@ const observer1 = new IntersectionObserver((entries) => {
       }
     });
 });
-  
+
 const prompts = document.querySelectorAll(".prompt-2");
 prompts.forEach(prompt => {
     observer1.observe(prompt);
 });
 
-/********** - Each Flavor Page - Image Slide Show - **********/
+/********** - Each Flavor Pages - Photo Gallery - **********/
 
 if (document.getElementById("flvr-body")) {
 
@@ -402,7 +409,7 @@ if (document.getElementById("flvr-body")) {
     }
 }
 
-/********** - Our Story - Fade in on Scroll - **********/
+/********** - Our Story - Info Fading in when in View - **********/
 
 const observer2 = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
@@ -421,7 +428,7 @@ timelines.forEach(timeline => {
     observer2.observe(timeline);
 })
 
-/********** - Our Story - Draw Line - **********/
+/********** - Our Story - Draw Line for Timeline - **********/
 
 const observer3 = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
@@ -451,11 +458,11 @@ if (document.getElementById("contact-body")){
     });
 
     // This formats for Phone Numbers so that when typing it Adds Dashes.
-    $('#phone').keyup(function(){
-        adddashes(this);
+    $('#phone-contact').keyup(function(){
+        addDashes(this);
     });
       
-    function adddashes(el){
+    function addDashes(el){
         let val = $(el).val().split('-').join('');      //remove all dashes (-)
         if(val.length < 9){
           let finalVal = val.match(/.{1,3}/g).join('-');//add dash (-) after every 3rd char.
@@ -469,7 +476,8 @@ if (document.getElementById("contact-body")){
 const checkoutCont = document.querySelector(".checkout-box");
 
 function checkoutDisplay(eachFlavor) {
-        // Creating the div with the items information for the Bag.
+
+        // Creating a Div with the product information for the Checkout Bag.
         const checkoutBox = document.createElement("div");
         let quantity = 1;
         checkoutBox.classList.add("checkout-items");
@@ -482,18 +490,18 @@ function checkoutDisplay(eachFlavor) {
                 </div>
                 <div class="checkout-amount">
                     <div class="checkout-quantity">
-                        <button class="checkout-decrement">-</button>
+                        <button type="button" class="checkout-decrement">-</button>
                         <p class="checkout-number">${eachFlavor.quantity}</p>
-                        <button class="checkout-increment">+</button>
+                        <button type="button" class="checkout-increment">+</button>
                     </div>
-                    <button class="bag-remove">Remove</button>
+                    <button type="button" class="bag-remove">Remove</button>
                 </div>
             </div>
         `;
     
         checkoutCont.appendChild(checkoutBox);
     
-        // This is for when the Remove button is clicked.
+        // When the Remove Button is clicked.
         checkoutBox.querySelector(".bag-remove").addEventListener("click", () => {
             checkoutBox.remove();
         
@@ -509,7 +517,7 @@ function checkoutDisplay(eachFlavor) {
         
         });
         
-        // A function to connect remove Button and the localStorage.
+        // A function to connect Remove Button and the localStorage.
         function removeObjectByName(key, objectName) {
             const storedArrayString = localStorage.getItem(key);
             
@@ -522,13 +530,14 @@ function checkoutDisplay(eachFlavor) {
             }
         }
         
-        // Changing the Quantity of the items when minus or plus buttons are clicked.
+        // Changing the Quantity of the product amount when Minus or Plus Buttons are clicked.
         checkoutBox.querySelector(".checkout-quantity").addEventListener("click", event => {
             const numberElement = checkoutBox.querySelector(".checkout-number");
             const myArray = JSON.parse(localStorage.getItem("cart"));
             const desiredName = eachFlavor.name;
             const index = myArray.findIndex(data => data.name === desiredName)
         
+            // When Minus Button is clicked.
             if (event.target.className === "checkout-decrement" && eachFlavor.quantity > 1) {
                 eachFlavor.quantity--;
         
@@ -542,6 +551,7 @@ function checkoutDisplay(eachFlavor) {
         
                 localStorage.setItem("cart", JSON.stringify(myArray));
         
+            // When Plus Button is clicked.
             } else if (event.target.className === "checkout-increment") {
                 eachFlavor.quantity++;
         
@@ -566,7 +576,7 @@ function checkoutDisplay(eachFlavor) {
         updateTotalPrice();
 }
 
-// Adding together the Total of the Items and Updating if things change.
+// Adding together the Total of the products and Updating as quantity changes.
 function updateTotalPrice() {
     const totalPriceElement = document.querySelector(".total-price");
     const checkoutBoxes = checkoutCont.querySelectorAll(".checkout-items");
@@ -603,11 +613,11 @@ if (document.getElementById("checkout-body")){
     });
 
     // This formats for Phone Numbers so that when typing it Adds Dashes.
-    $('#phone').keyup(function(){
-        adddashes(this);
+    $('#phone-checkout').keyup(function(){
+        addDashes(this);
     });
       
-    function adddashes(el){
+    function addDashes(el){
         let val = $(el).val().split('-').join('');      //remove all dashes (-)
         if(val.length < 9){
           let finalVal = val.match(/.{1,3}/g).join('-');//add dash (-) after every 3rd char.

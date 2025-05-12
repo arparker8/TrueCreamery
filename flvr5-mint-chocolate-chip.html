@@ -3,7 +3,7 @@ Ashleigh Parker - MGD2041
 
 True Creamery - Lactose Free Ice Cream Brand
 
-Mint Chocolate Chip Flavor - Description, Price, Add to Bag button, Ingredients and call to action about being lactose free. With Photo gallery.
+Mint Chocolate Chip Flavor - Description, Price, Add to Bag button, Ingredients and call to action about being lactose free. With photo gallery.
 -->
 
 <!DOCTYPE html>
@@ -19,7 +19,7 @@ Mint Chocolate Chip Flavor - Description, Price, Add to Bag button, Ingredients 
         <div class="top-banner">
             <!-- Nav holding the Menu Icon for Mobile -->
             <nav class="mobile-menu">
-                <button class="mobile-menu-icon"><img src="./images/header/mobile-menu.svg" alt="Mobile Menu"></button>
+                <button type="button" class="mobile-menu-icon"><img src="./images/header/mobile-menu.svg" alt="Mobile Menu"></button>
             </nav>
             <!-- Header holding logo -->
             <header>
@@ -32,17 +32,17 @@ Mint Chocolate Chip Flavor - Description, Price, Add to Bag button, Ingredients 
                 <a href="./contact.html">Contact</a>
                 <div class="search-cont">
                     <input type="text" placeholder="Search" class="search-text-box" id="search-desktop">
-                    <button class="search-icon"><img src="./images/header/search-icon.svg" alt="Search icon"></button>
+                    <button type="button" class="search-icon"><img src="./images/header/search-icon.svg" alt="Search icon"></button>
                 </div>
                 <div class="shop-cont">
-                    <button class="shop-icon"><img src="./images/header/shop-icon.svg" alt="Shop icon"></button>
+                    <button type="button" class="shop-icon"><img src="./images/header/shop-icon.svg" alt="Shop icon"></button>
                     <span class="shop-item-count"></span>
                 </div>
             </nav>
             <!-- Nav holding the Bag Icon for Mobile -->
             <nav class="mobile-menu">
                 <div class="shop-cont">
-                    <button class="shop-icon"><img src="./images/header/shop-icon.svg" alt="Shop icon"></button>
+                    <button type="button" class="shop-icon"><img src="./images/header/shop-icon.svg" alt="Shop icon"></button>
                     <span class="shop-item-count-mobile"></span>
                 </div>
             </nav>
@@ -51,7 +51,7 @@ Mint Chocolate Chip Flavor - Description, Price, Add to Bag button, Ingredients 
         <div class="mobile-links">
             <ul>
                 <li class="search-cont">
-                    <button class="search-icon"><img src="./images/header/search-icon.svg" alt="Search icon"></button>
+                    <button type="button" class="search-icon"><img src="./images/header/search-icon.svg" alt="Search icon"></button>
                     <input type="text" placeholder="Search" class="search-text-box" id="search-mobile">
                 </li>
                 <li><a href="./our-flavors.html">Our Flavors</a></li>
@@ -63,7 +63,7 @@ Mint Chocolate Chip Flavor - Description, Price, Add to Bag button, Ingredients 
         <div class="bag">
             <div class="bag-header">
                 <h2>YOUR BAG</h2>
-                <button class="close-icon"><img src="./images/header/close-icon.svg" alt="Close icon" id="bag-close"></button>
+                <button type="button" class="close-icon"><img src="./images/header/close-icon.svg" alt="Close icon" id="bag-close"></button>
             </div>
             <div class="bag-cont">
             </div>
@@ -76,10 +76,8 @@ Mint Chocolate Chip Flavor - Description, Price, Add to Bag button, Ingredients 
         </div>
         <!-- Container for Content on Page-->
         <div class="flvr-cont">
-
             <!-- Container for Image Gallery -->
             <div class="flvr-img-cont">
-
                 <!-- Full-Width Images with Number text -->
                 <div class="flvr-img-slides">
                     <div class="slides-num-text">1 / 3</div>
@@ -96,11 +94,9 @@ Mint Chocolate Chip Flavor - Description, Price, Add to Bag button, Ingredients 
                     <img src="./images/mint-img/top-view-mint.jpg" alt="Mint Chocolate Chip ice cream on plate.">
                     <p class="flvr-img-caption">Designed by Freepik</p>
                 </div>
-
                 <!-- Next and Previous Buttons -->
                 <a class="slides-prev-btn" onclick="plusSlides(-1)">&#10094;</a>
                 <a class="slides-next-btn" onclick="plusSlides(1)">&#10095;</a>
-
                  <!-- Thumbnail Images -->
                  <div class="thumbnail-row">
                     <div class="thumbnail-column">
@@ -114,7 +110,7 @@ Mint Chocolate Chip Flavor - Description, Price, Add to Bag button, Ingredients 
                     </div>
                  </div>
             </div>
-            <!-- Container for Text on Page -->
+            <!-- Container for Header, Description, Ingredients and Delivery Information -->
             <div class="flvr-text-cont">
                 <h2>Mint Chocolate Chip</h2>
                 <p>
@@ -122,9 +118,10 @@ Mint Chocolate Chip Flavor - Description, Price, Add to Bag button, Ingredients 
                     minty goodness and chocolatey crunch. Every scoop is a burst of fresh flavor and indulgence, crafted for everyone to enjoy!
                 </p>
                 <p class="flvr-price">$12.00</p>
-                <button class="add-to-bag-btn" id="add-btn-5">ADD TO BAG</button>
+                <button type="button" class="add-to-bag-btn" id="add-btn-5">ADD TO BAG</button>
                 <h3>INGREDIENTS</h3>
                 <p class="flvr-ingredients">Lactose-Free Whole Milk, Lactose-Free Heavy Cream, Granulated Sugar, Pure Peppermint Extract, Dairy-Free Chocolate Chips, and Salt.</p>
+                <!-- Container for Delivery Information -->
                 <div class="flvr-delivery">
                     <img src="./images/stickers/delivery-sticker.svg" alt="" class="delivery-sticker">
                     <h3>DELIVERY</h3>
@@ -135,7 +132,7 @@ Mint Chocolate Chip Flavor - Description, Price, Add to Bag button, Ingredients 
                 </div>
             </div>
         </div>
-        <!-- Footer with rights info -->
+        <!-- Footer with Rights Info -->
         <footer>
             <p>Term of Use</p>
             <p>Privacy Policy</p>

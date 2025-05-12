@@ -3,7 +3,7 @@ Ashleigh Parker - MGD2041
 
 True Creamery - Lactose Free Ice Cream Brand
 
-Bag Page - Which will display the products that are added to the bag.
+Bag Page - Which will display the products that are added to the bag. With a form for Contact Info and Delivery Info to order items.
 -->
 
 <!DOCTYPE html>
@@ -11,7 +11,7 @@ Bag Page - Which will display the products that are added to the bag.
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>True Creamery</title>
+        <title>True Creamery - Bag Checkout</title>
         <link rel="stylesheet" href="./styles.css">
     </head>
     <body data-page="bag" id="checkout-body">
@@ -19,7 +19,7 @@ Bag Page - Which will display the products that are added to the bag.
         <div class="top-banner">
             <!-- Nav holding the Menu Icon for Mobile -->
             <nav class="mobile-menu">
-                <button class="mobile-menu-icon"><img src="./images/header/mobile-menu.svg" alt="Mobile Menu"></button>
+                <button type="button" class="mobile-menu-icon"><img src="./images/header/mobile-menu.svg" alt="Mobile Menu"></button>
             </nav>
             <!-- Header holding logo -->
             <header>
@@ -32,17 +32,17 @@ Bag Page - Which will display the products that are added to the bag.
                 <a href="./contact.html">Contact</a>
                 <div class="search-cont">
                     <input type="text" placeholder="Search" class="search-text-box" id="search-desktop">
-                    <button class="search-icon"><img src="./images/header/search-icon.svg" alt="Search icon"></button>
+                    <button type="button" class="search-icon"><img src="./images/header/search-icon.svg" alt="Search icon"></button>
                 </div>
                 <div class="shop-cont">
-                    <button class="shop-icon"><img src="./images/header/shop-icon.svg" alt="Shop icon"></button>
+                    <button type="button" class="shop-icon"><img src="./images/header/shop-icon.svg" alt="Shop icon"></button>
                     <span class="shop-item-count"></span>
                 </div>
             </nav>
             <!-- Nav holding the Bag Icon for Mobile -->
             <nav class="mobile-menu">
                 <div class="shop-cont">
-                    <button class="shop-icon"><img src="./images/header/shop-icon.svg" alt="Shop icon"></button>
+                    <button type="button" class="shop-icon"><img src="./images/header/shop-icon.svg" alt="Shop icon"></button>
                     <span class="shop-item-count-mobile"></span>
                 </div>
             </nav>
@@ -51,7 +51,7 @@ Bag Page - Which will display the products that are added to the bag.
         <div class="mobile-links">
             <ul>
                 <li class="search-cont">
-                    <button class="search-icon"><img src="./images/header/search-icon.svg" alt="Search icon"></button>
+                    <button type="button" class="search-icon"><img src="./images/header/search-icon.svg" alt="Search icon"></button>
                     <input type="text" placeholder="Search" class="search-text-box" id="search-mobile">
                 </li>
                 <li><a href="./our-flavors.html">Our Flavors</a></li>
@@ -63,7 +63,7 @@ Bag Page - Which will display the products that are added to the bag.
         <div class="bag">
             <div class="bag-header">
                 <h2>YOUR BAG</h2>
-                <button class="close-icon"><img src="./images/header/close-icon.svg" alt="Close icon" id="bag-close"></button>
+                <button type="button" class="close-icon"><img src="./images/header/close-icon.svg" alt="Close icon" id="bag-close"></button>
             </div>
             <div class="bag-cont">
             </div>
@@ -72,7 +72,7 @@ Bag Page - Which will display the products that are added to the bag.
                 <h3 class="subtotal-title">Subtotal</h3>
                 <h4 class="subtotal-price">$0.00</h4>
             </div>
-            <a href="#" class="check-out">CHECK OUT</a>
+            <a href="./bag.html" class="check-out">CHECK OUT</a>
         </div>
         <div class="checkout-cont">
             <!-- Container for Display of Items in Bag to Checkout. -->
@@ -94,25 +94,27 @@ Bag Page - Which will display the products that are added to the bag.
                 <h2>ORDER HERE</h2>
                 <div class="checkout-form-cont">
                     <form method="get" id="checkout-form">
+                        <!-- Container for Contact Info Section -->
                         <div class="form-sections">
                             <p>Contact Info</p>
                             <div class="input-spacing">
-                                <input type="email" name="email" id="email" placeholder="Email" required>
-                                <input type="tel" name="phone" id="phone" placeholder="Phone" maxlength="12" required>
+                                <input type="email" name="email" id="email" placeholder="Email" autocomplete="on" required>
+                                <input type="tel" name="phone" id="phone-checkout" placeholder="Phone" maxlength="12" autocomplete="on" required>
                             </div>
                         </div>
+                        <!-- Container for Delivery Address Info Section -->
                         <div class="form-sections">
                             <p>Delivery Address</p>
                             <div class="input-spacing">
-                                <input type="text" name="first-name" id="first-name" placeholder="First Name" required>
-                                <input type="text" name="last-name" id="last-name" placeholder="Last Name" required>
+                                <input type="text" name="first-name" id="first-name" placeholder="First Name" autocomplete="on" required>
+                                <input type="text" name="last-name" id="last-name" placeholder="Last Name" autocomplete="on" required>
                             </div>
-                            <input type="text" name="address" id="address" placeholder="Street Address" required>
-                            <input type="text" name="optional" id="optional" placeholder="Apt/Suite/Floor(Optional)">
+                            <input type="text" name="address" id="address" placeholder="Street Address" autocomplete="on" required>
+                            <input type="text" name="optional" id="optional" placeholder="Apt/Suite/Floor(Optional)" autocomplete="on">
                             <div class="input-spacing">
-                                <input type="text" name="city" id="city" placeholder="City" required>
-                                <input type="text" name="states" id="states" placeholder="States" maxlength="2" required>
-                                <input type="text" name="zipcode" id="zipcode" placeholder="Zipcode" maxlength="5" required>
+                                <input type="text" name="city" id="city" placeholder="City" autocomplete="on" required>
+                                <input type="text" name="states" id="states" placeholder="States" maxlength="2" autocomplete="on" required>
+                                <input type="text" name="zipcode" id="zipcode" placeholder="Zipcode" maxlength="5" autocomplete="on" required>
                             </div>
                             <div class="checkbox-info">
                                 <input type="checkbox" name="billing-address" id="billing-address" value="billing-address">
@@ -125,7 +127,7 @@ Bag Page - Which will display the products that are added to the bag.
                 </div>
             </div>
         </div>
-        <!-- Footer with rights info -->
+        <!-- Footer with Rights Info -->
         <footer>
             <p>Term of Use</p>
             <p>Privacy Policy</p>

@@ -11,7 +11,7 @@ Contact Page - With contact info, form to ask Q&A's, and a API Google map for lo
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>True Creamery</title>
+        <title>True Creamery - Contact</title>
         <link rel="stylesheet" href="./styles.css">
     </head>
     <body id="contact-body">
@@ -19,7 +19,7 @@ Contact Page - With contact info, form to ask Q&A's, and a API Google map for lo
         <div class="top-banner">
             <!-- Nav holding the Menu Icon for Mobile -->
             <nav class="mobile-menu">
-                <button class="mobile-menu-icon"><img src="./images/header/mobile-menu.svg" alt="Mobile Menu"></button>
+                <button type="button" class="mobile-menu-icon"><img src="./images/header/mobile-menu.svg" alt="Mobile Menu"></button>
             </nav>
             <!-- Header holding logo -->
             <header>
@@ -32,17 +32,17 @@ Contact Page - With contact info, form to ask Q&A's, and a API Google map for lo
                 <a href="./contact.html">Contact</a>
                 <div class="search-cont">
                     <input type="text" placeholder="Search" class="search-text-box" id="search-desktop">
-                    <button class="search-icon"><img src="./images/header/search-icon.svg" alt="Search icon"></button>
+                    <button type="button" class="search-icon"><img src="./images/header/search-icon.svg" alt="Search icon"></button>
                 </div>
                 <div class="shop-cont">
-                    <button class="shop-icon"><img src="./images/header/shop-icon.svg" alt="Shop icon"></button>
+                    <button type="button" class="shop-icon"><img src="./images/header/shop-icon.svg" alt="Shop icon"></button>
                     <span class="shop-item-count"></span>
                 </div>
             </nav>
             <!-- Nav holding the Bag Icon for Mobile -->
             <nav class="mobile-menu">
                 <div class="shop-cont">
-                    <button class="shop-icon"><img src="./images/header/shop-icon.svg" alt="Shop icon"></button>
+                    <button type="button" class="shop-icon"><img src="./images/header/shop-icon.svg" alt="Shop icon"></button>
                     <span class="shop-item-count-mobile"></span>
                 </div>
             </nav>
@@ -51,7 +51,7 @@ Contact Page - With contact info, form to ask Q&A's, and a API Google map for lo
         <div class="mobile-links">
             <ul>
                 <li class="search-cont">
-                    <button class="search-icon"><img src="./images/header/search-icon.svg" alt="Search icon"></button>
+                    <button type="button" class="search-icon"><img src="./images/header/search-icon.svg" alt="Search icon"></button>
                     <input type="text" placeholder="Search" class="search-text-box" id="search-mobile">
                 </li>
                 <li><a href="./our-flavors.html">Our Flavors</a></li>
@@ -63,7 +63,7 @@ Contact Page - With contact info, form to ask Q&A's, and a API Google map for lo
         <div class="bag">
             <div class="bag-header">
                 <h2>YOUR BAG</h2>
-                <button class="close-icon"><img src="./images/header/close-icon.svg" alt="Close icon" id="bag-close"></button>
+                <button type="button" class="close-icon"><img src="./images/header/close-icon.svg" alt="Close icon" id="bag-close"></button>
             </div>
             <div class="bag-cont">
             </div>
@@ -110,7 +110,7 @@ Contact Page - With contact info, form to ask Q&A's, and a API Google map for lo
                 <!-- Container for Google Map-->
                 <div>
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d20707.273633031!2d-104.78086348691653!3d39.510999340163956!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x876c91ce239a3d55%3A0xd49aeed43d2e2426!2sParker%2C%20CO!5e0!3m2!1sen!2sus!4v1743569344915!5m2!1sen!2sus" 
-                    class="googleMap" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    title="GoogleMap" class="googleMap" allowfullscreen="" loading="lazy"></iframe>
                 </div>
             </div>
             <!-- Container for Title and Form -->
@@ -119,11 +119,11 @@ Contact Page - With contact info, form to ask Q&A's, and a API Google map for lo
                 <div class="form-cont">
                     <form method="get" id="contact-form">
                         <label for="name">Name</label>
-                        <input type="text" name="name" id="name" required>
+                        <input type="text" name="name" id="name" autocomplete="on" required>
                         <label for="email">Email</label>
-                        <input type="email" name="email" id="email" required>
-                        <label for="phone">Phone Number</label>
-                        <input type="tel" name="phone" id="phone" placeholder="000-000-0000" maxlength="12" required>
+                        <input type="email" name="email" id="email" autocomplete="on" required>
+                        <label for="phone-contact">Phone Number</label>
+                        <input type="tel" name="phone" id="phone-contact" placeholder="000-000-0000" maxlength="12" autocomplete="on" required>
                         <label for="message">Message</label>
                         <textarea name="message" id="message" placeholder="Put your message here..." required></textarea>
                         <input type="submit" id="submit">
@@ -132,7 +132,7 @@ Contact Page - With contact info, form to ask Q&A's, and a API Google map for lo
                 </div>
             </div>
         </div>
-        <!-- Footer with rights info -->
+        <!-- Footer with Rights Info -->
         <footer>
             <p>Term of Use</p>
             <p>Privacy Policy</p>
