@@ -15,6 +15,7 @@ $(document).ready(function(){
         $(".mobile-links").toggle();
     })
 
+    // When Menu Icon is Clicked it will take you back to the Top of the Page you are on.
     document.getElementById("mobile-menu").addEventListener("click", function() {
         window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
     });
