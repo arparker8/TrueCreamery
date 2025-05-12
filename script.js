@@ -6,6 +6,46 @@ True Creamery - Lactose Free Ice Cream Brand
 Document for all the Script that is being used for the project.
 */
 
+/********** - All Pages - Mobile Layout - Menu Icon - **********/
+
+// The Menu Icon when clicked toggles to show below the header the Menu Links and Search Bar.
+$(document).ready(function(){
+
+    $(".mobile-menu-icon").click(function(){
+        $(".mobile-links").toggle();
+    })
+
+    document.getElementById("mobile-menu").addEventListener("click", function() {
+        window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+    });
+})
+
+/********** - All Pages - Search Icon - **********/
+
+// When Search Icon is clicked a Search Box is Toggled to show.
+$(document).ready(function(){
+
+    $(".search-icon").click(function(){
+      $(".search-text-box").toggle();
+    });
+});
+
+// (On Desktop) When Search Box is selected and the Enter button is clicked an Alert Appears. After Alert is closed Page Refreshes.
+document.getElementById("search-desktop").addEventListener("keydown", function(event) {
+    if (event.keyCode === 13) {
+        alert ("Search Complete")
+        window.location.reload();
+    }
+})
+
+// (On Mobile) When Search Box is selected and the Enter button is clicked an Alert Appears. After Alert is closed Page Refreshes.
+document.getElementById("search-mobile").addEventListener("keydown", function(event) {
+    if (event.keyCode === 13) {
+        alert ("Search Complete")
+        window.location.reload();
+    }
+})
+
 /********** - All Pages - Bag Pop Out - **********/
 
 // An Array of my Products so that it can be stored in localStorage.
@@ -314,42 +354,6 @@ if (myArray && myArray.length > 0) {
         displayItem(item);
     });
 }
-
-/********** - All Pages - Search Icon - **********/
-
-// When Search Icon is clicked a Search Box is Toggled to show.
-$(document).ready(function(){
-
-    $(".search-icon").click(function(){
-      $(".search-text-box").toggle();
-    });
-});
-
-// (On Desktop) When Search Box is selected and the Enter button is clicked an Alert Appears. After Alert is closed Page Refreshes.
-document.getElementById("search-desktop").addEventListener("keydown", function(event) {
-    if (event.keyCode === 13) {
-        alert ("Search Complete")
-        window.location.reload();
-    }
-})
-
-// (On Mobile) When Search Box is selected and the Enter button is clicked an Alert Appears. After Alert is closed Page Refreshes.
-document.getElementById("search-mobile").addEventListener("keydown", function(event) {
-    if (event.keyCode === 13) {
-        alert ("Search Complete")
-        window.location.reload();
-    }
-})
-
-/********** - All Pages - Mobile Layout - Menu Icon - **********/
-
-// The Menu Icon when clicked toggles to show below the header the Menu Links and Search Bar.
-$(document).ready(function(){
-
-    $(".mobile-menu-icon").click(function(){
-        $(".mobile-links").toggle();
-    })
-})
 
 /********** - Homepage - Fading in on View for Prompt Two Info - **********/
 
